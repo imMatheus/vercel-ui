@@ -166,6 +166,10 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
 
+      boxShadow:{
+        inner: 'var(--ds-shadow-inset)'
+      },
+
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
         // mono: ["var(--font-mono)", ...fontFamily.mono],

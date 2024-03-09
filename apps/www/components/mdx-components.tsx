@@ -326,17 +326,17 @@ const components = {
     ]
 
     return (
-      <div className="">
+      <div className="mt-6">
         <div className="space-y-6">
           <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
             <div className="w-[100px] shrink-0">Backgrounds</div>
 
             <div className="flex w-full gap-1 md:gap-2">
-              <div className="w-full">
-                <button className="h-10 w-full bg-background-100 rounded"></button>
+              <div className="w-[68px]">
+                <button className="h-10 w-full bg-background-100 shadow-inner rounded"></button>
               </div>
-              <div className="w-full">
-                <button className="bg-background-200 h-10 w-full rounded"></button>
+              <div className="w-[68px]">
+                <button className="bg-background-200 h-10 w-full rounded shadow-inner"></button>
               </div>
             </div>
           </div>
@@ -354,7 +354,7 @@ const components = {
                   .map((_, index) => (
                     <div key={index} className="w-full">
                       <button
-                        className="h-10 w-full rounded"
+                        className="h-10 w-full rounded shadow-inner"
                         style={{
                           background: `hsl(var(--ds-${color.key}-${
                             (index + 1) * 100

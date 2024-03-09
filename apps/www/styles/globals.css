@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --ds-background-100: #fff;
-    --ds-background-200: #fafafa;
+    --ds-background-100: 0, 0%, 100%;
+    --ds-background-200: 0, 0%, 98%;
 
     --ds-gray-alpha-100: 0, 0, 0, 0.05;
     --ds-gray-alpha-200: 0, 0, 0, 0.08;
@@ -105,6 +105,9 @@
     --ds-pink-800: 336, 74%, 51%;
     --ds-pink-900: 336, 65%, 45%;
     --ds-pink-1000: 333, 74%, 15%;
+
+    --ds-shadow-inset:  inset 0 0 0 1px rgba(0, 0, 0, .08);
+
   }
 
   .dark {
@@ -209,6 +212,8 @@
     --ds-pink-800: 336, 74%, 51%;
     --ds-pink-900: 341, 90%, 67%;
     --ds-pink-1000: 333, 90%, 96%;
+
+    --ds-shadow-inset:  inset 0 0 0 1px  hsla(0, 0%, 100%, .1);
   }
 }
 
