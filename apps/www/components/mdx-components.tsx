@@ -312,11 +312,17 @@ const components = {
       {...props}
     />
   ),
-  ColorSteps: ({ label }: { label: string }) => {
+  ColorSteps: () => {
     const colors = [
-      { label: "Red", key: "red" },
-      { label: "Green", key: "green" },
+      { label: "Gray", key: "gray" },
+      { label: "Gray alpha", key: "gray-alpha" },
       { label: "Blue", key: "blue" },
+      { label: "Red", key: "red" },
+      { label: "Amber", key: "amber" },
+      { label: "Green", key: "green" },
+      { label: "Teal", key: "teal" },
+      { label: "Purple", key: "purple" },
+      { label: "Pink", key: "pink" },
     ]
 
     return (
@@ -330,7 +336,7 @@ const components = {
                 <button className="h-10 w-full bg-background-100 rounded"></button>
               </div>
               <div className="w-full">
-                <button className="h-10 w-full bg-background-200 rounded"></button>
+                <button className="bg-background-200 h-10 w-full rounded"></button>
               </div>
             </div>
           </div>
