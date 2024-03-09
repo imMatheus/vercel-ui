@@ -7,7 +7,7 @@ import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeToggle } from "@/components/mode-toggle"
-import { buttonVariants } from "@/registry/new-york/ui/button"
+import { buttonVariants } from "@/registry/default/ui/button"
 
 export function SiteHeader() {
   return (

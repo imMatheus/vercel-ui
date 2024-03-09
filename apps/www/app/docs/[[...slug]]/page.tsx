@@ -13,8 +13,6 @@ import { absoluteUrl, cn } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
 import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
-import { badgeVariants } from "@/registry/new-york/ui/badge"
-import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
 
 interface DocPageProps {
   params: {
@@ -108,7 +106,7 @@ export default async function DocPage({ params }: DocPageProps) {
         </div>
         {doc.links ? (
           <div className="flex items-center space-x-2 pt-4">
-            {doc.links?.doc && (
+            {/* {doc.links?.doc && (
               <Link
                 href={doc.links.doc}
                 target="_blank"
@@ -130,6 +128,8 @@ export default async function DocPage({ params }: DocPageProps) {
                 <ExternalLinkIcon className="h-3 w-3" />
               </Link>
             )}
+             */}
+            some should be here frfr
           </div>
         ) : null}
         <div className="pb-12 pt-8">
@@ -140,11 +140,12 @@ export default async function DocPage({ params }: DocPageProps) {
       {doc.toc && (
         <div className="hidden text-sm xl:block">
           <div className="sticky top-16 -mt-10 pt-4">
-            <ScrollArea className="pb-10">
-              <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
-                <DashboardTableOfContents toc={toc} />
-              </div>
-            </ScrollArea>
+            {/* <ScrollArea className="pb-10"> */}
+            scroll area or some fr
+            <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
+              <DashboardTableOfContents toc={toc} />
+            </div>
+            {/* </ScrollArea> */}
           </div>
         </div>
       )}

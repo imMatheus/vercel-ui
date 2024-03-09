@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 
-import { Separator } from "@/registry/new-york/ui/separator"
+import { Separator } from "@/registry/default/ui/separator"
 
 export function Announcement() {
   return (

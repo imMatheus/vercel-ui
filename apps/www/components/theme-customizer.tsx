@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { ThemeWrapper } from "@/components/theme-wrapper"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/default/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -25,19 +25,19 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york/ui/dialog"
+} from "@/registry/default/ui/dialog"
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/registry/new-york/ui/drawer"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/registry/default/ui/drawer"
+import { Label } from "@/registry/default/ui/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
-import { Skeleton } from "@/registry/new-york/ui/skeleton"
+} from "@/registry/default/ui/popover"
+import { Skeleton } from "@/registry/default/ui/skeleton"
 import { Theme, themes } from "@/registry/themes"
 
 import "@/styles/mdx.css"
@@ -45,7 +45,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
+} from "@/registry/default/ui/tooltip"
 
 export function ThemeCustomizer() {
   const [config, setConfig] = useConfig()
@@ -243,16 +243,6 @@ function Customizer() {
               )}
             >
               Default
-            </Button>
-            <Button
-              variant={"outline"}
-              size="sm"
-              onClick={() => setConfig({ ...config, style: "new-york" })}
-              className={cn(
-                config.style === "new-york" && "border-2 border-primary"
-              )}
-            >
-              New York
             </Button>
           </div>
         </div>
