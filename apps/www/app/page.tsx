@@ -13,7 +13,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { buttonVariants } from "@/registry/default/ui/button"
-import MailPage from "@/app/examples/mail/page"
+import AuthPage from "@/app/examples/authentication/page"
 
 export default function IndexPage() {
   return (
@@ -59,7 +59,7 @@ export default function IndexPage() {
       </section>
       <section className="hidden md:block">
         <div className="overflow-hidden rounded-lg border bg-background shadow-lg">
-          <MailPage />
+          <AuthPage />
         </div>
       </section>
     </div>
