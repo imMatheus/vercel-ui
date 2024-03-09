@@ -52,7 +52,7 @@ describe("split className", () => {
 describe("apply color mapping", async () => {
   test.each([
     {
-      input: "bg-background text-foreground",
+      input: "bg-background-200 text-foreground",
       output: "bg-white text-slate-950 dark:bg-slate-950 dark:text-slate-50",
     },
     {

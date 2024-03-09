@@ -232,7 +232,7 @@ export function CardsChat() {
                 {selectedUsers.map((user) => (
                   <Avatar
                     key={user.email}
-                    className="inline-block border-2 border-background"
+                    className="inline-block border-2 border-background-200"
                   >
                     <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name[0]}</AvatarFallback>

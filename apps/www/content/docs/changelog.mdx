@@ -82,7 +82,7 @@ This has been one of the most requested features. You can now configure a custom
 This means you can now easily add shadcn/ui components to existing projects like Docusaurus, Nextra...etc. A drop-in for your existing design system with no conflict. 🔥
 
 ```tsx /tw-/
-<AlertDialog className="tw-grid tw-gap-4 tw-border tw-bg-background tw-shadow-lg" />
+<AlertDialog className="tw-grid tw-gap-4 tw-border tw-bg-background-200 tw-shadow-lg" />
 ```
 
 It works with `cn`, `cva` and CSS variables.
@@ -271,8 +271,8 @@ To use utility classes for theming set `tailwind.cssVariables` to `false` in you
 
 #### CSS Variables
 
-```tsx /bg-background/ /text-foreground/
-<div className="bg-background text-foreground" />
+```tsx /bg-background-200/ /text-foreground/
+<div className="bg-background-200 text-foreground" />
 ```
 
 To use CSS variables classes for theming set `tailwind.cssVariables` to `true` in your `components.json` file.
@@ -478,7 +478,7 @@ const SheetOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-background/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "fixed inset-0 z-50 bg-background-200/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
@@ -488,7 +488,7 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+  "fixed z-50 gap-4 bg-background-200 p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
     variants: {
       side: {

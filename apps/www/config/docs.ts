@@ -58,8 +58,8 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Theming",
-          href: "/docs/theming",
+          title: "Colors",
+          href: "/docs/colors",
           items: [],
         },
         {

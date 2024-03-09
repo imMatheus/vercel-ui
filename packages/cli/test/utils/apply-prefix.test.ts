@@ -9,8 +9,8 @@ describe("apply tailwind prefix", () => {
       output: "tw-bg-slate-800 tw-text-gray-500",
     },
     {
-      input: "hover:dark:bg-background dark:text-foreground",
-      output: "hover:dark:tw-bg-background dark:tw-text-foreground",
+      input: "hover:dark:bg-background-200 dark:text-foreground",
+      output: "hover:dark:tw-bg-background-200 dark:tw-text-foreground",
     },
     {
       input:

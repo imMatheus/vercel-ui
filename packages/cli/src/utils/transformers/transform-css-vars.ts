@@ -47,7 +47,7 @@ export const transformCssVars: Transformer = async ({
 // export default function transformer(file: FileInfo, api: API) {
 //   const j = api.jscodeshift.withParser("tsx")
 
-//   // Replace bg-background with "bg-white dark:bg-slate-950"
+//   // Replace bg-background-200 with "bg-white dark:bg-slate-950"
 //   const $j = j(file.source)
 //   return $j
 //     .find(j.JSXAttribute, {

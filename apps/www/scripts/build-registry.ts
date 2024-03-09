@@ -255,7 +255,7 @@ export const BASE_STYLES_WITH_VARIABLES = `@tailwind base;
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background-200 text-foreground;
   }
 }`
 

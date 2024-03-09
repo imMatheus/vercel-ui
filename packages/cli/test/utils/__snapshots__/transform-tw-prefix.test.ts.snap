@@ -5,7 +5,7 @@ exports[`transform tailwind prefix 1`] = `
             export function Foo() {
                 return (
                     <div
-                        className=\\"tw-bg-background hover:tw-bg-muted tw-text-primary-foreground sm:focus:tw-text-accent-foreground\\">foo</div>
+                        className=\\"tw-bg-background-200 hover:tw-bg-muted tw-text-primary-foreground sm:focus:tw-text-accent-foreground\\">foo</div>
                 );
             }
         "
@@ -112,7 +112,7 @@ exports[`transform tailwind prefix 4`] = `
     @apply tw-border-border;
   }
   body {
-    @apply tw-bg-background tw-text-foreground;
+    @apply tw-bg-background-200 tw-text-foreground;
   }
 }"
 `;

@@ -9,7 +9,7 @@ test("transform css vars", async () => {
       filename: "test.ts",
       raw: `import * as React from "react"
 export function Foo() {
-	return <div className="bg-background hover:bg-muted text-primary-foreground sm:focus:text-accent-foreground">foo</div>
+	return <div className="bg-background-200 hover:bg-muted text-primary-foreground sm:focus:text-accent-foreground">foo</div>
 }"
     `,
       config: {
@@ -32,7 +32,7 @@ export function Foo() {
       filename: "test.ts",
       raw: `import * as React from "react"
 export function Foo() {
-	return <div className="bg-background hover:bg-muted text-primary-foreground sm:focus:text-accent-foreground">foo</div>
+	return <div className="bg-background-200 hover:bg-muted text-primary-foreground sm:focus:text-accent-foreground">foo</div>
 }"
     `,
       config: {
@@ -55,7 +55,7 @@ export function Foo() {
       filename: "test.ts",
       raw: `import * as React from "react"
 export function Foo() {
-	return <div className={cn("bg-background hover:bg-muted", true && "text-primary-foreground sm:focus:text-accent-foreground")}>foo</div>
+	return <div className={cn("bg-background-200 hover:bg-muted", true && "text-primary-foreground sm:focus:text-accent-foreground")}>foo</div>
 }"
     `,
       config: {
@@ -78,7 +78,7 @@ export function Foo() {
       filename: "test.ts",
       raw: `import * as React from "react"
 export function Foo() {
-	return <div className={cn("bg-background border border-input")}>foo</div>
+	return <div className={cn("bg-background-200 border border-input")}>foo</div>
 }"
     `,
       config: {

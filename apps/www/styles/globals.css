@@ -4,57 +4,220 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 72.22% 50.59%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5% 64.9%;
-    --radius: 0.5rem;
+    --ds-background-100: #fff;
+    --ds-background-200: #fafafa;
+
+    --ds-gray-alpha-100: 0, 0, 0, 0.05;
+    --ds-gray-alpha-200: 0, 0, 0, 0.08;
+    --ds-gray-alpha-300: 0, 0, 0, 0.1;
+    --ds-gray-alpha-400: 0, 0, 0, 0.08;
+    --ds-gray-alpha-500: 0, 0, 0, 0.21;
+    --ds-gray-alpha-600: 0, 0, 0, 0.34;
+    --ds-gray-alpha-700: 0, 0, 0, 0.44;
+    --ds-gray-alpha-800: 0, 0, 0, 0.51;
+    --ds-gray-alpha-900: 0, 0, 0, 0.61;
+    --ds-gray-alpha-1000: 0, 0, 0, 0.91;
+
+    --ds-gray-100: 0, 0%, 95%;
+    --ds-gray-200: 0, 0%, 92%;
+    --ds-gray-300: 0, 0%, 90%;
+    --ds-gray-400: 0, 0%, 92%;
+    --ds-gray-500: 0, 0%, 79%;
+    --ds-gray-600: 0, 0%, 66%;
+    --ds-gray-700: 0, 0%, 56%;
+    --ds-gray-800: 0, 0%, 49%;
+    --ds-gray-900: 0, 0%, 40%;
+    --ds-gray-1000: 0, 0%, 9%;
+
+    --ds-blue-100: 212, 100%, 97%;
+    --ds-blue-200: 210, 100%, 96%;
+    --ds-blue-300: 210, 100%, 94%;
+    --ds-blue-400: 209, 100%, 90%;
+    --ds-blue-500: 209, 100%, 80%;
+    --ds-blue-600: 208, 100%, 66%;
+    --ds-blue-700: 212, 100%, 48%;
+    --ds-blue-800: 212, 100%, 41%;
+    --ds-blue-900: 211, 100%, 42%;
+    --ds-blue-1000: 211, 100%, 15%;
+
+    --ds-red-100: 0, 100%, 97%;
+    --ds-red-200: 0, 100%, 96%;
+    --ds-red-300: 0, 100%, 95%;
+    --ds-red-400: 0, 90%, 92%;
+    --ds-red-500: 0, 82%, 85%;
+    --ds-red-600: 359, 90%, 71%;
+    --ds-red-700: 358, 75%, 59%;
+    --ds-red-800: 358, 70%, 52%;
+    --ds-red-900: 358, 66%, 48%;
+    --ds-red-1000: 355, 49%, 15%;
+
+    --ds-amber-100: 39, 100%, 95%;
+    --ds-amber-200: 44, 100%, 92%;
+    --ds-amber-300: 43, 96%, 90%;
+    --ds-amber-400: 42, 100%, 78%;
+    --ds-amber-500: 38, 100%, 71%;
+    --ds-amber-600: 36, 90%, 62%;
+    --ds-amber-700: 39, 100%, 57%;
+    --ds-amber-800: 35, 100%, 52%;
+    --ds-amber-900: 30, 100%, 32%;
+    --ds-amber-1000: 20, 79%, 17%;
+
+    --ds-green-100: 120, 60%, 96%;
+    --ds-green-200: 120, 60%, 95%;
+    --ds-green-300: 120, 60%, 91%;
+    --ds-green-400: 122, 60%, 86%;
+    --ds-green-500: 124, 60%, 75%;
+    --ds-green-600: 125, 60%, 64%;
+    --ds-green-700: 131, 41%, 46%;
+    --ds-green-800: 132, 43%, 39%;
+    --ds-green-900: 133, 50%, 32%;
+    --ds-green-1000: 128, 29%, 15%;
+
+    --ds-teal-100: 169, 70%, 96%;
+    --ds-teal-200: 167, 70%, 94%;
+    --ds-teal-300: 168, 70%, 90%;
+    --ds-teal-400: 170, 70%, 85%;
+    --ds-teal-500: 170, 70%, 72%;
+    --ds-teal-600: 170, 70%, 57%;
+    --ds-teal-700: 173, 80%, 36%;
+    --ds-teal-800: 173, 83%, 30%;
+    --ds-teal-900: 174, 91%, 25%;
+    --ds-teal-1000: 171, 80%, 13%;
+
+    --ds-purple-100: 276, 100%, 97%;
+    --ds-purple-200: 277, 87%, 97%;
+    --ds-purple-300: 274, 78%, 95%;
+    --ds-purple-400: 276, 71%, 92%;
+    --ds-purple-500: 274, 70%, 82%;
+    --ds-purple-600: 273, 72%, 73%;
+    --ds-purple-700: 272, 51%, 54%;
+    --ds-purple-800: 272, 47%, 45%;
+    --ds-purple-900: 274, 71%, 43%;
+    --ds-purple-1000: 276, 100%, 15%;
+
+    --ds-pink-100: 330, 100%, 96%;
+    --ds-pink-200: 340, 90%, 96%;
+    --ds-pink-300: 340, 82%, 94%;
+    --ds-pink-400: 341, 76%, 91%;
+    --ds-pink-500: 340, 75%, 84%;
+    --ds-pink-600: 341, 75%, 73%;
+    --ds-pink-700: 336, 80%, 58%;
+    --ds-pink-800: 336, 74%, 51%;
+    --ds-pink-900: 336, 65%, 45%;
+    --ds-pink-1000: 333, 74%, 15%;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --ds-background-100: 0, 0%, 4%;
+    --ds-background-200: 0, 0%, 0%;
+
+    --ds-gray-100: 0, 0%, 10%;
+    --ds-gray-200: 0, 0%, 12%;
+    --ds-gray-300: 0, 0%, 16%;
+    --ds-gray-400: 0, 0%, 18%;
+    --ds-gray-500: 0, 0%, 27%;
+    --ds-gray-600: 0, 0%, 53%;
+    --ds-gray-700: 0, 0%, 56%;
+    --ds-gray-800: 0, 0%, 49%;
+    --ds-gray-900: 0, 0%, 63%;
+    --ds-gray-1000: 0, 0%, 93%;
+
+    --ds-gray-alpha-100: 0, 0%, 100%, 0.06;
+    --ds-gray-alpha-200: 0, 0%, 100%, 0.09;
+    --ds-gray-alpha-300: 0, 0%, 100%, 0.13;
+    --ds-gray-alpha-400: 0, 0%, 100%, 0.14;
+    --ds-gray-alpha-500: 0, 0%, 100%, 0.24;
+    --ds-gray-alpha-600: 0, 0%, 100%, 0.51;
+    --ds-gray-alpha-700: 0, 0%, 100%, 0.54;
+    --ds-gray-alpha-800: 0, 0%, 100%, 0.47;
+    --ds-gray-alpha-900: 0, 0%, 100%, 0.61;
+    --ds-gray-alpha-1000: 0, 0%, 100%, 0.92;
+
+    --ds-blue-100: 216, 50%, 12%;
+    --ds-blue-200: 214, 59%, 15%;
+    --ds-blue-300: 213, 71%, 20%;
+    --ds-blue-400: 212, 78%, 23%;
+    --ds-blue-500: 211, 86%, 27%;
+    --ds-blue-600: 206, 100%, 50%;
+    --ds-blue-700: 212, 100%, 48%;
+    --ds-blue-800: 212, 100%, 41%;
+    --ds-blue-900: 210, 100%, 66%;
+    --ds-blue-1000: 206, 100%, 96%;
+
+    --ds-red-100: 357, 37%, 12%;
+    --ds-red-200: 357, 46%, 16%;
+    --ds-red-300: 356, 54%, 22%;
+    --ds-red-400: 357, 55%, 26%;
+    --ds-red-500: 357, 60%, 32%;
+    --ds-red-600: 358, 75%, 59%;
+    --ds-red-700: 358, 75%, 59%;
+    --ds-red-800: 358, 69%, 52%;
+    --ds-red-900: 358, 100%, 69%;
+    --ds-red-1000: 353, 90%, 96%;
+
+    --ds-amber-100: 35, 100%, 8%;
+    --ds-amber-200: 32, 100%, 10%;
+    --ds-amber-300: 33, 100%, 15%;
+    --ds-amber-400: 35, 100%, 17%;
+    --ds-amber-500: 35, 91%, 22%;
+    --ds-amber-600: 39, 85%, 49%;
+    --ds-amber-700: 39, 100%, 57%;
+    --ds-amber-800: 35, 100%, 52%;
+    --ds-amber-900: 35, 100%, 52%;
+    --ds-amber-1000: 40, 94%, 93%;
+
+    --ds-green-100: 136, 50%, 9%;
+    --ds-green-200: 137, 50%, 12%;
+    --ds-green-300: 136, 50%, 14%;
+    --ds-green-400: 135, 70%, 16%;
+    --ds-green-500: 135, 70%, 23%;
+    --ds-green-600: 135, 70%, 34%;
+    --ds-green-700: 131, 41%, 46%;
+    --ds-green-800: 132, 43%, 39%;
+    --ds-green-900: 131, 43%, 57%;
+    --ds-green-1000: 136, 73%, 94%;
+
+    --ds-teal-100: 169, 78%, 7%;
+    --ds-teal-200: 170, 74%, 9%;
+    --ds-teal-300: 171, 75%, 13%;
+    --ds-teal-400: 171, 85%, 13%;
+    --ds-teal-500: 172, 85%, 20%;
+    --ds-teal-600: 172, 85%, 32%;
+    --ds-teal-700: 173, 80%, 36%;
+    --ds-teal-800: 173, 83%, 30%;
+    --ds-teal-900: 174, 90%, 41%;
+    --ds-teal-1000: 166, 71%, 93%;
+
+    --ds-purple-100: 283, 30%, 12%;
+    --ds-purple-200: 281, 38%, 16%;
+    --ds-purple-300: 279, 44%, 23%;
+    --ds-purple-400: 277, 46%, 28%;
+    --ds-purple-500: 274, 49%, 35%;
+    --ds-purple-600: 272, 51%, 54%;
+    --ds-purple-700: 272, 51%, 54%;
+    --ds-purple-800: 272, 47%, 45%;
+    --ds-purple-900: 275, 80%, 71%;
+    --ds-purple-1000: 281, 73%, 96%;
+
+    --ds-pink-100: 335, 32%, 12%;
+    --ds-pink-200: 335, 43%, 16%;
+    --ds-pink-300: 335, 47%, 21%;
+    --ds-pink-400: 335, 51%, 22%;
+    --ds-pink-500: 335, 57%, 27%;
+    --ds-pink-600: 336, 75%, 40%;
+    --ds-pink-700: 336, 80%, 58%;
+    --ds-pink-800: 336, 74%, 51%;
+    --ds-pink-900: 341, 90%, 67%;
+    --ds-pink-1000: 333, 90%, 96%;
   }
 }
 
 @layer base {
-  * {
+  /* * {
     @apply border-border;
-  }
+  } */
   body {
-    @apply bg-background text-foreground;
+    @apply bg-red-500 text-gray-1000;
     /* font-feature-settings: "rlig" 1, "calt" 1; */
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
@@ -67,7 +230,7 @@
   }
 
   .step:before {
-    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background;
+    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background-200;
     @apply ml-[-50px] mt-[-4px];
     content: counter(step);
   }
