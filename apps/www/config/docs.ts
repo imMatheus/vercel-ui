@@ -13,7 +13,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Components",
-      href: "/docs/components/accordion",
+      href: "/docs/components/collapse",
     },
     {
       title: "Themes",
@@ -93,11 +93,6 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
-          title: "Accordion",
-          href: "/docs/components/accordion",
-          items: [],
-        },
-        {
           title: "Alert",
           href: "/docs/components/alert",
           items: [],
@@ -123,12 +118,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Breadcrumb",
-          href: "/docs/components/breadcrumb",
-          items: [],
-          label: "New",
-        },
-        {
           title: "Button",
           href: "/docs/components/button",
           items: [],
@@ -151,6 +140,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Checkbox",
           href: "/docs/components/checkbox",
+          items: [],
+        },
+        {
+          title: "Collapse",
+          href: "/docs/components/collapse",
           items: [],
         },
         {

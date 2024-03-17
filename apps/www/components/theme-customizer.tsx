@@ -184,7 +184,8 @@ function Customizer() {
         </div>
         <Button
           variant="ghost"
-          size="icon"
+          //  TODO change this to icon button
+          size="sm"
           className="ml-auto rounded-[0.5rem]"
           onClick={() => {
             setConfig({

@@ -2,12 +2,6 @@ import { Registry } from "@/registry/schema"
 
 const ui: Registry = [
   {
-    name: "accordion",
-    type: "components:ui",
-    dependencies: ["@radix-ui/react-accordion"],
-    files: ["ui/accordion.tsx"],
-  },
-  {
     name: "alert",
     type: "components:ui",
     files: ["ui/alert.tsx"],
@@ -35,12 +29,6 @@ const ui: Registry = [
     name: "badge",
     type: "components:ui",
     files: ["ui/badge.tsx"],
-  },
-  {
-    name: "breadcrumb",
-    type: "components:ui",
-    dependencies: ["@radix-ui/react-slot"],
-    files: ["ui/breadcrumb.tsx"],
   },
   {
     name: "button",
@@ -72,6 +60,12 @@ const ui: Registry = [
     type: "components:ui",
     dependencies: ["@radix-ui/react-checkbox"],
     files: ["ui/checkbox.tsx"],
+  },
+  {
+    name: "collapse",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-accordion"],
+    files: ["ui/collapse.tsx"],
   },
   {
     name: "collapsible",
@@ -280,10 +274,10 @@ const ui: Registry = [
 
 const example: Registry = [
   {
-    name: "accordion-demo",
+    name: "collapse-demo",
     type: "components:example",
-    registryDependencies: ["accordion"],
-    files: ["example/accordion-demo.tsx"],
+    registryDependencies: ["collapse"],
+    files: ["example/collapse-demo.tsx"],
   },
   {
     name: "alert-demo",
@@ -338,42 +332,6 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["badge"],
     files: ["example/badge-secondary.tsx"],
-  },
-  {
-    name: "breadcrumb-demo",
-    type: "components:example",
-    registryDependencies: ["breadcrumb"],
-    files: ["example/breadcrumb-demo.tsx"],
-  },
-  {
-    name: "breadcrumb-separator",
-    type: "components:example",
-    registryDependencies: ["breadcrumb"],
-    files: ["example/breadcrumb-separator.tsx"],
-  },
-  {
-    name: "breadcrumb-dropdown",
-    type: "components:example",
-    registryDependencies: ["breadcrumb"],
-    files: ["example/breadcrumb-dropdown.tsx"],
-  },
-  {
-    name: "breadcrumb-ellipsis",
-    type: "components:example",
-    registryDependencies: ["breadcrumb"],
-    files: ["example/breadcrumb-ellipsis"],
-  },
-  {
-    name: "breadcrumb-responsive",
-    type: "components:example",
-    registryDependencies: ["breadcrumb"],
-    files: ["example/breadcrumb-responsive"],
-  },
-  {
-    name: "breadcrumb-link",
-    type: "components:example",
-    registryDependencies: ["breadcrumb"],
-    files: ["example/breadcrumb-link"],
   },
   {
     name: "button-demo",

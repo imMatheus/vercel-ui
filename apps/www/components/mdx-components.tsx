@@ -23,12 +23,7 @@ import {
   AlertTitle,
 } from "@/registry/default/ui/alert"
 import { AspectRatio } from "@/registry/default/ui/aspect-ratio"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/registry/default/ui/collapse"
+import { Collapse, CollapseGroup } from "@/registry/default/ui/collapse"
 import {
   Tabs,
   TabsContent,
@@ -38,10 +33,8 @@ import {
 import { Style } from "@/registry/styles"
 
 const components = {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
+  CollapseGroup,
+  Collapse,
   Alert,
   AlertTitle,
   AlertDescription,

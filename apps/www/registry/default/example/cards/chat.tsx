@@ -111,7 +111,8 @@ export function CardsChat() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  size="icon"
+                  // TODO change this to icon button
+                  size="sm"
                   variant="outline"
                   className="ml-auto rounded-full"
                   onClick={() => setOpen(true)}
@@ -165,7 +166,12 @@ export function CardsChat() {
               value={input}
               onChange={(event) => setInput(event.target.value)}
             />
-            <Button type="submit" size="icon" disabled={inputLength === 0}>
+            <Button
+              type="submit"
+              // TODO change this to icon button
+              size="sm"
+              disabled={inputLength === 0}
+            >
               <Send className="h-4 w-4" />
               <span className="sr-only">Send</span>
             </Button>

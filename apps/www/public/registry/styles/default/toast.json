@@ -1,6 +1,8 @@
 {
   "name": "toast",
-  "dependencies": ["@radix-ui/react-toast"],
+  "dependencies": [
+    "@radix-ui/react-toast"
+  ],
   "files": [
     {
       "name": "toast.tsx",
