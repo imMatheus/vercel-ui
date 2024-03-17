@@ -31,12 +31,7 @@ import {
   DialogTitle,
 } from "@/registry/default/ui/dialog"
 import { Input } from "@/registry/default/ui/input"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/registry/default/ui/tooltip"
+import { Tooltip } from "@/registry/default/ui/tooltip"
 
 const users = [
   {
@@ -107,23 +102,19 @@ export function CardsChat() {
               <p className="text-sm text-muted-foreground">m@example.com</p>
             </div>
           </div>
-          <TooltipProvider delayDuration={0}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  // TODO change this to icon button
-                  size="sm"
-                  variant="outline"
-                  className="ml-auto rounded-full"
-                  onClick={() => setOpen(true)}
-                >
-                  <Plus className="h-4 w-4" />
-                  <span className="sr-only">New message</span>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent sideOffset={10}>New message</TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+
+          <Tooltip text="New message">
+            <Button
+              // TODO change this to icon button
+              size="sm"
+              variant="outline"
+              className="ml-auto rounded-full"
+              onClick={() => setOpen(true)}
+            >
+              <Plus className="h-4 w-4" />
+              <span className="sr-only">New message</span>
+            </Button>
+          </Tooltip>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
