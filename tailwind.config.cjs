@@ -50,6 +50,7 @@ module.exports = {
           100: "hsl(var(--ds-background-100))",
           200: "hsl(var(--ds-background-200))",
         },
+        contrast: "hsl(var(--ds-contrast-fg))",
         gray: {
           100: "hsl(var(--ds-gray-100))",
           200: "hsl(var(--ds-gray-200))",
@@ -159,15 +160,9 @@ module.exports = {
           1000: "hsl(var(--ds-pink-1000))",
         },
       },
-      borderRadius: {
-        xl: `calc(var(--radius) + 4px)`,
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: "calc(var(--radius) - 4px)",
-      },
 
-      boxShadow:{
-        inner: 'var(--ds-shadow-inset)'
+      boxShadow: {
+        inner: "var(--ds-shadow-inset)",
       },
 
       fontFamily: {

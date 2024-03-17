@@ -6,9 +6,8 @@ import AlertDialogDemo from "@/registry/default/example/alert-dialog-demo"
 import AspectRatioDemo from "@/registry/default/example/aspect-ratio-demo"
 import AvatarDemo from "@/registry/default/example/avatar-demo"
 import BadgeDemo from "@/registry/default/example/badge-demo"
-import BadgeDestructive from "@/registry/default/example/badge-destructive"
-import BadgeOutline from "@/registry/default/example/badge-outline"
-import BadgeSecondary from "@/registry/default/example/badge-secondary"
+import BadgeIcons from "@/registry/default/example/badge-icons"
+import BadgeSizes from "@/registry/default/example/badge-sizes"
 import ButtonDemo from "@/registry/default/example/button-demo"
 import ButtonDestructive from "@/registry/default/example/button-destructive"
 import ButtonGhost from "@/registry/default/example/button-ghost"
@@ -164,9 +163,8 @@ export default function KitchenSinkPage() {
             <ComponentWrapper>
               <div className="flex space-x-2">
                 <BadgeDemo />
-                <BadgeSecondary />
-                <BadgeDestructive />
-                <BadgeOutline />
+                <BadgeSizes />
+                <BadgeIcons />
               </div>
             </ComponentWrapper>
             <ComponentWrapper>

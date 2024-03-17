@@ -17,6 +17,7 @@ type Direction = "column" | "row" | { [key in BreakPoint]?: "column" | "row" }
 export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
   gap?: Gap
   direction?: Direction
+  align?: "center" | "flex-start" | "flex-end"
 }
 
 function convertNumberIntoPx(n: number) {
@@ -37,7 +38,7 @@ function convertGapToProps(gap?: Gap) {
 }
 
 const Stack = React.forwardRef<HTMLDivElement, StackProps>(
-  ({ className, gap, direction, ...props }, ref) => {
+  ({ className, gap, direction, align, ...props }, ref) => {
     const styles = convertGapToProps(gap)
 
     // Append styles for direction changes at specified breakpoints
@@ -47,25 +48,18 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
         if (!styles[`@media (min-width: ${minWidth})`]) {
           styles[`@media (min-width: ${minWidth})`] = {}
         }
-        styles[`@media (min-width: ${minWidth})`].flexDirection = dirValue
+        ;(
+          styles[`@media (min-width: ${minWidth})`] as React.CSSProperties
+        ).flexDirection = dirValue
       })
     }
-
-    console.log({ direction, styles })
-
-    // // Combine all styles
-    // const style = {
-    //   ...(typeof directionStyles === "string"
-    //     ? { flexDirection: directionStyles }
-    //     : directionStyles),
-    //   ...gapStyles,
-    // }
 
     return (
       <div
         ref={ref}
         className={cn(
-          "flex flex-col",
+          "flex [align-items:var(--align-items)]",
+          !direction && "flex-col",
           typeof gap === "number"
             ? convertGapToProps(gap)
             : [
@@ -76,7 +70,7 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
               ],
           className
         )}
-        style={styles}
+        style={{ ...styles, "--align-items": align } as React.CSSProperties}
         {...props}
       >
         {props.children}

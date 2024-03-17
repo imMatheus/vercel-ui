@@ -1,7 +1,7 @@
 import { Badge } from "@/registry/default/ui/badge"
 import { Stack } from "@/registry/default/ui/stack"
 
-export default function BadgeDemo() {
+export default function BadgeDestructive() {
   return (
     <Stack gap={2}>
       <Stack direction="row" gap={1}>

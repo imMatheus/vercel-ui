@@ -391,32 +391,23 @@ export const Index: Record<string, any> = {
       ),
       files: ["registry/default/example/badge-demo.tsx"],
     },
-    "badge-destructive": {
-      name: "badge-destructive",
+    "badge-sizes": {
+      name: "badge-sizes",
       type: "components:example",
       registryDependencies: ["badge"],
       component: React.lazy(
-        () => import("@/registry/default/example/badge-destructive")
+        () => import("@/registry/default/example/badge-sizes")
       ),
-      files: ["registry/default/example/badge-destructive.tsx"],
+      files: ["registry/default/example/badge-sizes.tsx"],
     },
-    "badge-outline": {
-      name: "badge-outline",
+    "badge-icons": {
+      name: "badge-icons",
       type: "components:example",
       registryDependencies: ["badge"],
       component: React.lazy(
-        () => import("@/registry/default/example/badge-outline")
+        () => import("@/registry/default/example/badge-icons")
       ),
-      files: ["registry/default/example/badge-outline.tsx"],
-    },
-    "badge-secondary": {
-      name: "badge-secondary",
-      type: "components:example",
-      registryDependencies: ["badge"],
-      component: React.lazy(
-        () => import("@/registry/default/example/badge-secondary")
-      ),
-      files: ["registry/default/example/badge-secondary.tsx"],
+      files: ["registry/default/example/badge-icons.tsx"],
     },
     "button-demo": {
       name: "button-demo",

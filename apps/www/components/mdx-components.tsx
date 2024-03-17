@@ -181,10 +181,7 @@ const components = {
     return (
       <StyleWrapper styleName={__style__}>
         <pre
-          className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900",
-            className
-          )}
+          className={cn("mb-4 mt-6 overflow-x-auto py-4", className)}
           {...props}
         />
         {__rawString__ && !__npmCommand__ && (

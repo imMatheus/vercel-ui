@@ -7,16 +7,16 @@
     --ds-background-100: 0 0% 100%;
     --ds-background-200: 0 0% 98%;
 
-    --ds-gray-alpha-100: 0 0 0 0.05;
-    --ds-gray-alpha-200: 0 0 0 0.08;
-    --ds-gray-alpha-300: 0 0 0 0.1;
-    --ds-gray-alpha-400: 0 0 0 0.08;
-    --ds-gray-alpha-500: 0 0 0 0.21;
-    --ds-gray-alpha-600: 0 0 0 0.34;
-    --ds-gray-alpha-700: 0 0 0 0.44;
-    --ds-gray-alpha-800: 0 0 0 0.51;
-    --ds-gray-alpha-900: 0 0 0 0.61;
-    --ds-gray-alpha-1000: 0 0 0 0.91;
+    --ds-gray-alpha-100: 0, 0%, 0%, 0.05;
+    --ds-gray-alpha-200: 0, 0%, 0%, 0.08;
+    --ds-gray-alpha-300: 0, 0%, 0%, 0.1;
+    --ds-gray-alpha-400: 0, 0%, 0%, 0.08;
+    --ds-gray-alpha-500: 0, 0%, 0%, 0.21;
+    --ds-gray-alpha-600: 0, 0%, 0%, 0.34;
+    --ds-gray-alpha-700: 0, 0%, 0%, 0.44;
+    --ds-gray-alpha-800: 0, 0%, 0%, 0.51;
+    --ds-gray-alpha-900: 0, 0%, 0%, 0.61;
+    --ds-gray-alpha-1000: 0, 0%, 0%, 0.91;
 
     --ds-gray-100: 0 0% 95%;
     --ds-gray-200: 0 0% 92%;
@@ -106,7 +106,7 @@
     --ds-pink-900: 336 65% 45%;
     --ds-pink-1000: 333 74% 15%;
 
-    --ds-shadow-inset:  inset 0 0 0 1px rgba(0 0 0 / .08);
+    --ds-shadow-inset: inset 0 0 0 1px rgba(0 0 0 / 0.08);
     --ds-contrast-fg: 0 0% 100%;
   }
 
@@ -126,16 +126,16 @@
     --ds-gray-900: 0 0% 63%;
     --ds-gray-1000: 0 0% 93%;
 
-    --ds-gray-alpha-100: 0 0% 100% 0.06;
-    --ds-gray-alpha-200: 0 0% 100% 0.09;
-    --ds-gray-alpha-300: 0 0% 100% 0.13;
-    --ds-gray-alpha-400: 0 0% 100% 0.14;
-    --ds-gray-alpha-500: 0 0% 100% 0.24;
-    --ds-gray-alpha-600: 0 0% 100% 0.51;
-    --ds-gray-alpha-700: 0 0% 100% 0.54;
-    --ds-gray-alpha-800: 0 0% 100% 0.47;
-    --ds-gray-alpha-900: 0 0% 100% 0.61;
-    --ds-gray-alpha-1000: 0 0% 100% 0.92;
+    --ds-gray-alpha-100: 0, 0%, 100%, 0.06;
+    --ds-gray-alpha-200: 0, 0%, 100%, 0.09;
+    --ds-gray-alpha-300: 0, 0%, 100%, 0.13;
+    --ds-gray-alpha-400: 0, 0%, 100%, 0.14;
+    --ds-gray-alpha-500: 0, 0%, 100%, 0.24;
+    --ds-gray-alpha-600: 0, 0%, 100%, 0.51;
+    --ds-gray-alpha-700: 0, 0%, 100%, 0.54;
+    --ds-gray-alpha-800: 0, 0%, 100%, 0.47;
+    --ds-gray-alpha-900: 0, 0%, 100%, 0.61;
+    --ds-gray-alpha-1000: 0, 0%, 100%, 0.92;
 
     --ds-blue-100: 216 50% 12%;
     --ds-blue-200: 214 59% 15%;
@@ -214,7 +214,7 @@
     --ds-pink-900: 341 90% 67%;
     --ds-pink-1000: 333 90% 96%;
 
-    --ds-shadow-inset:  inset 0 0 0 1px  hsla(0 0% 100% / .1);
+    --ds-shadow-inset: inset 0 0 0 1px hsla(0 0% 100% / 0.1);
   }
 }
 

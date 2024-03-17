@@ -322,22 +322,16 @@ const example: Registry = [
     files: ["example/badge-demo.tsx"],
   },
   {
-    name: "badge-destructive",
+    name: "badge-sizes",
     type: "components:example",
     registryDependencies: ["badge"],
-    files: ["example/badge-destructive.tsx"],
+    files: ["example/badge-sizes.tsx"],
   },
   {
-    name: "badge-outline",
+    name: "badge-icons",
     type: "components:example",
     registryDependencies: ["badge"],
-    files: ["example/badge-outline.tsx"],
-  },
-  {
-    name: "badge-secondary",
-    type: "components:example",
-    registryDependencies: ["badge"],
-    files: ["example/badge-secondary.tsx"],
+    files: ["example/badge-icons.tsx"],
   },
   {
     name: "button-demo",
