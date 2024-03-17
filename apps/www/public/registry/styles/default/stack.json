@@ -1,0 +1,13 @@
+{
+  "name": "stack",
+  "dependencies": [
+    "stack"
+  ],
+  "files": [
+    {
+      "name": "stack.tsx",
+      "content": "import * as React from \"react\"\n\ntype BreakPoint = \"sm\" | \"md\" | \"lg\" | \"xl\"\ntype Direction = \"column\" | \"flex\"\n\nexport interface StackProps extends React.HTMLAttributes<HTMLDivElement> {\n  gap?: number | Record<BreakPoint, number>\n  direction?: Record<BreakPoint, Direction>\n}\n\nfunction convertNumberIntoPx(n: number) {\n  return `${n * 4}px`\n}\n\nfunction convertGapToProps(gap?: number | Record<BreakPoint, number>) {\n  if (typeof gap === \"number\") {\n    return { gap: convertNumberIntoPx(gap) }\n  } else if (typeof gap === \"object\") {\n    return Object.keys(gap).reduce((acc, key) => {\n      const val = gap[key as BreakPoint]\n      acc[`--gap-${key as any}`] = convertNumberIntoPx(val)\n      return acc\n    }, {} as Record<string, string>)\n  }\n}\n\nconst Stack = React.forwardRef<HTMLDivElement, StackProps>(\n  ({ className, gap, direction, ...props }, ref) => {\n    // Handle direction changes at breakpoints if provided\n    const directionStyles = direction\n      ? Object.keys(direction).reduce((acc, breakpoint) => {\n          const value = direction[breakpoint as BreakPoint]\n          acc[`@media (min-width: ${breakpoint})`] = {\n            flexDirection: value,\n          }\n          return acc\n        }, {} as Record<string, Object>)\n      : {}\n\n    const gapStyles = convertGapToProps(gap)\n\n    // Combine all styles\n    const style = { ...directionStyles, ...gapStyles }\n\n    return (\n      <div ref={ref} className={`flex ${className}`} style={style} {...props}>\n        {props.children}\n      </div>\n    )\n  }\n)\nStack.displayName = \"Stack\"\n\nexport { Stack }\n\n// const gap =\n//   typeof props.gap === \"number\"\n//     ? convertNumberIntoPx(props.gap)\n//     : Object.entries(props)\n"
+    }
+  ],
+  "type": "components:ui"
+}

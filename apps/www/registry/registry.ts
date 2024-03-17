@@ -224,6 +224,12 @@ const ui: Registry = [
     files: ["ui/sonner.tsx"],
   },
   {
+    name: "stack",
+    type: "components:ui",
+    dependencies: ["stack"],
+    files: ["ui/stack.tsx"],
+  },
+  {
     name: "switch",
     type: "components:ui",
     dependencies: ["@radix-ui/react-switch"],
@@ -840,6 +846,24 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["switch"],
     files: ["example/switch-demo.tsx"],
+  },
+  {
+    name: "stack-demo",
+    type: "components:example",
+    registryDependencies: ["stack"],
+    files: ["example/stack-demo.tsx"],
+  },
+  {
+    name: "stack-padding",
+    type: "components:example",
+    registryDependencies: ["stack"],
+    files: ["example/stack-padding.tsx"],
+  },
+  {
+    name: "stack-responsive",
+    type: "components:example",
+    registryDependencies: ["stack"],
+    files: ["example/stack-responsive.tsx"],
   },
   {
     name: "switch-form",

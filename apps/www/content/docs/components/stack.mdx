@@ -1,0 +1,73 @@
+---
+title: Stack
+description: Display elements vertically or horizontally on the page.
+component: true
+---
+
+<ComponentPreview name="stack-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn-ui@latest add stack
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="stack" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Stack } from "@/components/ui/stack"
+```
+
+```tsx
+<Stack gap={3}>
+  <div className="bg-gray-1000 h-12 w-12 rounded-md" />
+  <div className="bg-gray-1000 h-12 w-12 rounded-md" />
+  <div className="bg-gray-1000 h-12 w-12 rounded-md" />
+</Stack>
+```
+
+## Examples
+
+### Gap
+
+Gap is a unit on a 4px grid scale.
+
+<ComponentPreview name="stack-demo" />
+
+### Padding
+
+Padding uses the same scale as gap on a 4px grid scale.
+
+<ComponentPreview name="stack-padding" />
+
+### Responsive
+
+Resize the window to observe changes to the layout.
+
+<ComponentPreview name="stack-responsive" />
