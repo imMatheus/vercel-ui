@@ -499,6 +499,15 @@ export const Index: Record<string, any> = {
       ),
       files: ["registry/default/example/button-destructive.tsx"],
     },
+    "button-variants": {
+      name: "button-variants",
+      type: "components:example",
+      registryDependencies: ["button"],
+      component: React.lazy(
+        () => import("@/registry/default/example/button-variants")
+      ),
+      files: ["registry/default/example/button-destructive.tsx"],
+    },
     "button-outline": {
       name: "button-outline",
       type: "components:example",
