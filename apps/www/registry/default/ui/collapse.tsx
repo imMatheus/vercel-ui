@@ -6,7 +6,15 @@ import { ChevronDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-const CollapseGroup = AccordionPrimitive.Root
+const CollapseGroup = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Root>,
+  { children: React.ReactNode }
+>(({ children }, ref) => (
+  <AccordionPrimitive.Root ref={ref} className="w-full" type="single">
+    {children}
+  </AccordionPrimitive.Root>
+))
+CollapseGroup.displayName = "CollapseGroup"
 
 const Collapse = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
@@ -22,7 +30,7 @@ const Collapse = React.forwardRef<
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         className={cn(
-          "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+          "flex flex-1 items-center justify-between py-6 font-semibold text-2xl transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
           className
         )}
       >
@@ -30,7 +38,10 @@ const Collapse = React.forwardRef<
         <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
-    {props.children}
+    {/* <AccordionPrimitive.Content className="overflow-hidden text-sm transition-[height]"> */}
+    <AccordionPrimitive.Content className="overflow-hidden text-base mb-4 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+      {props.children}
+    </AccordionPrimitive.Content>
   </AccordionPrimitive.Item>
 ))
 Collapse.displayName = "Collapse"
