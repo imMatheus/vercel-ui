@@ -2,7 +2,6 @@ import * as React from "react"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-import AccordionDemo from "@/registry/default/example/accordion-demo"
 import AlertDialogDemo from "@/registry/default/example/alert-dialog-demo"
 import AspectRatioDemo from "@/registry/default/example/aspect-ratio-demo"
 import AvatarDemo from "@/registry/default/example/avatar-demo"
@@ -20,6 +19,7 @@ import ButtonSecondary from "@/registry/default/example/button-secondary"
 import ButtonWithIcon from "@/registry/default/example/button-with-icon"
 import CardDemo from "@/registry/default/example/card-demo"
 import CheckboxDemo from "@/registry/default/example/checkbox-demo"
+import CollapseDemo from "@/registry/default/example/collapse-demo"
 import CollapsibleDemo from "@/registry/default/example/collapsible-demo"
 import CommandDemo from "@/registry/default/example/command-demo"
 import ContextMenuDemo from "@/registry/default/example/context-menu-demo"
@@ -118,7 +118,7 @@ export default function KitchenSinkPage() {
               <DatePickerDemo />
             </ComponentWrapper>
             <ComponentWrapper>
-              <AccordionDemo />
+              <CollapseDemo />
             </ComponentWrapper>
             <ComponentWrapper className="[&_ul>li:last-child]:hidden">
               <NavigationMenuDemo />

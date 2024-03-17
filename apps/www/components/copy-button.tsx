@@ -43,9 +43,10 @@ export function CopyButton({
     }, 2000)
   }, [hasCopied])
 
+  // TODO change this to icon button
   return (
     <Button
-      size="icon"
+      size="sm"
       variant="ghost"
       className={cn(
         "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
@@ -102,11 +103,12 @@ export function CopyWithClassNames({
     setHasCopied(true)
   }, [])
 
+  // TODO change this to icon button
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          size="icon"
+          size="sm"
           variant="ghost"
           className={cn(
             "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
@@ -164,11 +166,12 @@ export function CopyNpmCommandButton({
     []
   )
 
+  // TODO change this to icon button
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          size="icon"
+          size="sm"
           variant="ghost"
           className={cn(
             "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",

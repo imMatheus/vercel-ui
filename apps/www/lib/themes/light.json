@@ -49,7 +49,6 @@
     "focusBorder": "#0008",
     "titleBar.activeBackground": "#fff",
     "titleBar.inactiveBackground": "#fff",
-    "breadcrumb.background": "#fff",
     "activityBar.background": "#fff",
     "activityBar.foreground": "#0008",
     "panel.background": "#fff",

@@ -383,10 +383,7 @@ export async function runInit(cwd: string, config: Config) {
   const packageManager = await getPackageManager(cwd)
 
   // TODO: add support for other icon libraries.
-  const deps = [
-    ...PROJECT_DEPENDENCIES,
-    config.style === "new-york" ? "@radix-ui/react-icons" : "lucide-react",
-  ]
+  const deps = [...PROJECT_DEPENDENCIES, "lucide-react"]
 
   await execa(
     packageManager,
