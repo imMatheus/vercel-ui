@@ -18,17 +18,17 @@ import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button"
 import { FrameworkDocs } from "@/components/framework-docs"
 import { StyleWrapper } from "@/components/style-wrapper"
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/registry/default/ui/accordion"
-import {
   Alert,
   AlertDescription,
   AlertTitle,
 } from "@/registry/default/ui/alert"
 import { AspectRatio } from "@/registry/default/ui/aspect-ratio"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/registry/default/ui/collapse"
 import {
   Tabs,
   TabsContent,

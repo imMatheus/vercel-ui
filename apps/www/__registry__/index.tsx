@@ -9,7 +9,7 @@ export const Index: Record<string, any> = {
       name: "accordion",
       type: "components:ui",
       registryDependencies: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/accordion")),
+      component: React.lazy(() => import("@/registry/default/ui/collapse")),
       files: ["registry/default/ui/accordion.tsx"],
     },
     alert: {
