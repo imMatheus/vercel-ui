@@ -2,8 +2,8 @@ import { Cloud, Plus, Users } from "lucide-react"
 
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenuContent,
   DropdownMenuShortcut,
+  Menu,
   MenuButton,
   MenuContainer,
   MenuItem,
@@ -12,24 +12,15 @@ import {
 export default function DropdownMenuDemo() {
   return (
     <MenuContainer>
-      <MenuButton>Hello</MenuButton>
-      <DropdownMenuContent className="w-56">
-        <MenuItem>
-          <Users className="mr-2 h-4 w-4" />
-          <span>Team</span>
+      <MenuButton>Actions</MenuButton>
+      <Menu width={200}>
+        <MenuItem onClick={() => alert("one")}>One</MenuItem>
+        <MenuItem onClick={() => alert("one")}>Two</MenuItem>
+        <MenuItem onClick={() => alert("one")}>Three</MenuItem>
+        <MenuItem onClick={() => alert("one")} type="error">
+          Delete
         </MenuItem>
-
-        <MenuItem>
-          <Plus className="mr-2 h-4 w-4" />
-          <span>New Team</span>
-          <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-        </MenuItem>
-
-        <MenuItem disabled>
-          <Cloud className="mr-2 h-4 w-4" />
-          <span>API</span>
-        </MenuItem>
-      </DropdownMenuContent>
+      </Menu>
     </MenuContainer>
   )
 }

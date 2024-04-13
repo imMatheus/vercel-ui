@@ -9,7 +9,7 @@ import { Event, trackEvent } from "@/lib/events"
 import { cn } from "@/lib/utils"
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenuContent,
+  Menu,
   MenuButton,
   MenuContainer,
   MenuItem,
@@ -114,12 +114,12 @@ export function CopyWithClassNames({
         )}
         <span className="sr-only">Copy</span>
       </MenuButton>
-      <DropdownMenuContent align="end">
+      <Menu align="end">
         <MenuItem onClick={() => copyToClipboard(value)}>Component</MenuItem>
         <MenuItem onClick={() => copyToClipboard(classNames)}>
           Classname
         </MenuItem>
-      </DropdownMenuContent>
+      </Menu>
     </MenuContainer>
   )
 }
@@ -166,7 +166,7 @@ export function CopyNpmCommandButton({
         )}
         <span className="sr-only">Copy</span>
       </MenuButton>
-      <DropdownMenuContent align="end">
+      <Menu align="end">
         <MenuItem onClick={() => copyCommand(commands.__npmCommand__, "npm")}>
           npm
         </MenuItem>
@@ -179,7 +179,7 @@ export function CopyNpmCommandButton({
         <MenuItem onClick={() => copyCommand(commands.__bunCommand__, "bun")}>
           bun
         </MenuItem>
-      </DropdownMenuContent>
+      </Menu>
     </MenuContainer>
   )
 }

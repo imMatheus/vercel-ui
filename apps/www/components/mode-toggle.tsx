@@ -6,7 +6,7 @@ import { useTheme } from "next-themes"
 
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenuContent,
+  Menu,
   MenuButton,
   MenuContainer,
   MenuItem,
@@ -22,11 +22,11 @@ export function ModeToggle() {
         <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Toggle theme</span>
       </MenuButton>
-      <DropdownMenuContent align="end">
+      <Menu align="end">
         <MenuItem onClick={() => setTheme("light")}>Light</MenuItem>
         <MenuItem onClick={() => setTheme("dark")}>Dark</MenuItem>
         <MenuItem onClick={() => setTheme("system")}>System</MenuItem>
-      </DropdownMenuContent>
+      </Menu>
     </MenuContainer>
   )
 }

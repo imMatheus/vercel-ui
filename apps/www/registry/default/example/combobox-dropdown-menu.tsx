@@ -5,9 +5,9 @@ import { Calendar, MoreHorizontal, Tags, Trash, User } from "lucide-react"
 
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuShortcut,
+  Menu,
   MenuButton,
   MenuContainer,
   MenuItem,
@@ -39,7 +39,7 @@ export default function ComboboxDropdownMenu() {
         <MenuButton>
           <MoreHorizontal />
         </MenuButton>
-        <DropdownMenuContent align="end" className="w-[200px]">
+        <Menu align="end" className="w-[200px]">
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
 
           <MenuItem>
@@ -55,7 +55,7 @@ export default function ComboboxDropdownMenu() {
             Delete
             <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
           </MenuItem>
-        </DropdownMenuContent>
+        </Menu>
       </MenuContainer>
     </div>
   )
