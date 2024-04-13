@@ -258,12 +258,6 @@ const ui: Registry = [
     files: ["ui/toast.tsx", "ui/use-toast.ts", "ui/toaster.tsx"],
   },
   {
-    name: "toggle",
-    type: "components:ui",
-    dependencies: ["@radix-ui/react-toggle"],
-    files: ["ui/toggle.tsx"],
-  },
-  {
     name: "tooltip",
     type: "components:ui",
     dependencies: ["@radix-ui/react-tooltip"],
@@ -929,42 +923,6 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["toast"],
     files: ["example/toast-with-title.tsx"],
-  },
-  {
-    name: "toggle-demo",
-    type: "components:example",
-    registryDependencies: ["toggle"],
-    files: ["example/toggle-demo.tsx"],
-  },
-  {
-    name: "toggle-disabled",
-    type: "components:example",
-    registryDependencies: ["toggle"],
-    files: ["example/toggle-disabled.tsx"],
-  },
-  {
-    name: "toggle-lg",
-    type: "components:example",
-    registryDependencies: ["toggle"],
-    files: ["example/toggle-lg.tsx"],
-  },
-  {
-    name: "toggle-outline",
-    type: "components:example",
-    registryDependencies: ["toggle"],
-    files: ["example/toggle-outline.tsx"],
-  },
-  {
-    name: "toggle-sm",
-    type: "components:example",
-    registryDependencies: ["toggle"],
-    files: ["example/toggle-sm.tsx"],
-  },
-  {
-    name: "toggle-with-text",
-    type: "components:example",
-    registryDependencies: ["toggle"],
-    files: ["example/toggle-with-text.tsx"],
   },
   {
     name: "tooltip-demo",

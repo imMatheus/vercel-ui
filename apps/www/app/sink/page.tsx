@@ -40,10 +40,6 @@ import SliderDemo from "@/registry/default/example/slider-demo"
 import SwitchDemo from "@/registry/default/example/switch-demo"
 import TabsDemo from "@/registry/default/example/tabs-demo"
 import ToastDemo from "@/registry/default/example/toast-demo"
-import ToggleDemo from "@/registry/default/example/toggle-demo"
-import ToggleDisabled from "@/registry/default/example/toggle-disabled"
-import ToggleOutline from "@/registry/default/example/toggle-outline"
-import ToggleWithText from "@/registry/default/example/toggle-with-text"
 import TooltipDemo from "@/registry/default/example/tooltip-demo"
 import { Button } from "@/registry/default/ui/button"
 
@@ -168,14 +164,6 @@ export default function KitchenSinkPage() {
             </ComponentWrapper>
             <ComponentWrapper className="[&>div]:w-full">
               <CollapsibleDemo />
-            </ComponentWrapper>
-            <ComponentWrapper>
-              <div className="flex space-x-2">
-                <ToggleDemo />
-                <ToggleOutline />
-                <ToggleDisabled />
-                <ToggleWithText />
-              </div>
             </ComponentWrapper>
             <ComponentWrapper>
               <ScrollAreaDemo />

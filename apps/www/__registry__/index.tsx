@@ -300,13 +300,6 @@ export const Index: Record<string, any> = {
         "registry/default/ui/toaster.tsx",
       ],
     },
-    toggle: {
-      name: "toggle",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/toggle")),
-      files: ["registry/default/ui/toggle.tsx"],
-    },
     tooltip: {
       name: "tooltip",
       type: "components:ui",
@@ -1294,60 +1287,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/toast-with-title")
       ),
       files: ["registry/default/example/toast-with-title.tsx"],
-    },
-    "toggle-demo": {
-      name: "toggle-demo",
-      type: "components:example",
-      registryDependencies: ["toggle"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-demo")
-      ),
-      files: ["registry/default/example/toggle-demo.tsx"],
-    },
-    "toggle-disabled": {
-      name: "toggle-disabled",
-      type: "components:example",
-      registryDependencies: ["toggle"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-disabled")
-      ),
-      files: ["registry/default/example/toggle-disabled.tsx"],
-    },
-    "toggle-lg": {
-      name: "toggle-lg",
-      type: "components:example",
-      registryDependencies: ["toggle"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-lg")
-      ),
-      files: ["registry/default/example/toggle-lg.tsx"],
-    },
-    "toggle-outline": {
-      name: "toggle-outline",
-      type: "components:example",
-      registryDependencies: ["toggle"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-outline")
-      ),
-      files: ["registry/default/example/toggle-outline.tsx"],
-    },
-    "toggle-sm": {
-      name: "toggle-sm",
-      type: "components:example",
-      registryDependencies: ["toggle"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-sm")
-      ),
-      files: ["registry/default/example/toggle-sm.tsx"],
-    },
-    "toggle-with-text": {
-      name: "toggle-with-text",
-      type: "components:example",
-      registryDependencies: ["toggle"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-with-text")
-      ),
-      files: ["registry/default/example/toggle-with-text.tsx"],
     },
     "tooltip-demo": {
       name: "tooltip-demo",
