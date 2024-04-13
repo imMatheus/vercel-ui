@@ -5,12 +5,12 @@ import "@/styles/mdx.css"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
-import Balancer from "react-wrap-balancer"
 
 import { siteConfig } from "@/config/site"
 import { getTableOfContents } from "@/lib/toc"
 import { absoluteUrl, cn } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
+import { PaddingBox } from "@/components/padding-box"
 import { DocsPager } from "@/components/pager"
 import { badgeVariants } from "@/registry/default/ui/badge"
 
@@ -85,58 +85,62 @@ export default async function DocPage({ params }: DocPageProps) {
   const toc = await getTableOfContents(doc.body.raw)
 
   return (
-    <main className="relative py-6 lg:gap-10 lg:py-8">
+    <main className="relative lg:gap-10">
       <div className="mx-auto w-full min-w-0">
-        <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
-          <div className="overflow-hidden text-ellipsis whitespace-nowrap">
-            Docs
+        <PaddingBox>
+          <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
+            <div className="overflow-hidden text-ellipsis whitespace-nowrap">
+              Docs
+            </div>
+            <ChevronRightIcon className="h-4 w-4" />
+            <div className="font-medium text-foreground">{doc.title}</div>
           </div>
-          <ChevronRightIcon className="h-4 w-4" />
-          <div className="font-medium text-foreground">{doc.title}</div>
-        </div>
-        <div className="space-y-2">
-          <h1 className={cn("scroll-m-20 text-4xl font-bold tracking-tight")}>
-            {doc.title}
-          </h1>
-          {doc.description && (
-            <p className="text-lg text-muted-foreground">
-              <Balancer>{doc.description}</Balancer>
-            </p>
-          )}
-        </div>
-        {doc.links ? (
-          <div className="flex items-center space-x-2 pt-4">
-            {doc.links?.doc && (
-              <Link
-                href={doc.links.doc}
-                target="_blank"
-                rel="noreferrer"
-                className={cn(badgeVariants({ variant: "turbo" }), "gap-1")}
-              >
-                Docs
-                <ExternalLinkIcon className="h-3 w-3" />
-              </Link>
-            )}
-            {doc.links?.api && (
-              <Link
-                href={doc.links.api}
-                target="_blank"
-                rel="noreferrer"
-                className={cn(badgeVariants({ variant: "trial" }), "gap-1")}
-              >
-                API Reference
-                <ExternalLinkIcon className="h-3 w-3" />
-              </Link>
+          <div className="space-y-3">
+            <h1
+              className={cn(
+                "scroll-m-20 text-2xl sm:text-[40px] font-semibold tracking-tight"
+              )}
+            >
+              {doc.title}
+            </h1>
+            {doc.description && (
+              <p className="text-base sm:text-[20px] tracking-tight text-gray-900">
+                {doc.description}
+              </p>
             )}
           </div>
-        ) : null}
-        hej
-        <div className="pb-12 pt-8 divide-y divide-yellow-300 space-y-4">
+          {doc.links ? (
+            <div className="flex items-center space-x-2 pt-4">
+              {doc.links?.doc && (
+                <Link
+                  href={doc.links.doc}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={cn(badgeVariants({ variant: "turbo" }), "gap-1")}
+                >
+                  Docs
+                  <ExternalLinkIcon className="h-3 w-3" />
+                </Link>
+              )}
+              {doc.links?.api && (
+                <Link
+                  href={doc.links.api}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={cn(badgeVariants({ variant: "trial" }), "gap-1")}
+                >
+                  API Reference
+                  <ExternalLinkIcon className="h-3 w-3" />
+                </Link>
+              )}
+            </div>
+          ) : null}
+        </PaddingBox>
+
+        <div className="">
           <Mdx code={doc.body.code} />
         </div>
-        123
         <DocsPager doc={doc} />
-        456
       </div>
     </main>
   )

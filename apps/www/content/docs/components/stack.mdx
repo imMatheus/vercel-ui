@@ -4,10 +4,11 @@ description: Display elements vertically or horizontally on the page.
 component: true
 ---
 
-<ComponentPreview name="stack-demo" />
+<PaddingBox>
+  <ComponentPreview name="stack-demo" />
+</PaddingBox>
 
-## Installation
-
+<PaddingBox title="Installation">
 <Tabs defaultValue="cli">
 
 <TabsList>
@@ -52,22 +53,26 @@ import { Stack } from "@/components/ui/stack"
 </Stack>
 ```
 
-## Examples
+</PaddingBox>
 
-### Gap
-
-Gap is a unit on a 4px grid scale.
-
+<PaddingBox
+  title="Gap"
+  description="Gap is a unit on a 4px grid scale."
+>
 <ComponentPreview name="stack-demo" />
 
-### Padding
+</PaddingBox>
 
-Padding uses the same scale as gap on a 4px grid scale.
+<PaddingBox
+  title="Padding"
+  description="Padding uses the same scale as gap on a 4px grid scale."
+>
+  <ComponentPreview name="stack-padding" />
+</PaddingBox>
 
-<ComponentPreview name="stack-padding" />
-
-### Responsive
-
-Resize the window to observe changes to the layout.
-
-<ComponentPreview name="stack-responsive" />
+<PaddingBox
+  title="Responsive"
+  description="Resize the window to observe changes to the layout."
+>
+  <ComponentPreview name="stack-responsive" />
+</PaddingBox>

@@ -7,6 +7,8 @@
     --ds-background-100: 0 0% 100%;
     --ds-background-200: 0 0% 98%;
 
+    --border: 0, 0%, 0%, 0.08;
+
     --ds-gray-alpha-100: 0, 0%, 0%, 0.05;
     --ds-gray-alpha-200: 0, 0%, 0%, 0.08;
     --ds-gray-alpha-300: 0, 0%, 0%, 0.1;

@@ -16,6 +16,7 @@ import { ComponentPreview } from "@/components/component-preview"
 import { ComponentSource } from "@/components/component-source"
 import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button"
 import { FrameworkDocs } from "@/components/framework-docs"
+import { PaddingBox } from "@/components/padding-box"
 import { StyleWrapper } from "@/components/style-wrapper"
 import {
   Alert,
@@ -221,6 +222,7 @@ const components = {
   Image,
   Callout,
   ComponentPreview,
+  PaddingBox,
   ComponentExample,
   ComponentSource,
   AspectRatio,
