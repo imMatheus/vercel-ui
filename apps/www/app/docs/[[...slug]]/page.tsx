@@ -12,7 +12,7 @@ import { getTableOfContents } from "@/lib/toc"
 import { absoluteUrl, cn } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
 import { DocsPager } from "@/components/pager"
-import { DashboardTableOfContents } from "@/components/toc"
+import { badgeVariants } from "@/registry/default/ui/badge"
 
 interface DocPageProps {
   params: {
@@ -62,7 +62,7 @@ export async function generateMetadata({
       title: doc.title,
       description: doc.description,
       images: [siteConfig.ogImage],
-      creator: "@shadcn",
+      creator: "@whosmatu",
     },
   }
 }
@@ -85,7 +85,7 @@ export default async function DocPage({ params }: DocPageProps) {
   const toc = await getTableOfContents(doc.body.raw)
 
   return (
-    <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+    <main className="relative py-6 lg:gap-10 lg:py-8">
       <div className="mx-auto w-full min-w-0">
         <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
           <div className="overflow-hidden text-ellipsis whitespace-nowrap">
@@ -106,12 +106,12 @@ export default async function DocPage({ params }: DocPageProps) {
         </div>
         {doc.links ? (
           <div className="flex items-center space-x-2 pt-4">
-            {/* {doc.links?.doc && (
+            {doc.links?.doc && (
               <Link
                 href={doc.links.doc}
                 target="_blank"
                 rel="noreferrer"
-                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
+                className={cn(badgeVariants({ variant: "turbo" }), "gap-1")}
               >
                 Docs
                 <ExternalLinkIcon className="h-3 w-3" />
@@ -122,33 +122,22 @@ export default async function DocPage({ params }: DocPageProps) {
                 href={doc.links.api}
                 target="_blank"
                 rel="noreferrer"
-                className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
+                className={cn(badgeVariants({ variant: "trial" }), "gap-1")}
               >
                 API Reference
                 <ExternalLinkIcon className="h-3 w-3" />
               </Link>
             )}
-             */}
-            some should be here frfr
           </div>
         ) : null}
-        <div className="pb-12 pt-8">
+        hej
+        <div className="pb-12 pt-8 divide-y divide-yellow-300 space-y-4">
           <Mdx code={doc.body.code} />
         </div>
+        123
         <DocsPager doc={doc} />
+        456
       </div>
-      {doc.toc && (
-        <div className="hidden text-sm xl:block">
-          <div className="sticky top-16 -mt-10 pt-4">
-            {/* <ScrollArea className="pb-10"> */}
-            scroll area or some fr
-            <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
-              <DashboardTableOfContents toc={toc} />
-            </div>
-            {/* </ScrollArea> */}
-          </div>
-        </div>
-      )}
     </main>
   )
 }

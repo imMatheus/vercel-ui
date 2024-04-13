@@ -11,8 +11,8 @@ import { buttonVariants } from "@/registry/default/ui/button"
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background-200/95 backdrop-blur supports-[backdrop-filter]:bg-background-200/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
+    <header className="max-w-[1220px] mx-auto sticky top-0 z-50 w-full border-x border-b border-border bg-background-100">
+      <div className="flex h-16 max-w-screen-2xl items-center">
         <MainNav />
         <MobileNav />
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">

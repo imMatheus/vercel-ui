@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       url: "https://shadcn.com",
     },
   ],
-  creator: "shadcn",
+  creator: "Matheus",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@shadcn",
+    creator: "@whosmatu",
   },
   icons: {
     icon: "/favicon.ico",
@@ -95,8 +95,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div vaul-drawer-wrapper="">
               <div className="relative flex min-h-screen flex-col bg-background-200">
                 <SiteHeader />
-                <main className="flex-1">{children}</main>
-                <SiteFooter />
+                <main className="flex-1 w-full border-x border-x-border max-w-[1220px] mx-auto">
+                  {children}
+                </main>
               </div>
             </div>
             <TailwindIndicator />

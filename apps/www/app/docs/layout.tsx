@@ -8,15 +8,15 @@ interface DocsLayoutProps {
 
 export default function DocsLayout({ children }: DocsLayoutProps) {
   return (
-    <div className="border-b">
-      <div className="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
-        <aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block">
-          <ScrollArea className="h-full py-6 pr-6 lg:py-8">
+    <div className="relative flex-1 items-start md:grid md:grid-cols-[260px_1fr]">
+      <aside className="sticky border-r border-border h-[calc(100vh-64px)] min-h-0 top-16 bottom-0 hidden xl:flex flex-col z-100 w-full shrink-0">
+        <div className="relative overflow-y-auto">
+          <ScrollArea className="h-full px-6 pt-4">
             <DocsSidebarNav items={docsConfig.sidebarNav} />
           </ScrollArea>
-        </aside>
-        {children}
-      </div>
+        </div>
+      </aside>
+      {children}
     </div>
   )
 }

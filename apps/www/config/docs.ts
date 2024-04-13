@@ -26,7 +26,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Twitter",
-      href: "https://twitter.com/shadcn",
+      href: "https://twitter.com/whosmatu",
       external: true,
     },
   ],

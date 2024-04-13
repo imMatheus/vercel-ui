@@ -17,7 +17,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
     <div className="w-full">
       {items.map((item, index) => (
         <div key={index} className={cn("pb-4")}>
-          <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold">
+          <h4 className="mb-0.5 rounded-md py-1.5 text-sm font-medium text-gray-1000">
             {item.title}
           </h4>
           {item?.items?.length && (
@@ -34,23 +34,21 @@ interface DocsSidebarNavItemsProps {
   pathname: string | null
 }
 
-export function DocsSidebarNavItems({
-  items,
-  pathname,
-}: DocsSidebarNavItemsProps) {
+// SHADCNUI should not export here
+function DocsSidebarNavItems({ items, pathname }: DocsSidebarNavItemsProps) {
   return items?.length ? (
-    <div className="grid grid-flow-row auto-rows-max text-sm">
+    <div className="grid grid-flow-row auto-rows-max text-sm space-y-1">
       {items.map((item, index) =>
         item.href && !item.disabled ? (
           <Link
             key={index}
             href={item.href}
             className={cn(
-              "group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline",
+              "group flex w-full text-gray-900 items-center rounded-md px-3 h-10 leading-5 hover:no-underline",
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href
-                ? "font-medium text-foreground"
-                : "text-muted-foreground"
+                ? "bg-gray-alpha-100 text-gray-1000"
+                : "hover:bg-gray-100"
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
