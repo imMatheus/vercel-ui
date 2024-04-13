@@ -39,11 +39,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/figma",
-        destination: "/docs/figma",
-        permanent: true,
-      },
-      {
         source: "/docs/forms",
         destination: "/docs/components/form",
         permanent: false,

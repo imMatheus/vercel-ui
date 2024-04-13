@@ -24,10 +24,6 @@ export const docsConfig: DocsConfig = {
       href: "/examples",
     },
     {
-      title: "Figma",
-      href: "/docs/figma",
-    },
-    {
       title: "GitHub",
       href: "https://github.com/shadcn/ui",
       external: true,
@@ -75,11 +71,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Typography",
           href: "/docs/components/typography",
-          items: [],
-        },
-        {
-          title: "Figma",
-          href: "/docs/figma",
           items: [],
         },
         {
