@@ -1,6 +1,6 @@
 ---
-title: Dropdown Menu
-description: Displays a menu to the user — such as a set of actions or functions — triggered by a button.
+title: Menu
+description: Dropdown menu opened via button. Supports typeahead and keyboard navigation.
 featured: true
 component: true
 links:
@@ -8,9 +8,13 @@ links:
   api: https://www.radix-ui.com/docs/primitives/components/dropdown-menu#api-reference
 ---
 
-<ComponentPreview name="dropdown-menu-demo" />
+{/* TODO add link to the button component in the description */}
 
-## Installation
+<PaddingBox title="Defualt" description="Menu extends the Button component.">
+  <ComponentPreview name="dropdown-menu-demo" />
+</PaddingBox>
+
+<PaddingBox title="Installation">
 
 <Tabs defaultValue="cli">
 
@@ -75,12 +79,12 @@ import {
 </DropdownMenu>
 ```
 
-## Examples
+</PaddingBox>
 
-### Checkboxes
+<PaddingBox title="Disabled items">
+  <ComponentPreview name="dropdown-menu-checkboxes" />
+</PaddingBox>
 
-<ComponentPreview name="dropdown-menu-checkboxes" />
-
-### Radio Group
-
-<ComponentPreview name="dropdown-menu-radio-group" />
+<PaddingBox title="Radio Group">
+  <ComponentPreview name="dropdown-menu-radio-group" />
+</PaddingBox>
