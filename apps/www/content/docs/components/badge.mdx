@@ -4,8 +4,11 @@ description: Displays a badge or a component that looks like a badge.
 component: true
 ---
 
-<ComponentPreview name="badge-demo" />
+<PaddingBox title="Variants">
+  <ComponentPreview name="badge-demo" />
+</PaddingBox>
 
+<PaddingBox>
 ## Installation
 
 <Tabs defaultValue="cli">
@@ -60,20 +63,16 @@ import { badgeVariants } from "@/components/ui/badge"
 <Link className={badgeVariants({ variant: "outline" })}>Badge</Link>
 ```
 
-## Examples
+</PaddingBox>
 
-### Variants
+<PaddingBox title="Variants">
+  <ComponentPreview name="badge-demo" />
+</PaddingBox>
 
-<ComponentPreview name="badge-demo" />
+<PaddingBox title="Sizes">
+  <ComponentPreview name="badge-sizes" />
+</PaddingBox>
 
----
-
-### Sizes
-
-<ComponentPreview name="badge-sizes" />
-
----
-
-### Icons
-
-<ComponentPreview name="badge-icons" />
+<PaddingBox title="Icons">
+  <ComponentPreview name="badge-icons" />
+</PaddingBox>
