@@ -6,17 +6,17 @@ import { useTheme } from "next-themes"
 
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  MenuContainer,
 } from "@/registry/default/ui/menu"
 
 export default function ModeToggle() {
   const { setTheme } = useTheme()
 
   return (
-    <DropdownMenu>
+    <MenuContainer>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
@@ -39,6 +39,6 @@ export default function ModeToggle() {
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </MenuContainer>
   )
 }

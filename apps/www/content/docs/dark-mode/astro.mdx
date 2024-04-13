@@ -49,10 +49,10 @@ import { Moon, Sun } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
-  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  MenuContainer,
 } from "@/components/ui/dropdown-menu"
 
 export function ModeToggle() {
@@ -74,7 +74,7 @@ export function ModeToggle() {
   }, [theme])
 
   return (
-    <DropdownMenu>
+    <MenuContainer>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
@@ -97,7 +97,7 @@ export function ModeToggle() {
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </MenuContainer>
   )
 }
 ```

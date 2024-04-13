@@ -6,17 +6,17 @@ import { useTheme } from "next-themes"
 
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  MenuContainer,
 } from "@/registry/default/ui/menu"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
 
   return (
-    <DropdownMenu>
+    <MenuContainer>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="w-9 px-0">
           <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -35,6 +35,6 @@ export function ModeToggle() {
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </MenuContainer>
   )
 }

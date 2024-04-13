@@ -13,7 +13,6 @@ import {
   CommandList,
 } from "@/registry/default/ui/command"
 import {
-  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
@@ -24,6 +23,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
+  MenuContainer,
 } from "@/registry/default/ui/menu"
 
 const labels = [
@@ -48,7 +48,7 @@ export default function ComboboxDropdownMenu() {
         </span>
         <span className="text-muted-foreground">Create a new project</span>
       </p>
-      <DropdownMenu open={open} onOpenChange={setOpen}>
+      <MenuContainer open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" size="sm">
             <MoreHorizontal />
@@ -105,7 +105,7 @@ export default function ComboboxDropdownMenu() {
             </DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>
-      </DropdownMenu>
+      </MenuContainer>
     </div>
   )
 }

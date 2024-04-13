@@ -5,12 +5,12 @@ import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
 
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  MenuContainer,
 } from "@/registry/default/ui/menu"
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]
@@ -21,7 +21,7 @@ export default function DropdownMenuCheckboxes() {
   const [showPanel, setShowPanel] = React.useState<Checked>(false)
 
   return (
-    <DropdownMenu>
+    <MenuContainer>
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Open</Button>
       </DropdownMenuTrigger>
@@ -48,6 +48,6 @@ export default function DropdownMenuCheckboxes() {
           Panel
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </MenuContainer>
   )
 }

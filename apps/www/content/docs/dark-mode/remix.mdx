@@ -125,17 +125,17 @@ import { Theme, useTheme } from "remix-themes"
 
 import { Button } from "./ui/button"
 import {
-  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  MenuContainer,
 } from "./ui/dropdown-menu"
 
 export function ModeToggle() {
   const [, setTheme] = useTheme()
 
   return (
-    <DropdownMenu>
+    <MenuContainer>
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
@@ -155,7 +155,7 @@ export function ModeToggle() {
           Dark
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </MenuContainer>
   )
 }
 ```

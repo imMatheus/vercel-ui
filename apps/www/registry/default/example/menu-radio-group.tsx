@@ -4,20 +4,20 @@ import * as React from "react"
 
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  MenuContainer,
 } from "@/registry/default/ui/menu"
 
 export default function DropdownMenuRadioGroupDemo() {
   const [position, setPosition] = React.useState("bottom")
 
   return (
-    <DropdownMenu>
+    <MenuContainer>
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Open</Button>
       </DropdownMenuTrigger>
@@ -30,6 +30,6 @@ export default function DropdownMenuRadioGroupDemo() {
           <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </MenuContainer>
   )
 }

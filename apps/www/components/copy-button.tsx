@@ -9,10 +9,10 @@ import { Event, trackEvent } from "@/lib/events"
 import { cn } from "@/lib/utils"
 import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  MenuContainer,
 } from "@/registry/default/ui/menu"
 
 interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -105,7 +105,7 @@ export function CopyWithClassNames({
 
   // TODO change this to icon button
   return (
-    <DropdownMenu>
+    <MenuContainer>
       <DropdownMenuTrigger asChild>
         <Button
           size="sm"
@@ -131,7 +131,7 @@ export function CopyWithClassNames({
           Classname
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </MenuContainer>
   )
 }
 
@@ -168,7 +168,7 @@ export function CopyNpmCommandButton({
 
   // TODO change this to icon button
   return (
-    <DropdownMenu>
+    <MenuContainer>
       <DropdownMenuTrigger asChild>
         <Button
           size="sm"
@@ -208,6 +208,6 @@ export function CopyNpmCommandButton({
           bun
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    </MenuContainer>
   )
 }
