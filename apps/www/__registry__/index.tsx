@@ -147,13 +147,6 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/input")),
       files: ["registry/default/ui/input.tsx"],
     },
-    "input-otp": {
-      name: "input-otp",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/input-otp")),
-      files: ["registry/default/ui/input-otp.tsx"],
-    },
     label: {
       name: "label",
       type: "components:ui",
@@ -864,51 +857,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/input-with-text")
       ),
       files: ["registry/default/example/input-with-text.tsx"],
-    },
-    "input-otp-demo": {
-      name: "input-otp-demo",
-      type: "components:example",
-      registryDependencies: ["input-otp"],
-      component: React.lazy(
-        () => import("@/registry/default/example/input-otp-demo")
-      ),
-      files: ["registry/default/example/input-otp-demo.tsx"],
-    },
-    "input-otp-pattern": {
-      name: "input-otp-pattern",
-      type: "components:example",
-      registryDependencies: ["input-otp"],
-      component: React.lazy(
-        () => import("@/registry/default/example/input-otp-pattern")
-      ),
-      files: ["registry/default/example/input-otp-pattern.tsx"],
-    },
-    "input-otp-separator": {
-      name: "input-otp-separator",
-      type: "components:example",
-      registryDependencies: ["input-otp"],
-      component: React.lazy(
-        () => import("@/registry/default/example/input-otp-separator")
-      ),
-      files: ["registry/default/example/input-otp-separator.tsx"],
-    },
-    "input-otp-controlled": {
-      name: "input-otp-controlled",
-      type: "components:example",
-      registryDependencies: ["input-otp"],
-      component: React.lazy(
-        () => import("@/registry/default/example/input-otp-controlled")
-      ),
-      files: ["registry/default/example/input-otp-controlled.tsx"],
-    },
-    "input-otp-form": {
-      name: "input-otp-form",
-      type: "components:example",
-      registryDependencies: ["input-otp", "form"],
-      component: React.lazy(
-        () => import("@/registry/default/example/input-otp-form")
-      ),
-      files: ["registry/default/example/input-otp-form.tsx"],
     },
     "label-demo": {
       name: "label-demo",
