@@ -2,11 +2,6 @@ import { Registry } from "@/registry/schema"
 
 const ui: Registry = [
   {
-    name: "alert",
-    type: "components:ui",
-    files: ["ui/alert.tsx"],
-  },
-  {
     name: "alert-dialog",
     type: "components:ui",
     dependencies: ["@radix-ui/react-alert-dialog"],
@@ -265,18 +260,6 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["collapse"],
     files: ["example/collapse-demo.tsx"],
-  },
-  {
-    name: "alert-demo",
-    type: "components:example",
-    registryDependencies: ["alert"],
-    files: ["example/alert-demo.tsx"],
-  },
-  {
-    name: "alert-destructive",
-    type: "components:example",
-    registryDependencies: ["alert"],
-    files: ["example/alert-destructive.tsx"],
   },
   {
     name: "alert-dialog-demo",

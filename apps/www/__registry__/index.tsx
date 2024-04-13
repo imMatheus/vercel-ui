@@ -5,13 +5,6 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   default: {
-    alert: {
-      name: "alert",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/alert")),
-      files: ["registry/default/ui/alert.tsx"],
-    },
     "alert-dialog": {
       name: "alert-dialog",
       type: "components:ui",

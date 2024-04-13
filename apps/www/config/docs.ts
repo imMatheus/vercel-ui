@@ -80,11 +80,6 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
-          title: "Alert",
-          href: "/docs/components/alert",
-          items: [],
-        },
-        {
           title: "Alert Dialog",
           href: "/docs/components/alert-dialog",
           items: [],

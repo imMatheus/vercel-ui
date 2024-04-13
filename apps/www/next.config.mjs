@@ -20,12 +20,12 @@ const nextConfig = {
     return [
       {
         source: "/components",
-        destination: "/docs/components/alert",
+        destination: "/docs/components/stack",
         permanent: true,
       },
       {
         source: "/docs/components",
-        destination: "/docs/components/alert",
+        destination: "/docs/components/stack",
         permanent: true,
       },
       {
