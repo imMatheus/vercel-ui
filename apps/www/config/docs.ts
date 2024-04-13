@@ -16,10 +16,6 @@ export const docsConfig: DocsConfig = {
       href: "/docs/components/collapse",
     },
     {
-      title: "Themes",
-      href: "/themes",
-    },
-    {
       title: "Examples",
       href: "/examples",
     },
