@@ -275,13 +275,6 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/switch")),
       files: ["registry/default/ui/switch.tsx"],
     },
-    table: {
-      name: "table",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/table")),
-      files: ["registry/default/ui/table.tsx"],
-    },
     tabs: {
       name: "tabs",
       type: "components:ui",
@@ -313,13 +306,6 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/toggle")),
       files: ["registry/default/ui/toggle.tsx"],
-    },
-    "toggle-group": {
-      name: "toggle-group",
-      type: "components:ui",
-      registryDependencies: ["toggle"],
-      component: React.lazy(() => import("@/registry/default/ui/toggle-group")),
-      files: ["registry/default/ui/toggle-group.tsx"],
     },
     tooltip: {
       name: "tooltip",
@@ -714,15 +700,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/context-menu-demo")
       ),
       files: ["registry/default/example/context-menu-demo.tsx"],
-    },
-    "data-table-demo": {
-      name: "data-table-demo",
-      type: "components:example",
-      registryDependencies: ["data-table"],
-      component: React.lazy(
-        () => import("@/registry/default/example/data-table-demo")
-      ),
-      files: ["registry/default/example/data-table-demo.tsx"],
     },
     "date-picker-demo": {
       name: "date-picker-demo",
@@ -1210,15 +1187,6 @@ export const Index: Record<string, any> = {
       ),
       files: ["registry/default/example/switch-form.tsx"],
     },
-    "table-demo": {
-      name: "table-demo",
-      type: "components:example",
-      registryDependencies: ["table"],
-      component: React.lazy(
-        () => import("@/registry/default/example/table-demo")
-      ),
-      files: ["registry/default/example/table-demo.tsx"],
-    },
     "tabs-demo": {
       name: "tabs-demo",
       type: "components:example",
@@ -1326,60 +1294,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/toast-with-title")
       ),
       files: ["registry/default/example/toast-with-title.tsx"],
-    },
-    "toggle-group-demo": {
-      name: "toggle-group-demo",
-      type: "components:example",
-      registryDependencies: ["toggle-group"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-group-demo")
-      ),
-      files: ["registry/default/example/toggle-group-demo.tsx"],
-    },
-    "toggle-group-disabled": {
-      name: "toggle-group-disabled",
-      type: "components:example",
-      registryDependencies: ["toggle-group"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-group-disabled")
-      ),
-      files: ["registry/default/example/toggle-group-disabled.tsx"],
-    },
-    "toggle-group-lg": {
-      name: "toggle-group-lg",
-      type: "components:example",
-      registryDependencies: ["toggle-group"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-group-lg")
-      ),
-      files: ["registry/default/example/toggle-group-lg.tsx"],
-    },
-    "toggle-group-outline": {
-      name: "toggle-group-outline",
-      type: "components:example",
-      registryDependencies: ["toggle-group"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-group-outline")
-      ),
-      files: ["registry/default/example/toggle-group-outline.tsx"],
-    },
-    "toggle-group-sm": {
-      name: "toggle-group-sm",
-      type: "components:example",
-      registryDependencies: ["toggle-group"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-group-sm")
-      ),
-      files: ["registry/default/example/toggle-group-sm.tsx"],
-    },
-    "toggle-group-single": {
-      name: "toggle-group-single",
-      type: "components:example",
-      registryDependencies: ["toggle-group"],
-      component: React.lazy(
-        () => import("@/registry/default/example/toggle-group-single")
-      ),
-      files: ["registry/default/example/toggle-group-single.tsx"],
     },
     "toggle-demo": {
       name: "toggle-demo",

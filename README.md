@@ -1,8 +1,10 @@
-# shadcn/ui
+# vercel/ui
 
-Accessible and customizable components that you can copy and paste into your apps. Free. Open Source. **Use this to build your own component library**.
+Accessible and customizable components designed by [vercel](https://vercel.com) that you can copy and paste into your apps. Free. Open Source. **Use this to build your own component library**.
 
 ![hero](apps/www/public/og.jpg)
+
+All components, themes, colors and other design things comes from [https://vercel.com/geist](https://vercel.com/geist)
 
 ## Documentation
 

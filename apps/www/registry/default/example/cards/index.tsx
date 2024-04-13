@@ -3,7 +3,6 @@ import { CardsCalendar } from "@/registry/default/example/cards/calendar"
 import { CardsChat } from "@/registry/default/example/cards/chat"
 import { CardsCookieSettings } from "@/registry/default/example/cards/cookie-settings"
 import { CardsCreateAccount } from "@/registry/default/example/cards/create-account"
-import { CardsDataTable } from "@/registry/default/example/cards/data-table"
 import { CardsMetric } from "@/registry/default/example/cards/metric"
 import { CardsPaymentMethod } from "@/registry/default/example/cards/payment-method"
 import { CardsReportIssue } from "@/registry/default/example/cards/report-issue"
@@ -50,9 +49,7 @@ export default function CardsDemo() {
             <CardsMetric />
           </div>
         </div>
-        <div className="hidden md:block">
-          <CardsDataTable />
-        </div>
+
         <CardsShare />
         <div className="xl:hidden">
           <CardsReportIssue />

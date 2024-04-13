@@ -168,11 +168,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Data Table",
-          href: "/docs/components/data-table",
-          items: [],
-        },
-        {
           title: "Date Picker",
           href: "/docs/components/date-picker",
           items: [],
@@ -323,11 +318,7 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/toggle",
           items: [],
         },
-        {
-          title: "Toggle Group",
-          href: "/docs/components/toggle-group",
-          items: [],
-        },
+
         {
           title: "Tooltip",
           href: "/docs/components/tooltip",
