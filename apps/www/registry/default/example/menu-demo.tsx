@@ -3,40 +3,32 @@ import { Cloud, Plus, Users } from "lucide-react"
 import { Button } from "@/registry/default/ui/button"
 import {
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuShortcut,
-  DropdownMenuTrigger,
+  MenuButton,
   MenuContainer,
+  MenuItem,
 } from "@/registry/default/ui/menu"
 
 export default function DropdownMenuDemo() {
   return (
     <MenuContainer>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
-      </DropdownMenuTrigger>
+      <MenuButton>Hello</MenuButton>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuSeparator />
+        <MenuItem>
+          <Users className="mr-2 h-4 w-4" />
+          <span>Team</span>
+        </MenuItem>
 
-        <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <Users className="mr-2 h-4 w-4" />
-            <span>Team</span>
-          </DropdownMenuItem>
+        <MenuItem>
+          <Plus className="mr-2 h-4 w-4" />
+          <span>New Team</span>
+          <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
+        </MenuItem>
 
-          <DropdownMenuItem>
-            <Plus className="mr-2 h-4 w-4" />
-            <span>New Team</span>
-            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-
-        <DropdownMenuItem disabled>
+        <MenuItem disabled>
           <Cloud className="mr-2 h-4 w-4" />
           <span>API</span>
-        </DropdownMenuItem>
+        </MenuItem>
       </DropdownMenuContent>
     </MenuContainer>
   )

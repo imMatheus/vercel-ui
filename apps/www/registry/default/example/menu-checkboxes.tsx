@@ -8,8 +8,7 @@ import {
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  MenuButton,
   MenuContainer,
 } from "@/registry/default/ui/menu"
 
@@ -22,12 +21,9 @@ export default function DropdownMenuCheckboxes() {
 
   return (
     <MenuContainer>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
-      </DropdownMenuTrigger>
+      <MenuButton>Open</MenuButton>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-        <DropdownMenuSeparator />
         <DropdownMenuCheckboxItem
           checked={showStatusBar}
           onCheckedChange={setShowStatusBar}

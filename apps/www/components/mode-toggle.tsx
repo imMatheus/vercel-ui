@@ -7,9 +7,9 @@ import { useTheme } from "next-themes"
 import { Button } from "@/registry/default/ui/button"
 import {
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
+  MenuButton,
   MenuContainer,
+  MenuItem,
 } from "@/registry/default/ui/menu"
 
 export function ModeToggle() {
@@ -17,23 +17,15 @@ export function ModeToggle() {
 
   return (
     <MenuContainer>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="w-9 px-0">
-          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
+      <MenuButton>
+        <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <span className="sr-only">Toggle theme</span>
+      </MenuButton>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
+        <MenuItem onClick={() => setTheme("light")}>Light</MenuItem>
+        <MenuItem onClick={() => setTheme("dark")}>Dark</MenuItem>
+        <MenuItem onClick={() => setTheme("system")}>System</MenuItem>
       </DropdownMenuContent>
     </MenuContainer>
   )

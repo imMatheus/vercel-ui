@@ -10,9 +10,9 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/registry/default/ui/button"
 import {
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
+  MenuButton,
   MenuContainer,
+  MenuItem,
 } from "@/registry/default/ui/menu"
 
 interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
@@ -106,30 +106,19 @@ export function CopyWithClassNames({
   // TODO change this to icon button
   return (
     <MenuContainer>
-      <DropdownMenuTrigger asChild>
-        <Button
-          size="sm"
-          variant="ghost"
-          className={cn(
-            "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
-            className
-          )}
-        >
-          {hasCopied ? (
-            <CheckIcon className="h-3 w-3" />
-          ) : (
-            <CopyIcon className="h-3 w-3" />
-          )}
-          <span className="sr-only">Copy</span>
-        </Button>
-      </DropdownMenuTrigger>
+      <MenuButton asChild>
+        {hasCopied ? (
+          <CheckIcon className="h-3 w-3" />
+        ) : (
+          <CopyIcon className="h-3 w-3" />
+        )}
+        <span className="sr-only">Copy</span>
+      </MenuButton>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => copyToClipboard(value)}>
-          Component
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => copyToClipboard(classNames)}>
+        <MenuItem onClick={() => copyToClipboard(value)}>Component</MenuItem>
+        <MenuItem onClick={() => copyToClipboard(classNames)}>
           Classname
-        </DropdownMenuItem>
+        </MenuItem>
       </DropdownMenuContent>
     </MenuContainer>
   )
@@ -169,44 +158,27 @@ export function CopyNpmCommandButton({
   // TODO change this to icon button
   return (
     <MenuContainer>
-      <DropdownMenuTrigger asChild>
-        <Button
-          size="sm"
-          variant="ghost"
-          className={cn(
-            "relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
-            className
-          )}
-        >
-          {hasCopied ? (
-            <CheckIcon className="h-3 w-3" />
-          ) : (
-            <CopyIcon className="h-3 w-3" />
-          )}
-          <span className="sr-only">Copy</span>
-        </Button>
-      </DropdownMenuTrigger>
+      <MenuButton>
+        {hasCopied ? (
+          <CheckIcon className="h-3 w-3" />
+        ) : (
+          <CopyIcon className="h-3 w-3" />
+        )}
+        <span className="sr-only">Copy</span>
+      </MenuButton>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem
-          onClick={() => copyCommand(commands.__npmCommand__, "npm")}
-        >
+        <MenuItem onClick={() => copyCommand(commands.__npmCommand__, "npm")}>
           npm
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => copyCommand(commands.__yarnCommand__, "yarn")}
-        >
+        </MenuItem>
+        <MenuItem onClick={() => copyCommand(commands.__yarnCommand__, "yarn")}>
           yarn
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => copyCommand(commands.__pnpmCommand__, "pnpm")}
-        >
+        </MenuItem>
+        <MenuItem onClick={() => copyCommand(commands.__pnpmCommand__, "pnpm")}>
           pnpm
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => copyCommand(commands.__bunCommand__, "bun")}
-        >
+        </MenuItem>
+        <MenuItem onClick={() => copyCommand(commands.__bunCommand__, "bun")}>
           bun
-        </DropdownMenuItem>
+        </MenuItem>
       </DropdownMenuContent>
     </MenuContainer>
   )

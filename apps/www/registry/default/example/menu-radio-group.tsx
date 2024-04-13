@@ -8,8 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  MenuButton,
   MenuContainer,
 } from "@/registry/default/ui/menu"
 
@@ -18,12 +17,9 @@ export default function DropdownMenuRadioGroupDemo() {
 
   return (
     <MenuContainer>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
-      </DropdownMenuTrigger>
+      <MenuButton>Open</MenuButton>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
-        <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
           <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>

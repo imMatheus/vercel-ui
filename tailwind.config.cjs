@@ -163,6 +163,16 @@ module.exports = {
 
       boxShadow: {
         inner: "var(--ds-shadow-inset)",
+        border: "var(--ds-shadow-border)",
+        small: "var(--ds-shadow-small)",
+        ["border-small"]: "var(--ds-shadow-border-small)",
+        medium: "var(--ds-shadow-medium)",
+        large: "var(--ds-shadow-large)",
+        ["border-large"]: "var(--ds-shadow-border-large)",
+        tooltip: "var(--ds-shadow-tooltip)",
+        menu: "var(--ds-shadow-menu)",
+        modal: "var(--ds-shadow-modal)",
+        fullscreen: "var(--ds-shadow-fullscreen)",
       },
 
       fontFamily: {

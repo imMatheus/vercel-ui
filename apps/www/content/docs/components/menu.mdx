@@ -57,24 +57,22 @@ npm install @radix-ui/react-dropdown-menu
 ```tsx
 import {
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  MenuButton,
   MenuContainer,
+  MenuItem,
 } from "@/components/ui/dropdown-menu"
 ```
 
 ```tsx
 <MenuContainer>
-  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+  <MenuButton>Open</MenuButton>
   <DropdownMenuContent>
     <DropdownMenuLabel>My Account</DropdownMenuLabel>
-    <DropdownMenuSeparator />
-    <DropdownMenuItem>Profile</DropdownMenuItem>
-    <DropdownMenuItem>Billing</DropdownMenuItem>
-    <DropdownMenuItem>Team</DropdownMenuItem>
-    <DropdownMenuItem>Subscription</DropdownMenuItem>
+    <MenuItem>Profile</MenuItem>
+    <MenuItem>Billing</MenuItem>
+    <MenuItem>Team</MenuItem>
+    <MenuItem>Subscription</MenuItem>
   </DropdownMenuContent>
 </MenuContainer>
 ```

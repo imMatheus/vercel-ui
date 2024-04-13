@@ -126,9 +126,9 @@ import { Theme, useTheme } from "remix-themes"
 import { Button } from "./ui/button"
 import {
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
+  MenuButton,
   MenuContainer,
+  MenuItem,
 } from "./ui/dropdown-menu"
 
 export function ModeToggle() {
@@ -136,24 +136,14 @@ export function ModeToggle() {
 
   return (
     <MenuContainer>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          // TODO change this to icon button
-          size="sm"
-        >
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
+      <MenuButton>
+        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <span className="sr-only">Toggle theme</span>
+      </MenuButton>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme(Theme.LIGHT)}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme(Theme.DARK)}>
-          Dark
-        </DropdownMenuItem>
+        <MenuItem onClick={() => setTheme(Theme.LIGHT)}>Light</MenuItem>
+        <MenuItem onClick={() => setTheme(Theme.DARK)}>Dark</MenuItem>
       </DropdownMenuContent>
     </MenuContainer>
   )

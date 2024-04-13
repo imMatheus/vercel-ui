@@ -5,25 +5,12 @@ import { Calendar, MoreHorizontal, Tags, Trash, User } from "lucide-react"
 
 import { Button } from "@/registry/default/ui/button"
 import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/registry/default/ui/command"
-import {
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
+  MenuButton,
   MenuContainer,
+  MenuItem,
 } from "@/registry/default/ui/menu"
 
 const labels = [
@@ -49,61 +36,25 @@ export default function ComboboxDropdownMenu() {
         <span className="text-muted-foreground">Create a new project</span>
       </p>
       <MenuContainer open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="sm">
-            <MoreHorizontal />
-          </Button>
-        </DropdownMenuTrigger>
+        <MenuButton>
+          <MoreHorizontal />
+        </MenuButton>
         <DropdownMenuContent align="end" className="w-[200px]">
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
-          <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <User className="mr-2 h-4 w-4" />
-              Assign to...
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Calendar className="mr-2 h-4 w-4" />
-              Set due date...
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuSub>
-              <DropdownMenuSubTrigger>
-                <Tags className="mr-2 h-4 w-4" />
-                Apply label
-              </DropdownMenuSubTrigger>
-              <DropdownMenuSubContent className="p-0">
-                <Command>
-                  <CommandInput
-                    placeholder="Filter label..."
-                    autoFocus={true}
-                  />
-                  <CommandList>
-                    <CommandEmpty>No label found.</CommandEmpty>
-                    <CommandGroup>
-                      {labels.map((label) => (
-                        <CommandItem
-                          key={label}
-                          value={label}
-                          onSelect={(value) => {
-                            setLabel(value)
-                            setOpen(false)
-                          }}
-                        >
-                          {label}
-                        </CommandItem>
-                      ))}
-                    </CommandGroup>
-                  </CommandList>
-                </Command>
-              </DropdownMenuSubContent>
-            </DropdownMenuSub>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-red-600">
-              <Trash className="mr-2 h-4 w-4" />
-              Delete
-              <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
+
+          <MenuItem>
+            <User className="mr-2 h-4 w-4" />
+            Assign to...
+          </MenuItem>
+          <MenuItem>
+            <Calendar className="mr-2 h-4 w-4" />
+            Set due date...
+          </MenuItem>
+          <MenuItem className="text-red-600">
+            <Trash className="mr-2 h-4 w-4" />
+            Delete
+            <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
+          </MenuItem>
         </DropdownMenuContent>
       </MenuContainer>
     </div>
