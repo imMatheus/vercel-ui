@@ -110,15 +110,6 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/drawer")),
       files: ["registry/default/ui/drawer.tsx"],
     },
-    "dropdown-menu": {
-      name: "dropdown-menu",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(
-        () => import("@/registry/default/ui/dropdown-menu")
-      ),
-      files: ["registry/default/ui/dropdown-menu.tsx"],
-    },
     form: {
       name: "form",
       type: "components:ui",
@@ -146,6 +137,13 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/label")),
       files: ["registry/default/ui/label.tsx"],
+    },
+    menu: {
+      name: "menu",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/menu")),
+      files: ["registry/default/ui/menu.tsx"],
     },
     menubar: {
       name: "menubar",
@@ -620,7 +618,7 @@ export const Index: Record<string, any> = {
     "combobox-dropdown-menu": {
       name: "combobox-dropdown-menu",
       type: "components:example",
-      registryDependencies: ["command", "dropdown-menu", "button"],
+      registryDependencies: ["command", "menu", "button"],
       component: React.lazy(
         () => import("@/registry/default/example/combobox-dropdown-menu")
       ),
@@ -752,33 +750,6 @@ export const Index: Record<string, any> = {
       ),
       files: ["registry/default/example/drawer-dialog.tsx"],
     },
-    "dropdown-menu-demo": {
-      name: "dropdown-menu-demo",
-      type: "components:example",
-      registryDependencies: ["dropdown-menu"],
-      component: React.lazy(
-        () => import("@/registry/default/example/dropdown-menu-demo")
-      ),
-      files: ["registry/default/example/dropdown-menu-demo.tsx"],
-    },
-    "dropdown-menu-checkboxes": {
-      name: "dropdown-menu-checkboxes",
-      type: "components:example",
-      registryDependencies: ["dropdown-menu", "checkbox"],
-      component: React.lazy(
-        () => import("@/registry/default/example/dropdown-menu-checkboxes")
-      ),
-      files: ["registry/default/example/dropdown-menu-checkboxes.tsx"],
-    },
-    "dropdown-menu-radio-group": {
-      name: "dropdown-menu-radio-group",
-      type: "components:example",
-      registryDependencies: ["dropdown-menu", "radio-group"],
-      component: React.lazy(
-        () => import("@/registry/default/example/dropdown-menu-radio-group")
-      ),
-      files: ["registry/default/example/dropdown-menu-radio-group.tsx"],
-    },
     "hover-card-demo": {
       name: "hover-card-demo",
       type: "components:example",
@@ -859,6 +830,33 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/label-demo")
       ),
       files: ["registry/default/example/label-demo.tsx"],
+    },
+    "menu-demo": {
+      name: "menu-demo",
+      type: "components:example",
+      registryDependencies: ["menu"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-demo")
+      ),
+      files: ["registry/default/example/menu-demo.tsx"],
+    },
+    "menu-checkboxes": {
+      name: "menu-checkboxes",
+      type: "components:example",
+      registryDependencies: ["menu", "checkbox"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-checkboxes")
+      ),
+      files: ["registry/default/example/menu-checkboxes.tsx"],
+    },
+    "menu-radio-group": {
+      name: "menu-radio-group",
+      type: "components:example",
+      registryDependencies: ["menu", "radio-group"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-radio-group")
+      ),
+      files: ["registry/default/example/menu-radio-group.tsx"],
     },
     "menubar-demo": {
       name: "menubar-demo",

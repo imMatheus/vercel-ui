@@ -165,11 +165,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Dropdown Menu",
-          href: "/docs/components/dropdown-menu",
-          items: [],
-        },
-        {
           title: "Form",
           href: "/docs/components/form",
           items: [],
@@ -187,6 +182,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Label",
           href: "/docs/components/label",
+          items: [],
+        },
+        {
+          title: "Menu",
+          href: "/docs/components/menu",
           items: [],
         },
         {

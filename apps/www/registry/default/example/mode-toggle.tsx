@@ -10,7 +10,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from "@/registry/default/ui/menu"
 
 export default function ModeToggle() {
   const { setTheme } = useTheme()

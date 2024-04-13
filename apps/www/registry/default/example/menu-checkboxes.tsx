@@ -11,7 +11,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from "@/registry/default/ui/menu"
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 
