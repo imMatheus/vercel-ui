@@ -194,12 +194,6 @@ const ui: Registry = [
     files: ["ui/skeleton.tsx"],
   },
   {
-    name: "slider",
-    type: "components:ui",
-    dependencies: ["@radix-ui/react-slider"],
-    files: ["ui/slider.tsx"],
-  },
-  {
     name: "sonner",
     type: "components:ui",
     dependencies: ["sonner", "next-themes"],
@@ -732,12 +726,6 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["skeleton"],
     files: ["example/skeleton-card.tsx"],
-  },
-  {
-    name: "slider-demo",
-    type: "components:example",
-    registryDependencies: ["slider"],
-    files: ["example/slider-demo.tsx"],
   },
   {
     name: "sonner-demo",

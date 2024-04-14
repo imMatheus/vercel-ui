@@ -192,12 +192,6 @@
     "type": "components:ui"
   },
   {
-    "name": "slider",
-    "dependencies": ["@radix-ui/react-slider"],
-    "files": ["ui/slider.tsx"],
-    "type": "components:ui"
-  },
-  {
     "name": "sonner",
     "dependencies": ["sonner", "next-themes"],
     "files": ["ui/sonner.tsx"],
