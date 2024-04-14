@@ -576,7 +576,7 @@ const example: Registry = [
     name: "menu-link-items",
     type: "components:example",
     registryDependencies: ["menu"],
-    files: ["example/menu-disabled-items.tsx"],
+    files: ["example/menu-link-items.tsx"],
   },
   {
     name: "menu-position",

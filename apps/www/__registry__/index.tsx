@@ -775,7 +775,7 @@ export const Index: Record<string, any> = {
       component: React.lazy(
         () => import("@/registry/default/example/menu-link-items")
       ),
-      files: ["registry/default/example/menu-disabled-items.tsx"],
+      files: ["registry/default/example/menu-link-items.tsx"],
     },
     "menu-position": {
       name: "menu-position",

@@ -1,26 +1,25 @@
-import { Cloud, Plus, Users } from "lucide-react"
-
-import { Button } from "@/registry/default/ui/button"
 import {
-  DropdownMenuShortcut,
   Menu,
   MenuButton,
   MenuContainer,
-  MenuItem,
+  MenuLink,
 } from "@/registry/default/ui/menu"
 
-export default function DropdownMenuDemo() {
+export default function MenuLinksDemo() {
   return (
-    <MenuContainer>
-      <MenuButton>links</MenuButton>
-      <Menu width={200}>
-        <MenuItem onClick={() => alert("one")}>One</MenuItem>
-        <MenuItem onClick={() => alert("one")}>Two</MenuItem>
-        <MenuItem onClick={() => alert("one")}>Three</MenuItem>
-        <MenuItem onClick={() => alert("one")} type="error">
-          Delete
-        </MenuItem>
-      </Menu>
-    </MenuContainer>
+    <>
+      <MenuContainer>
+        <MenuButton>Actions</MenuButton>
+        <Menu width={200}>
+          <MenuLink href="/design/menu#custom-trigger">One</MenuLink>
+          <MenuLink href="#">Two</MenuLink>
+          <MenuLink href="#">Three</MenuLink>
+        </Menu>
+      </MenuContainer>
+      <div className="group">
+        <p className="bg-red-400">class</p>
+        <p className="!no-underline">heej</p>
+      </div>
+    </>
   )
 }

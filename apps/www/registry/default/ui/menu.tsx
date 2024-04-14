@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { Check, Circle } from "lucide-react"
 
@@ -39,7 +40,7 @@ const Menu = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={cn(
-        "z-50 min-w-[8rem] overflow-hidden font-sm rounded-xl shadow-menu bg-background-100 p-2 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+        "z-50 min-w-[150px] overflow-hidden font-sm rounded-xl shadow-menu bg-background-100 p-2 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
         className
       )}
       align={align}
@@ -59,7 +60,7 @@ const MenuItem = React.forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex h-10 select-none items-center rounded-md text-gray-1000 px-2 text-sm outline-none transition-colors focus:bg-gray-alpha-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      "relative flex h-10 select-none items-center rounded-md cursor-pointer text-gray-1000 px-2 text-sm outline-none transition-colors focus:bg-gray-alpha-100 data-[disabled]:pointer-events-none data-[disabled]:text-gray-700",
       type === "error" && "text-red-900",
       className
     )}
@@ -67,6 +68,18 @@ const MenuItem = React.forwardRef<
   />
 ))
 MenuItem.displayName = DropdownMenuPrimitive.Item.displayName
+
+const MenuLink = React.forwardRef<
+  React.ElementRef<typeof DropdownMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
+    href: string
+  }
+>(({ className, href, children, ...props }, ref) => (
+  <MenuItem asChild {...props}>
+    <Link href={href}>{children}</Link>
+  </MenuItem>
+))
+MenuLink.displayName = DropdownMenuPrimitive.Item.displayName
 
 const DropdownMenuCheckboxItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,
@@ -149,6 +162,7 @@ export {
   MenuContainer,
   Menu,
   MenuItem,
+  MenuLink,
   MenuButton,
   DropdownMenuCheckboxItem,
   DropdownMenuRadioItem,
