@@ -2,13 +2,17 @@
 
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
-import { Check, ChevronRight, Circle } from "lucide-react"
+import { Check, Circle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
 import { Button } from "./button"
 
-const MenuContainer = DropdownMenuPrimitive.Root
+const MenuContainer = ({ children }: { children: React.ReactNode }) => (
+  <DropdownMenuPrimitive.Root modal={false}>
+    {children}
+  </DropdownMenuPrimitive.Root>
+)
 
 const MenuButton = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Trigger>,
@@ -29,7 +33,7 @@ const Menu = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content> & {
     width?: number
   }
->(({ className, sideOffset = 4, width, ...props }, ref) => (
+>(({ className, sideOffset = 8, width, align = "start", ...props }, ref) => (
   <DropdownMenuPrimitive.Portal>
     <DropdownMenuPrimitive.Content
       ref={ref}
@@ -38,6 +42,7 @@ const Menu = React.forwardRef<
         "z-50 min-w-[8rem] overflow-hidden font-sm rounded-xl shadow-menu bg-background-100 p-2 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
         className
       )}
+      align={align}
       style={{ width: width ? `${width}px` : undefined }}
       {...props}
     />

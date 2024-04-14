@@ -225,11 +225,6 @@ const ui: Registry = [
     files: ["ui/switch.tsx"],
   },
   {
-    name: "table",
-    type: "components:ui",
-    files: ["ui/table.tsx"],
-  },
-  {
     name: "tabs",
     type: "components:ui",
     dependencies: ["@radix-ui/react-tabs"],
@@ -566,6 +561,36 @@ const example: Registry = [
     files: ["example/menu-checkboxes.tsx"],
   },
   {
+    name: "menu-custom-trigger",
+    type: "components:example",
+    registryDependencies: ["menu"],
+    files: ["example/menu-custom-trigger.tsx"],
+  },
+  {
+    name: "menu-disabled-items",
+    type: "components:example",
+    registryDependencies: ["menu"],
+    files: ["example/menu-disabled-items.tsx"],
+  },
+  {
+    name: "menu-link-items",
+    type: "components:example",
+    registryDependencies: ["menu"],
+    files: ["example/menu-disabled-items.tsx"],
+  },
+  {
+    name: "menu-position",
+    type: "components:example",
+    registryDependencies: ["menu"],
+    files: ["example/menu-position.tsx"],
+  },
+  {
+    name: "menu-prefix",
+    type: "components:example",
+    registryDependencies: ["menu"],
+    files: ["example/menu-prefix.tsx"],
+  },
+  {
     name: "menu-radio-group",
     type: "components:example",
     registryDependencies: ["menu", "radio-group"],
@@ -794,12 +819,6 @@ const example: Registry = [
     files: ["example/switch-form.tsx"],
   },
   {
-    name: "table-demo",
-    type: "components:example",
-    registryDependencies: ["table"],
-    files: ["example/table-demo.tsx"],
-  },
-  {
     name: "tabs-demo",
     type: "components:example",
     registryDependencies: ["tabs"],
@@ -951,11 +970,6 @@ const example: Registry = [
     name: "mode-toggle",
     type: "components:example",
     files: ["example/mode-toggle.tsx"],
-  },
-  {
-    name: "cards",
-    type: "components:example",
-    files: ["example/cards/cards.tsx"],
   },
 ]
 

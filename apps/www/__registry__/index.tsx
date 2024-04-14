@@ -110,6 +110,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/drawer")),
       files: ["registry/default/ui/drawer.tsx"],
     },
+    menu: {
+      name: "menu",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/menu")),
+      files: ["registry/default/ui/menu.tsx"],
+    },
     form: {
       name: "form",
       type: "components:ui",
@@ -137,13 +144,6 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/label")),
       files: ["registry/default/ui/label.tsx"],
-    },
-    menu: {
-      name: "menu",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/menu")),
-      files: ["registry/default/ui/menu.tsx"],
     },
     menubar: {
       name: "menubar",
@@ -299,24 +299,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/collapse-demo")
       ),
       files: ["registry/default/example/collapse-demo.tsx"],
-    },
-    "alert-demo": {
-      name: "alert-demo",
-      type: "components:example",
-      registryDependencies: ["alert"],
-      component: React.lazy(
-        () => import("@/registry/default/example/alert-demo")
-      ),
-      files: ["registry/default/example/alert-demo.tsx"],
-    },
-    "alert-destructive": {
-      name: "alert-destructive",
-      type: "components:example",
-      registryDependencies: ["alert"],
-      component: React.lazy(
-        () => import("@/registry/default/example/alert-destructive")
-      ),
-      files: ["registry/default/example/alert-destructive.tsx"],
     },
     "alert-dialog-demo": {
       name: "alert-dialog-demo",
@@ -750,6 +732,78 @@ export const Index: Record<string, any> = {
       ),
       files: ["registry/default/example/drawer-dialog.tsx"],
     },
+    "menu-demo": {
+      name: "menu-demo",
+      type: "components:example",
+      registryDependencies: ["menu"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-demo")
+      ),
+      files: ["registry/default/example/menu-demo.tsx"],
+    },
+    "menu-checkboxes": {
+      name: "menu-checkboxes",
+      type: "components:example",
+      registryDependencies: ["menu", "checkbox"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-checkboxes")
+      ),
+      files: ["registry/default/example/menu-checkboxes.tsx"],
+    },
+    "menu-custom-trigger": {
+      name: "menu-custom-trigger",
+      type: "components:example",
+      registryDependencies: ["menu"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-custom-trigger")
+      ),
+      files: ["registry/default/example/menu-custom-trigger.tsx"],
+    },
+    "menu-disabled-items": {
+      name: "menu-disabled-items",
+      type: "components:example",
+      registryDependencies: ["menu"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-disabled-items")
+      ),
+      files: ["registry/default/example/menu-disabled-items.tsx"],
+    },
+    "menu-link-items": {
+      name: "menu-link-items",
+      type: "components:example",
+      registryDependencies: ["menu"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-link-items")
+      ),
+      files: ["registry/default/example/menu-disabled-items.tsx"],
+    },
+    "menu-position": {
+      name: "menu-position",
+      type: "components:example",
+      registryDependencies: ["menu"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-position")
+      ),
+      files: ["registry/default/example/menu-position.tsx"],
+    },
+    "menu-prefix": {
+      name: "menu-prefix",
+      type: "components:example",
+      registryDependencies: ["menu"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-prefix")
+      ),
+      files: ["registry/default/example/menu-prefix.tsx"],
+    },
+    "menu-radio-group": {
+      name: "menu-radio-group",
+      type: "components:example",
+      registryDependencies: ["menu", "radio-group"],
+      component: React.lazy(
+        () => import("@/registry/default/example/menu-radio-group")
+      ),
+      files: ["registry/default/example/menu-radio-group.tsx"],
+    },
     "hover-card-demo": {
       name: "hover-card-demo",
       type: "components:example",
@@ -830,33 +884,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/label-demo")
       ),
       files: ["registry/default/example/label-demo.tsx"],
-    },
-    "menu-demo": {
-      name: "menu-demo",
-      type: "components:example",
-      registryDependencies: ["menu"],
-      component: React.lazy(
-        () => import("@/registry/default/example/menu-demo")
-      ),
-      files: ["registry/default/example/menu-demo.tsx"],
-    },
-    "menu-checkboxes": {
-      name: "menu-checkboxes",
-      type: "components:example",
-      registryDependencies: ["menu", "checkbox"],
-      component: React.lazy(
-        () => import("@/registry/default/example/menu-checkboxes")
-      ),
-      files: ["registry/default/example/menu-checkboxes.tsx"],
-    },
-    "menu-radio-group": {
-      name: "menu-radio-group",
-      type: "components:example",
-      registryDependencies: ["menu", "radio-group"],
-      component: React.lazy(
-        () => import("@/registry/default/example/menu-radio-group")
-      ),
-      files: ["registry/default/example/menu-radio-group.tsx"],
     },
     "menubar-demo": {
       name: "menubar-demo",
@@ -1091,15 +1118,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/stack-padding")
       ),
       files: ["registry/default/example/stack-padding.tsx"],
-    },
-    "stack-responsive": {
-      name: "stack-responsive",
-      type: "components:example",
-      registryDependencies: ["stack"],
-      component: React.lazy(
-        () => import("@/registry/default/example/stack-responsive")
-      ),
-      files: ["registry/default/example/stack-responsive.tsx"],
     },
     "stack-responsive": {
       name: "stack-responsive",
