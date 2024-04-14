@@ -1,4 +1,5 @@
 import path from "path"
+import { getHighlighter } from "@shikijs/compat"
 import {
   defineDocumentType,
   defineNestedType,
@@ -9,7 +10,7 @@ import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
 import { codeImport } from "remark-code-import"
 import remarkGfm from "remark-gfm"
-import { getHighlighter, loadTheme } from "shiki"
+import { createCssVariablesTheme } from "shiki"
 import { visit } from "unist-util-visit"
 
 import { rehypeComponent } from "./lib/rehype-component"
@@ -115,10 +116,19 @@ export default makeSource({
         rehypePrettyCode,
         {
           getHighlighter: async () => {
-            const theme = await loadTheme(
-              path.join(process.cwd(), "/lib/themes/dark.json")
-            )
-            return await getHighlighter({ theme })
+            // colors are defined in styles/mdx.css file
+            const myTheme = createCssVariablesTheme({
+              name: "css-variables",
+              variablePrefix: "--shiki-",
+              variableDefaults: {},
+              fontStyle: true,
+            })
+
+            return await getHighlighter({
+              langs: ["tsx", "typescript"],
+              themes: [myTheme],
+              theme: myTheme,
+            })
           },
           onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty

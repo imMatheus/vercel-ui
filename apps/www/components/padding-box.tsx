@@ -1,16 +1,12 @@
 import * as React from "react"
 
-interface ComponentPreviewProps {
+interface PaddingBoxProps {
   title?: string
   description?: string
   children: React.ReactNode
 }
 
-export function PaddingBox({
-  title,
-  description,
-  children,
-}: ComponentPreviewProps) {
+export function PaddingBox({ title, description, children }: PaddingBoxProps) {
   const hasLabel = !!title || !!description
 
   return (

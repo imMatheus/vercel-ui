@@ -173,12 +173,6 @@ importers:
       '@radix-ui/react-select':
         specifier: ^2.0.0
         version: 2.0.0(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-separator':
-        specifier: ^1.0.3
-        version: 1.0.3(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-slider':
-        specifier: ^1.1.2
-        version: 1.1.2(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.7)(react@18.2.0)
@@ -224,18 +218,9 @@ importers:
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
-      embla-carousel-autoplay:
-        specifier: 8.0.0-rc15
-        version: 8.0.0-rc15(embla-carousel@8.0.0-rc15)
-      embla-carousel-react:
-        specifier: 8.0.0-rc15
-        version: 8.0.0-rc15(react@18.2.0)
       geist:
         specifier: ^1.1.0
         version: 1.1.0(next@14.0.4)
-      input-otp:
-        specifier: ^1.0.1
-        version: 1.0.1(react-dom@18.2.0)(react@18.2.0)
       jotai:
         specifier: ^2.1.0
         version: 2.1.0(react@18.2.0)
@@ -294,6 +279,9 @@ importers:
         specifier: ^3.21.4
         version: 3.21.4
     devDependencies:
+      '@shikijs/compat':
+        specifier: ^1.1.7
+        version: 1.3.0
       '@types/lodash.template':
         specifier: ^4.5.1
         version: 4.5.1
@@ -332,7 +320,7 @@ importers:
         version: 6.1.1
       rehype-pretty-code:
         specifier: ^0.6.0
-        version: 0.6.0(shiki@0.12.1)
+        version: 0.6.0(shiki@1.3.0)
       rehype-slug:
         specifier: ^5.1.0
         version: 5.1.0
@@ -349,8 +337,8 @@ importers:
         specifier: ^4.1.3
         version: 4.1.3
       shiki:
-        specifier: ^0.12.1
-        version: 0.12.1
+        specifier: ^1.1.7
+        version: 1.3.0
       tailwindcss:
         specifier: ^3.4.0
         version: 3.4.0(ts-node@10.9.1)
@@ -3620,58 +3608,6 @@ packages:
       react-remove-scroll: 2.5.5(@types/react@18.2.7)(react@18.2.0)
     dev: false
 
-  /@radix-ui/react-separator@1.0.3(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-itYmTy/kokS21aiV5+Z56MZB54KrhPgn6eHDKkFeOLR34HMN2s8PaN47qZZAGnvupcjxHaFZnW4pQEh0BvvVuw==}
-    peerDependencies:
-      '@types/react': '*'
-      '@types/react-dom': '*'
-      react: ^16.8 || ^17.0 || ^18.0
-      react-dom: ^16.8 || ^17.0 || ^18.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      '@types/react-dom':
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.22.3
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
-      '@types/react': 18.2.7
-      '@types/react-dom': 18.2.4
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
-  /@radix-ui/react-slider@1.1.2(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-NKs15MJylfzVsCagVSWKhGGLNR1W9qWs+HtgbmjjVUB3B9+lb3PYoXxVju3kOrpf0VKyVCtZp+iTwVoqpa1Chw==}
-    peerDependencies:
-      '@types/react': '*'
-      '@types/react-dom': '*'
-      react: ^16.8 || ^17.0 || ^18.0
-      react-dom: ^16.8 || ^17.0 || ^18.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      '@types/react-dom':
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.22.3
-      '@radix-ui/number': 1.0.1
-      '@radix-ui/primitive': 1.0.1
-      '@radix-ui/react-collection': 1.0.3(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.7)(react@18.2.0)
-      '@radix-ui/react-context': 1.0.1(@types/react@18.2.7)(react@18.2.0)
-      '@radix-ui/react-direction': 1.0.1(@types/react@18.2.7)(react@18.2.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.2.7)(react@18.2.0)
-      '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.2.7)(react@18.2.0)
-      '@radix-ui/react-use-previous': 1.0.1(@types/react@18.2.7)(react@18.2.0)
-      '@radix-ui/react-use-size': 1.0.1(@types/react@18.2.7)(react@18.2.0)
-      '@types/react': 18.2.7
-      '@types/react-dom': 18.2.4
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /@radix-ui/react-slot@1.0.0(react@18.2.0):
     resolution: {integrity: sha512-3mrKauI/tWXo1Ll+gN5dHcxDPdm/Df1ufcDLCecn+pnCIVcdWE7CujXo8QaXOWRJyZyQWWbpB8eFwHzWXlv5mQ==}
     peerDependencies:
@@ -4041,6 +3977,24 @@ packages:
   /@rushstack/eslint-patch@1.3.0:
     resolution: {integrity: sha512-IthPJsJR85GhOkp3Hvp8zFOPK5ynKn6STyHa/WZpioK7E1aYDiBzpqQPrngc14DszIUkIrdd3k9Iu0XSzlP/1w==}
     dev: false
+
+  /@shikijs/compat@1.3.0:
+    resolution: {integrity: sha512-IKckZga9SFtXx+s8r1imcs8PhsENaUtiil715/GruW3OKu+hn0SkK2f9PDFmExzQIwR36qqFH+jN9eG12PtAjw==}
+    dependencies:
+      '@shikijs/core': 1.3.0
+      '@shikijs/transformers': 1.3.0
+      shiki: 1.3.0
+    dev: true
+
+  /@shikijs/core@1.3.0:
+    resolution: {integrity: sha512-7fedsBfuILDTBmrYZNFI8B6ATTxhQAasUHllHmjvSZPnoq4bULWoTpHwmuQvZ8Aq03/tAa2IGo6RXqWtHdWaCA==}
+    dev: true
+
+  /@shikijs/transformers@1.3.0:
+    resolution: {integrity: sha512-3mlpg2I9CjhjE96dEWQOGeCWoPcyTov3s4aAsHmgvnTHa8MBknEnCQy8/xivJPSpD+olqOqIEoHnLfbNJK29AA==}
+    dependencies:
+      shiki: 1.3.0
+    dev: true
 
   /@shuding/opentype.js@1.4.0-beta.0:
     resolution: {integrity: sha512-3NgmNyH3l/Hv6EvsWJbsvpcpUba6R8IREQ83nH83cyakCw7uM1arZKNfHwv1Wz6jgqrF/j4x5ELvR6PnK9nTcA==}
@@ -5694,36 +5648,6 @@ packages:
   /electron-to-chromium@1.4.450:
     resolution: {integrity: sha512-BLG5HxSELlrMx7dJ2s+8SFlsCtJp37Zpk2VAxyC6CZtbc+9AJeZHfYHbrlSgdXp6saQ8StMqOTEDaBKgA7u1sw==}
 
-  /embla-carousel-autoplay@8.0.0-rc15(embla-carousel@8.0.0-rc15):
-    resolution: {integrity: sha512-ABTbDJGNb9jzI9OV2vSpbUvxUA0ELmK0SI3yPm8Haj3ghssS+vElfahoDqp7zuFkWBRih6w3B51oMPKdF5J55A==}
-    peerDependencies:
-      embla-carousel: 8.0.0-rc15
-    dependencies:
-      embla-carousel: 8.0.0-rc15
-    dev: false
-
-  /embla-carousel-react@8.0.0-rc15(react@18.2.0):
-    resolution: {integrity: sha512-PePOkyPMWsUDNJKYRhUmGScYhex9mfpEiYiKT8OgwP/4K60plW0qk8cAXWvS9N61A/3RkUq7uz+hQsmhAtYMcA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.1 || ^18.0.0
-    dependencies:
-      embla-carousel: 8.0.0-rc15
-      embla-carousel-reactive-utils: 8.0.0-rc15(embla-carousel@8.0.0-rc15)
-      react: 18.2.0
-    dev: false
-
-  /embla-carousel-reactive-utils@8.0.0-rc15(embla-carousel@8.0.0-rc15):
-    resolution: {integrity: sha512-17Pr+N2vULFS8Lxzi2jaebwVloiFJLpdJMJLKJKQ26NzEmX8pVtHSu3uuTWc8HPwye5HFugqCPJ2QoWWhKs6Kg==}
-    peerDependencies:
-      embla-carousel: 8.0.0-rc15
-    dependencies:
-      embla-carousel: 8.0.0-rc15
-    dev: false
-
-  /embla-carousel@8.0.0-rc15:
-    resolution: {integrity: sha512-s7VPexK2h8VEYjEVQFnJAPcRnY5YqJYicFxKVVyWXP3Hk9FFDkT0kqVxMM1PcL187qHOUgmGVHOrfC8xWy3OKQ==}
-    dev: false
-
   /emoji-regex@10.2.1:
     resolution: {integrity: sha512-97g6QgOk8zlDRdgq1WxwgTMgEWGVAQvB5Fdpgc1MkNy56la5SKP9GsMXKDOdqwn90/41a8yPwIGk1Y6WVbeMQA==}
     dev: false
@@ -7091,16 +7015,6 @@ packages:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
     dev: false
 
-  /input-otp@1.0.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-AFMGRsOwXcH7koO+8nnVcJFYEe92tNmRlb2TUKbj9Bpdyc44GaS3LfJam3MdoXQv1jejpMS0+fxJFSCsEDHd9A==}
-    peerDependencies:
-      react: ^16.8 || ^17.0 || ^18.0
-      react-dom: ^16.8 || ^17.0 || ^18.0
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /internal-slot@1.0.5:
     resolution: {integrity: sha512-Y+R5hJrzs52QCG2laLn4udYVnxsfny9CpOhNhUvk/SSSVyF6T27FzRbF0sroPidSu3X8oEAkOn2K804mjpt6UQ==}
     engines: {node: '>= 0.4'}
@@ -7530,6 +7444,7 @@ packages:
 
   /jsonc-parser@3.2.0:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
+    dev: false
 
   /jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
@@ -9725,7 +9640,7 @@ packages:
       unified: 10.1.2
     dev: true
 
-  /rehype-pretty-code@0.6.0(shiki@0.12.1):
+  /rehype-pretty-code@0.6.0(shiki@1.3.0):
     resolution: {integrity: sha512-VfntYoWYOBVURXYDdB8p/E1sZTm2W5ry89fJyY94WJAo1jUH/5sVhDC7cX5PPnksMyW9PYMxRLNfjkBpSgJrzQ==}
     engines: {node: ^12.16.0 || >=13.2.0}
     peerDependencies:
@@ -9734,7 +9649,7 @@ packages:
       hash-obj: 4.0.0
       nanoid: 4.0.2
       parse-numeric-range: 1.3.0
-      shiki: 0.12.1
+      shiki: 1.3.0
     dev: true
 
   /rehype-slug@5.1.0:
@@ -10105,12 +10020,10 @@ packages:
     resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
     dev: false
 
-  /shiki@0.12.1:
-    resolution: {integrity: sha512-aieaV1m349rZINEBkjxh2QbBvFFQOlgqYTNtCal82hHj4dDZ76oMlQIX+C7ryerBTDiga3e5NfH6smjdJ02BbQ==}
+  /shiki@1.3.0:
+    resolution: {integrity: sha512-9aNdQy/etMXctnPzsje1h1XIGm9YfRcSksKOGqZWXA/qP9G18/8fpz5Bjpma8bOgz3tqIpjERAd6/lLjFyzoww==}
     dependencies:
-      jsonc-parser: 3.2.0
-      vscode-oniguruma: 1.7.0
-      vscode-textmate: 8.0.0
+      '@shikijs/core': 1.3.0
     dev: true
 
   /side-channel@1.0.4:
@@ -11360,14 +11273,6 @@ packages:
       - supports-color
       - terser
     dev: false
-
-  /vscode-oniguruma@1.7.0:
-    resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
-    dev: true
-
-  /vscode-textmate@8.0.0:
-    resolution: {integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==}
-    dev: true
 
   /watchpack@2.4.0:
     resolution: {integrity: sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==}

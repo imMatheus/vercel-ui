@@ -117,7 +117,7 @@ export function ComponentPreview({
           </Accordion.Header>
           <Accordion.Content>
             <div className="flex flex-col space-y-4">
-              <div className="w-full [&_pre]:my-0 [&_pre]:overflow-auto !text-orange-400">
+              <div className="w-full [&_pre]:my-0 [&_pre]:overflow-auto">
                 {Code}
               </div>
             </div>

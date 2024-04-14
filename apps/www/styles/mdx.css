@@ -1,3 +1,97 @@
+:root {
+  --shiki-foreground: #24292e; /* Editor foreground */
+  --shiki-background: #fff; /* Editor background */
+  --shiki-token-constant: #005cc5; /* Constant */
+  --shiki-token-string: #032f62; /* String */
+  --shiki-token-comment: #6a737d; /* Comment */
+  --shiki-token-keyword: #d73a49; /* Keyword */
+  --shiki-token-parameter: #24292e; /* Variable parameter */
+  --shiki-token-function: #6f42c1; /* Entity */
+  --shiki-token-string-expression: #032f62; /* String regexp */
+  --shiki-token-punctuation: #24292e; /* Punctuation */
+
+  /* ANSI colors */
+  --shiki-ansi-black: #24292e; /* Terminal ansiBlack */
+  --shiki-ansi-black-dim: #24292e80; /* Dimmed, just an example, may not be accurate */
+  --shiki-ansi-red: #d73a49; /* Terminal ansiRed */
+  --shiki-ansi-red-dim: #d73a4980; /* Dimmed */
+  --shiki-ansi-green: #28a745; /* Terminal ansiGreen */
+  --shiki-ansi-green-dim: #28a74580; /* Dimmed */
+  --shiki-ansi-yellow: #dbab09; /* Terminal ansiYellow */
+  --shiki-ansi-yellow-dim: #dbab0980; /* Dimmed */
+  --shiki-ansi-blue: #0366d6; /* Terminal ansiBlue */
+  --shiki-ansi-blue-dim: #0366d680; /* Dimmed */
+  --shiki-ansi-magenta: #5a32a3; /* Terminal ansiMagenta */
+  --shiki-ansi-magenta-dim: #5a32a380; /* Dimmed */
+  --shiki-ansi-cyan: #1b7c83; /* Terminal ansiCyan */
+  --shiki-ansi-cyan-dim: #1b7c8380; /* Dimmed */
+  --shiki-ansi-white: #6a737d; /* Terminal ansiWhite */
+  --shiki-ansi-white-dim: #6a737d80; /* Dimmed */
+  --shiki-ansi-bright-black: #959da5; /* Terminal ansiBrightBlack */
+  --shiki-ansi-bright-black-dim: #959da580; /* Dimmed */
+  --shiki-ansi-bright-red: #cb2431; /* Terminal ansiBrightRed */
+  --shiki-ansi-bright-red-dim: #cb243180; /* Dimmed */
+  --shiki-ansi-bright-green: #22863a; /* Terminal ansiBrightGreen */
+  --shiki-ansi-bright-green-dim: #22863a80; /* Dimmed */
+  --shiki-ansi-bright-yellow: #b08800; /* Terminal ansiBrightYellow */
+  --shiki-ansi-bright-yellow-dim: #b0880080; /* Dimmed */
+  --shiki-ansi-bright-blue: #005cc5; /* Terminal ansiBrightBlue */
+  --shiki-ansi-bright-blue-dim: #005cc580; /* Dimmed */
+  --shiki-ansi-bright-magenta: #5a32a3; /* Terminal ansiBrightMagenta */
+  --shiki-ansi-bright-magenta-dim: #5a32a380; /* Dimmed */
+  --shiki-ansi-bright-cyan: #3192aa; /* Terminal ansiBrightCyan */
+  --shiki-ansi-bright-cyan-dim: #3192aa80; /* Dimmed */
+  --shiki-ansi-bright-white: #d1d5da; /* Terminal ansiBrightWhite */
+  --shiki-ansi-bright-white-dim: #d1d5da80; /* Dimmed */
+}
+
+.dark {
+  --shiki-foreground: #e1e4e8; /* Editor foreground */
+  --shiki-background: #24292e; /* Editor background */
+  --shiki-token-constant: #79b8ff; /* Constant */
+  --shiki-token-string: #9ecbff; /* String */
+  --shiki-token-comment: #6a737d; /* Comment */
+  --shiki-token-keyword: #f97583; /* Keyword */
+  --shiki-token-parameter: #e1e4e8; /* Variable parameter */
+  --shiki-token-function: #b392f0; /* Entity */
+  --shiki-token-string-expression: #dbedff; /* String regexp */
+  --shiki-token-punctuation: #d1d5da; /* Not explicitly mentioned, using the foreground color */
+
+  /* ANSI colors */
+  --shiki-ansi-black: #586069; /* Terminal ansiBlack */
+  --shiki-ansi-black-dim: #58606980; /* Dimmed, just an example, may not be accurate */
+  --shiki-ansi-red: #ea4a5a; /* Terminal ansiRed */
+  --shiki-ansi-red-dim: #ea4a5a80; /* Dimmed */
+  --shiki-ansi-green: #34d058; /* Terminal ansiGreen */
+  --shiki-ansi-green-dim: #34d05880; /* Dimmed */
+  --shiki-ansi-yellow: #ffea7f; /* Terminal ansiYellow */
+  --shiki-ansi-yellow-dim: #ffea7f80; /* Dimmed */
+  --shiki-ansi-blue: #2188ff; /* Terminal ansiBlue */
+  --shiki-ansi-blue-dim: #2188ff80; /* Dimmed */
+  --shiki-ansi-magenta: #b392f0; /* Terminal ansiMagenta */
+  --shiki-ansi-magenta-dim: #b392f080; /* Dimmed */
+  --shiki-ansi-cyan: #39c5cf; /* Terminal ansiCyan */
+  --shiki-ansi-cyan-dim: #39c5cf80; /* Dimmed */
+  --shiki-ansi-white: #d1d5da; /* Terminal ansiWhite */
+  --shiki-ansi-white-dim: #d1d5da80; /* Dimmed */
+  --shiki-ansi-bright-black: #959da5; /* Terminal ansiBrightBlack */
+  --shiki-ansi-bright-black-dim: #959da580; /* Dimmed */
+  --shiki-ansi-bright-red: #f97583; /* Terminal ansiBrightRed */
+  --shiki-ansi-bright-red-dim: #f9758380; /* Dimmed */
+  --shiki-ansi-bright-green: #85e89d; /* Terminal ansiBrightGreen */
+  --shiki-ansi-bright-green-dim: #85e89d80; /* Dimmed */
+  --shiki-ansi-bright-yellow: #ffea7f; /* Terminal ansiBrightYellow */
+  --shiki-ansi-bright-yellow-dim: #ffea7f80; /* Dimmed */
+  --shiki-ansi-bright-blue: #79b8ff; /* Terminal ansiBrightBlue */
+  --shiki-ansi-bright-blue-dim: #79b8ff80; /* Dimmed */
+  --shiki-ansi-bright-magenta: #b392f0; /* Terminal ansiBrightMagenta */
+  --shiki-ansi-bright-magenta-dim: #b392f080; /* Dimmed */
+  --shiki-ansi-bright-cyan: #56d4dd; /* Terminal ansiBrightCyan */
+  --shiki-ansi-bright-cyan-dim: #56d4dd80; /* Dimmed */
+  --shiki-ansi-bright-white: #fafbfc; /* Terminal ansiBrightWhite */
+  --shiki-ansi-bright-white-dim: #fafbfc80; /* Dimmed */
+}
+
 [data-theme="light"] {
   display: block;
 }
