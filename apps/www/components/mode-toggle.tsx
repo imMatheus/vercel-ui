@@ -17,7 +17,7 @@ export function ModeToggle() {
           id="theme-switch-system"
           value="system"
           checked={theme === "system"}
-          onClick={() => setTheme("system")}
+          onChange={(e) => setTheme(e.target.value)}
         />
         <label
           htmlFor="theme-switch-system"
@@ -33,7 +33,7 @@ export function ModeToggle() {
           id="theme-switch-light"
           value="light"
           checked={theme === "light"}
-          onClick={() => setTheme("light")}
+          onChange={(e) => setTheme(e.target.value)}
         />
         <label
           htmlFor="theme-switch-light"
@@ -49,7 +49,7 @@ export function ModeToggle() {
           id="theme-switch-dark"
           value="dark"
           checked={theme === "dark"}
-          onClick={() => setTheme("dark")}
+          onChange={(e) => setTheme(e.target.value)}
         />
         <label
           htmlFor="theme-switch-dark"
