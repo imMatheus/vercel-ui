@@ -1,9 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { Calendar, MoreHorizontal, Tags, Trash, User } from "lucide-react"
+import { Calendar, MoreHorizontal, Trash, User } from "lucide-react"
 
-import { Button } from "@/registry/default/ui/button"
 import {
   DropdownMenuLabel,
   DropdownMenuShortcut,
@@ -25,7 +24,6 @@ const labels = [
 
 export default function ComboboxDropdownMenu() {
   const [label, setLabel] = React.useState("feature")
-  const [open, setOpen] = React.useState(false)
 
   return (
     <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
@@ -35,11 +33,11 @@ export default function ComboboxDropdownMenu() {
         </span>
         <span className="text-muted-foreground">Create a new project</span>
       </p>
-      <MenuContainer open={open} onOpenChange={setOpen}>
+      <MenuContainer>
         <MenuButton>
           <MoreHorizontal />
         </MenuButton>
-        <Menu align="end" className="w-[200px]">
+        <Menu align="end" width={200}>
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
 
           <MenuItem>
