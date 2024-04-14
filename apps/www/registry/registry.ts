@@ -177,12 +177,6 @@ const ui: Registry = [
     files: ["ui/select.tsx"],
   },
   {
-    name: "separator",
-    type: "components:ui",
-    dependencies: ["@radix-ui/react-separator"],
-    files: ["ui/separator.tsx"],
-  },
-  {
     name: "sheet",
     type: "components:ui",
     dependencies: ["@radix-ui/react-dialog"],
@@ -698,12 +692,6 @@ const example: Registry = [
     files: ["example/select-form.tsx"],
   },
   {
-    name: "separator-demo",
-    type: "components:example",
-    registryDependencies: ["separator"],
-    files: ["example/separator-demo.tsx"],
-  },
-  {
     name: "sheet-demo",
     type: "components:example",
     registryDependencies: ["sheet"],
@@ -836,10 +824,46 @@ const example: Registry = [
     files: ["example/toast-with-title.tsx"],
   },
   {
+    name: "tooltip-box-align",
+    type: "components:example",
+    registryDependencies: ["tooltip"],
+    files: ["example/tooltip-box-align.tsx"],
+  },
+  {
+    name: "tooltip-components",
+    type: "components:example",
+    registryDependencies: ["tooltip"],
+    files: ["example/tooltip-components.tsx"],
+  },
+  {
+    name: "tooltip-custom-content",
+    type: "components:example",
+    registryDependencies: ["tooltip"],
+    files: ["example/tooltip-custom-content.tsx"],
+  },
+  {
+    name: "tooltip-custom-type",
+    type: "components:example",
+    registryDependencies: ["tooltip"],
+    files: ["example/tooltip-custom-type.tsx"],
+  },
+  {
     name: "tooltip-demo",
     type: "components:example",
     registryDependencies: ["tooltip"],
     files: ["example/tooltip-demo.tsx"],
+  },
+  {
+    name: "tooltip-no-delay",
+    type: "components:example",
+    registryDependencies: ["tooltip"],
+    files: ["example/tooltip-no-delay.tsx"],
+  },
+  {
+    name: "tooltip-other",
+    type: "components:example",
+    registryDependencies: ["tooltip"],
+    files: ["example/tooltip-other.tsx"],
   },
   {
     name: "typography-blockquote",

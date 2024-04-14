@@ -108,7 +108,7 @@
     --ds-pink-900: 336 65% 45%;
     --ds-pink-1000: 333 74% 15%;
 
-    --ds-contrast-fg: 0 0% 100%;
+    --ds-contrast-fg: 0 0% 0%;
 
     --ds-shadow-inset: inset 0 0 0 1px rgba(0 0 0 / 0.08);
     --ds-shadow-border: 0 0 0 1px rgba(0, 0, 0, 0.08);
@@ -242,7 +242,7 @@
     --ds-pink-900: 341 90% 67%;
     --ds-pink-1000: 333 90% 96%;
 
-    --ds-contrast-fg: 0 0% 0%;
+    --ds-contrast-fg: 0 0% 100%;
 
     --ds-shadow-inset: inset 0 0 0 1px hsla(0 0% 100% / 0.1);
     --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, 0.145);
