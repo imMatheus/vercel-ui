@@ -16,6 +16,7 @@ export function ModeToggle() {
           type="radio"
           id="theme-switch-system"
           value="system"
+          defaultChecked={theme === "system"}
           checked={theme === "system"}
           onChange={(e) => setTheme(e.target.value)}
         />
@@ -32,6 +33,7 @@ export function ModeToggle() {
           type="radio"
           id="theme-switch-light"
           value="light"
+          defaultChecked={theme === "light"}
           checked={theme === "light"}
           onChange={(e) => setTheme(e.target.value)}
         />
@@ -48,6 +50,7 @@ export function ModeToggle() {
           type="radio"
           id="theme-switch-dark"
           value="dark"
+          defaultChecked={theme === "dark"}
           checked={theme === "dark"}
           onChange={(e) => setTheme(e.target.value)}
         />

@@ -137,7 +137,7 @@
 }
 
 [data-rehype-pretty-code-fragment] .line--highlighted {
-  @apply bg-zinc-700/50;
+  @apply bg-green-500/20;
 }
 
 [data-rehype-pretty-code-fragment] .line-highlighted span {

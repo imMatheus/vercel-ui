@@ -31,6 +31,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/registry/default/ui/tabs"
+import { Tooltip } from "@/registry/default/ui/tooltip"
 import { Style } from "@/registry/styles"
 
 const components = {
@@ -325,10 +326,14 @@ const components = {
 
             <div className="flex w-full gap-1 md:gap-2">
               <div className="w-[68px]">
-                <button className="h-10 w-full bg-background-100 shadow-inner rounded"></button>
+                <Tooltip text="bg-background-100">
+                  <button className="h-10 w-full bg-background-100 shadow-inner rounded"></button>
+                </Tooltip>
               </div>
               <div className="w-[68px]">
-                <button className="bg-background-200 h-10 w-full rounded shadow-inner"></button>
+                <Tooltip text="bg-background-200">
+                  <button className="bg-background-200 h-10 w-full rounded shadow-inner"></button>
+                </Tooltip>
               </div>
             </div>
           </div>
@@ -345,14 +350,18 @@ const components = {
                   .fill(0)
                   .map((_, index) => (
                     <div key={index} className="w-full">
-                      <button
-                        className="h-10 w-full rounded shadow-inner"
-                        style={{
-                          background: `hsl(var(--ds-${color.key}-${
-                            (index + 1) * 100
-                          }))`,
-                        }}
-                      ></button>
+                      <Tooltip
+                        text={`var(--ds-${color.key}-${(index + 1) * 100})`}
+                      >
+                        <button
+                          className="h-10 w-full rounded shadow-inner"
+                          style={{
+                            background: `hsl(var(--ds-${color.key}-${
+                              (index + 1) * 100
+                            }))`,
+                          }}
+                        />
+                      </Tooltip>
                     </div>
                   ))}
               </div>
