@@ -230,11 +230,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Separator",
-          href: "/docs/components/separator",
-          items: [],
-        },
-        {
           title: "Sheet",
           href: "/docs/components/sheet",
           items: [],

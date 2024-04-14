@@ -203,13 +203,6 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/select")),
       files: ["registry/default/ui/select.tsx"],
     },
-    separator: {
-      name: "separator",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("@/registry/default/ui/separator")),
-      files: ["registry/default/ui/separator.tsx"],
-    },
     sheet: {
       name: "sheet",
       type: "components:ui",
@@ -960,15 +953,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/select-form")
       ),
       files: ["registry/default/example/select-form.tsx"],
-    },
-    "separator-demo": {
-      name: "separator-demo",
-      type: "components:example",
-      registryDependencies: ["separator"],
-      component: React.lazy(
-        () => import("@/registry/default/example/separator-demo")
-      ),
-      files: ["registry/default/example/separator-demo.tsx"],
     },
     "sheet-demo": {
       name: "sheet-demo",
