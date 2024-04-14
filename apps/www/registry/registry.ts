@@ -44,13 +44,6 @@ const ui: Registry = [
     files: ["ui/card.tsx"],
   },
   {
-    name: "carousel",
-    type: "components:ui",
-    files: ["ui/carousel.tsx"],
-    registryDependencies: ["button"],
-    dependencies: ["embla-carousel-react"],
-  },
-  {
     name: "checkbox",
     type: "components:ui",
     dependencies: ["@radix-ui/react-checkbox"],
@@ -375,42 +368,6 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["button", "card", "input", "label", "select"],
     files: ["example/card-with-form.tsx"],
-  },
-  {
-    name: "carousel-demo",
-    type: "components:example",
-    registryDependencies: ["carousel"],
-    files: ["example/carousel-demo.tsx"],
-  },
-  {
-    name: "carousel-size",
-    type: "components:example",
-    registryDependencies: ["carousel"],
-    files: ["example/carousel-size.tsx"],
-  },
-  {
-    name: "carousel-spacing",
-    type: "components:example",
-    registryDependencies: ["carousel"],
-    files: ["example/carousel-spacing.tsx"],
-  },
-  {
-    name: "carousel-orientation",
-    type: "components:example",
-    registryDependencies: ["carousel"],
-    files: ["example/carousel-orientation.tsx"],
-  },
-  {
-    name: "carousel-api",
-    type: "components:example",
-    registryDependencies: ["carousel"],
-    files: ["example/carousel-api.tsx"],
-  },
-  {
-    name: "carousel-plugin",
-    type: "components:example",
-    registryDependencies: ["carousel"],
-    files: ["example/carousel-plugin.tsx"],
   },
   {
     name: "checkbox-demo",

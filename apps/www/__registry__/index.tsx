@@ -54,13 +54,6 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/card")),
       files: ["registry/default/ui/card.tsx"],
     },
-    carousel: {
-      name: "carousel",
-      type: "components:ui",
-      registryDependencies: ["button"],
-      component: React.lazy(() => import("@/registry/default/ui/carousel")),
-      files: ["registry/default/ui/carousel.tsx"],
-    },
     checkbox: {
       name: "checkbox",
       type: "components:ui",
@@ -479,60 +472,6 @@ export const Index: Record<string, any> = {
         () => import("@/registry/default/example/card-with-form")
       ),
       files: ["registry/default/example/card-with-form.tsx"],
-    },
-    "carousel-demo": {
-      name: "carousel-demo",
-      type: "components:example",
-      registryDependencies: ["carousel"],
-      component: React.lazy(
-        () => import("@/registry/default/example/carousel-demo")
-      ),
-      files: ["registry/default/example/carousel-demo.tsx"],
-    },
-    "carousel-size": {
-      name: "carousel-size",
-      type: "components:example",
-      registryDependencies: ["carousel"],
-      component: React.lazy(
-        () => import("@/registry/default/example/carousel-size")
-      ),
-      files: ["registry/default/example/carousel-size.tsx"],
-    },
-    "carousel-spacing": {
-      name: "carousel-spacing",
-      type: "components:example",
-      registryDependencies: ["carousel"],
-      component: React.lazy(
-        () => import("@/registry/default/example/carousel-spacing")
-      ),
-      files: ["registry/default/example/carousel-spacing.tsx"],
-    },
-    "carousel-orientation": {
-      name: "carousel-orientation",
-      type: "components:example",
-      registryDependencies: ["carousel"],
-      component: React.lazy(
-        () => import("@/registry/default/example/carousel-orientation")
-      ),
-      files: ["registry/default/example/carousel-orientation.tsx"],
-    },
-    "carousel-api": {
-      name: "carousel-api",
-      type: "components:example",
-      registryDependencies: ["carousel"],
-      component: React.lazy(
-        () => import("@/registry/default/example/carousel-api")
-      ),
-      files: ["registry/default/example/carousel-api.tsx"],
-    },
-    "carousel-plugin": {
-      name: "carousel-plugin",
-      type: "components:example",
-      registryDependencies: ["carousel"],
-      component: React.lazy(
-        () => import("@/registry/default/example/carousel-plugin")
-      ),
-      files: ["registry/default/example/carousel-plugin.tsx"],
     },
     "checkbox-demo": {
       name: "checkbox-demo",
