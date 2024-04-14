@@ -1,32 +1,63 @@
 "use client"
 
 import * as React from "react"
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
+import { LaptopIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons"
 import { useTheme } from "next-themes"
 
-import { Button } from "@/registry/default/ui/button"
-import {
-  Menu,
-  MenuButton,
-  MenuContainer,
-  MenuItem,
-} from "@/registry/default/ui/menu"
-
 export function ModeToggle() {
-  const { setTheme } = useTheme()
+  const { setTheme, theme } = useTheme()
 
+  // NOTE vercel seems to have a bug on there site where the switcher has "32x" in height
   return (
-    <MenuContainer>
-      <MenuButton>
-        <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-        <span className="sr-only">Toggle theme</span>
-      </MenuButton>
-      <Menu align="end">
-        <MenuItem onClick={() => setTheme("light")}>Light</MenuItem>
-        <MenuItem onClick={() => setTheme("dark")}>Dark</MenuItem>
-        <MenuItem onClick={() => setTheme("system")}>System</MenuItem>
-      </Menu>
-    </MenuContainer>
+    <div className="flex rounded-full bg-background-100 shadow-border w-fit">
+      <span className="h-full">
+        <input
+          className="sr-only peer"
+          type="radio"
+          id="theme-switch-system"
+          value="system"
+          checked={theme === "system"}
+          onClick={() => setTheme("system")}
+        />
+        <label
+          htmlFor="theme-switch-system"
+          className="peer-checked:shadow-border peer-checked:text-gray-1000 w-[28px] h-[28px] relative text-gray-700 rounded-full flex justify-center items-center"
+        >
+          <LaptopIcon className="w-4 h-4" />
+        </label>
+      </span>
+      <span className="h-full">
+        <input
+          className="sr-only peer"
+          type="radio"
+          id="theme-switch-light"
+          value="light"
+          checked={theme === "light"}
+          onClick={() => setTheme("light")}
+        />
+        <label
+          htmlFor="theme-switch-light"
+          className="peer-checked:shadow-border peer-checked:text-gray-1000 w-[28px] h-[28px] relative text-gray-700 rounded-full flex justify-center items-center"
+        >
+          <SunIcon className="w-4 h-4" />
+        </label>
+      </span>
+      <span className="h-full">
+        <input
+          className="sr-only peer"
+          type="radio"
+          id="theme-switch-dark"
+          value="dark"
+          checked={theme === "dark"}
+          onClick={() => setTheme("dark")}
+        />
+        <label
+          htmlFor="theme-switch-dark"
+          className="peer-checked:shadow-border peer-checked:text-gray-1000 w-[28px] h-[28px] relative text-gray-700 rounded-full flex justify-center items-center"
+        >
+          <MoonIcon className="w-4 h-4" />
+        </label>
+      </span>
+    </div>
   )
 }
