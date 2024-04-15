@@ -1,7 +1,5 @@
-export default function TypographyH1() {
-  return (
-    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-      Taxing Laughter: The Joke Tax Chronicles
-    </h1>
-  )
+import { Text } from "../ui/text"
+
+export default function TextResponsive() {
+  return <Text size={{ sm: 24, md: 32, lg: 48 }}> The Evil Rabbit jumps.</Text>
 }

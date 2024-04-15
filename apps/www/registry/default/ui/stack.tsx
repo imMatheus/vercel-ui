@@ -63,10 +63,10 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
           typeof gap === "number"
             ? convertGapToProps(gap)
             : [
-                gap?.sm && `sm:gap-[var(--gap-sm)]`,
-                gap?.md && `md:gap-[var(--gap-md)]`,
-                gap?.lg && `lg:gap-[var(--gap-lg)]`,
-                gap?.xl && `xl:gap-[var(--gap-xl)]`,
+                gap?.sm && "sm:gap-[var(--gap-sm)]",
+                gap?.md && "md:gap-[var(--gap-md)]",
+                gap?.lg && "lg:gap-[var(--gap-lg)]",
+                gap?.xl && "xl:gap-[var(--gap-xl)]",
               ],
           className
         )}
