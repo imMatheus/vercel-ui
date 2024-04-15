@@ -95,7 +95,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div vaul-drawer-wrapper="">
               <div className="relative flex min-h-screen flex-col bg-background-200">
                 <SiteHeader />
-                <main className="flex-1 w-full sm:border-x sm:border-x-border max-w-[1220px] mx-auto">
+                <main className="flex-1 min-w-0 w-full sm:border-x sm:border-x-border max-w-[1220px] mx-auto">
                   {children}
                 </main>
               </div>

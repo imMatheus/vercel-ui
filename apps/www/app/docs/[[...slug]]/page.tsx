@@ -85,7 +85,7 @@ export default async function DocPage({ params }: DocPageProps) {
   const toc = await getTableOfContents(doc.body.raw)
 
   return (
-    <main className="relative lg:gap-10">
+    <main className="relative min-w-0 lg:gap-10">
       <div className="mx-auto w-full min-w-0">
         <PaddingBox>
           <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
