@@ -911,6 +911,11 @@ const example: Registry = [
     files: ["example/text-truncate.tsx"],
   },
   {
+    name: "text-variants",
+    type: "components:example",
+    files: ["example/text-variants.tsx"],
+  },
+  {
     name: "mode-toggle",
     type: "components:example",
     files: ["example/mode-toggle.tsx"],

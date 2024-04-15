@@ -1062,6 +1062,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/text-truncate")),
       files: ["registry/default/example/text-truncate.tsx"],
     },
+    "text-variants": {
+      name: "text-variants",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/example/text-variants")),
+      files: ["registry/default/example/text-variants.tsx"],
+    },
     "mode-toggle": {
       name: "mode-toggle",
       type: "components:example",
