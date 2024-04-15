@@ -1,5 +1,11 @@
 import { Text } from "@/registry/default/ui/text"
 
 export default function TextMonospace() {
-  return <Text size={16}>Monospace</Text>
+  return (
+    <div>
+      <Text>This is a sans-serif font.</Text>
+
+      <Text monospace>This is a monospace font.</Text>
+    </div>
+  )
 }

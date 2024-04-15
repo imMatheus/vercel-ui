@@ -1,5 +1,9 @@
 import { Text } from "@/registry/default/ui/text"
 
 export default function TextColor() {
-  return <Text size={16}>color</Text>
+  return (
+    <Text color="blue-900" size={16}>
+      The Evil Rabbit jumps.
+    </Text>
+  )
 }
