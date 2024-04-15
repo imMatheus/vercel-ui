@@ -65,11 +65,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Typography",
-          href: "/docs/components/typography",
-          items: [],
-        },
-        {
           title: "Changelog",
           href: "/docs/changelog",
           items: [],
@@ -262,6 +257,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Tabs",
           href: "/docs/components/tabs",
+          items: [],
+        },
+        {
+          title: "Text",
+          href: "/docs/components/text",
           items: [],
         },
         {
