@@ -194,6 +194,11 @@ const ui: Registry = [
     files: ["ui/sonner.tsx"],
   },
   {
+    name: "spinner",
+    type: "components:ui",
+    files: ["ui/spinner.tsx"],
+  },
+  {
     name: "stack",
     type: "components:ui",
     dependencies: ["stack"],
@@ -720,6 +725,18 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["sonner"],
     files: ["example/sonner-demo.tsx"],
+  },
+  {
+    name: "spinner-demo",
+    type: "components:example",
+    registryDependencies: ["spinner"],
+    files: ["example/spinner-demo.tsx"],
+  },
+  {
+    name: "spinner-size",
+    type: "components:example",
+    registryDependencies: ["spinner"],
+    files: ["example/spinner-size.tsx"],
   },
   {
     name: "switch-demo",

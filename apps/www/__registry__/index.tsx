@@ -222,6 +222,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/sonner")),
       files: ["registry/default/ui/sonner.tsx"],
     },
+    "spinner": {
+      name: "spinner",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/spinner")),
+      files: ["registry/default/ui/spinner.tsx"],
+    },
     "stack": {
       name: "stack",
       type: "components:ui",
@@ -830,6 +837,20 @@ export const Index: Record<string, any> = {
       registryDependencies: ["sonner"],
       component: React.lazy(() => import("@/registry/default/example/sonner-demo")),
       files: ["registry/default/example/sonner-demo.tsx"],
+    },
+    "spinner-demo": {
+      name: "spinner-demo",
+      type: "components:example",
+      registryDependencies: ["spinner"],
+      component: React.lazy(() => import("@/registry/default/example/spinner-demo")),
+      files: ["registry/default/example/spinner-demo.tsx"],
+    },
+    "spinner-size": {
+      name: "spinner-size",
+      type: "components:example",
+      registryDependencies: ["spinner"],
+      component: React.lazy(() => import("@/registry/default/example/spinner-size")),
+      files: ["registry/default/example/spinner-size.tsx"],
     },
     "switch-demo": {
       name: "switch-demo",

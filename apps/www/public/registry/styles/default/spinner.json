@@ -1,0 +1,10 @@
+{
+  "name": "spinner",
+  "files": [
+    {
+      "name": "spinner.tsx",
+      "content": "type SpinnerProps = { size?: string }\n\nconst Spinner = ({ ...props }: SpinnerProps) => {\n  const className = \"bg-gray-700 rounded-[5px]\"\n\n  return (\n    <div className=\"w-5 h-5\">\n      <div className=\"w-5 h-5 relative top-1/2 left-1/2\">\n        {Array(12)\n          .fill(null)\n          .map((_, i) => (\n            <div\n              key={i}\n              className=\"bg-gray-700 rounded-[5px] w-[24%] h-[8%] absolute left-[10%] top-[3.9%] animate-spinner-spin\"\n              style={{ transform: `rotate(${i * 30}deg) translate(146%)` }}\n            />\n          ))}\n      </div>\n    </div>\n  )\n}\n\nexport { Spinner }\n"
+    }
+  ],
+  "type": "components:ui"
+}
