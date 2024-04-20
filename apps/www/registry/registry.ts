@@ -205,10 +205,10 @@ const ui: Registry = [
     files: ["ui/stack.tsx"],
   },
   {
-    name: "switch",
+    name: "toggle",
     type: "components:ui",
     dependencies: ["@radix-ui/react-switch"],
-    files: ["ui/switch.tsx"],
+    files: ["ui/toggle.tsx"],
   },
   {
     name: "tabs",
@@ -353,7 +353,7 @@ const example: Registry = [
   {
     name: "card-demo",
     type: "components:example",
-    registryDependencies: ["card", "button", "switch"],
+    registryDependencies: ["card", "button", "toggle"],
     files: ["example/card-demo.tsx"],
   },
   {
@@ -739,10 +739,10 @@ const example: Registry = [
     files: ["example/spinner-size.tsx"],
   },
   {
-    name: "switch-demo",
+    name: "toggle-demo",
     type: "components:example",
-    registryDependencies: ["switch"],
-    files: ["example/switch-demo.tsx"],
+    registryDependencies: ["toggle"],
+    files: ["example/toggle-demo.tsx"],
   },
   {
     name: "stack-demo",
@@ -763,10 +763,10 @@ const example: Registry = [
     files: ["example/stack-responsive.tsx"],
   },
   {
-    name: "switch-form",
+    name: "toggle-form",
     type: "components:example",
-    registryDependencies: ["switch", "form"],
-    files: ["example/switch-form.tsx"],
+    registryDependencies: ["toggle", "form"],
+    files: ["example/toggle-form.tsx"],
   },
   {
     name: "tabs-demo",

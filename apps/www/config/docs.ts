@@ -250,16 +250,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Switch",
-          href: "/docs/components/switch",
-          items: [],
-        },
-        {
-          title: "Table",
-          href: "/docs/components/table",
-          items: [],
-        },
-        {
           title: "Tabs",
           href: "/docs/components/tabs",
           items: [],
@@ -277,6 +267,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Toast",
           href: "/docs/components/toast",
+          items: [],
+        },
+        {
+          title: "Toggle",
+          href: "/docs/components/toggle",
           items: [],
         },
         {

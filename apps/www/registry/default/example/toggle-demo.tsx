@@ -1,10 +1,10 @@
 import { Label } from "@/registry/default/ui/label"
-import { Switch } from "@/registry/default/ui/switch"
+import { Toggle } from "@/registry/default/ui/toggle"
 
-export default function SwitchDemo() {
+export default function ToggleDemo() {
   return (
     <div className="flex items-center space-x-2">
-      <Switch id="airplane-mode" />
+      <Toggle id="airplane-mode" />
       <Label htmlFor="airplane-mode">Airplane Mode</Label>
     </div>
   )

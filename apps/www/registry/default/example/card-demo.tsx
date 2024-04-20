@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/registry/default/ui/card"
-import { Switch } from "@/registry/default/ui/switch"
+import { Toggle } from "@/registry/default/ui/toggle"
 
 const notifications = [
   {
@@ -47,7 +47,7 @@ export default function CardDemo({ className, ...props }: CardProps) {
               Send notifications to device.
             </p>
           </div>
-          <Switch />
+          <Toggle />
         </div>
         <div>
           {notifications.map((notification, index) => (

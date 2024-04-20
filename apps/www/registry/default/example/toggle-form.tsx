@@ -13,7 +13,7 @@ import {
   FormItem,
   FormLabel,
 } from "@/registry/default/ui/form"
-import { Switch } from "@/registry/default/ui/switch"
+import { Toggle } from "@/registry/default/ui/toggle"
 import { toast } from "@/registry/default/ui/use-toast"
 
 const FormSchema = z.object({
@@ -21,7 +21,7 @@ const FormSchema = z.object({
   security_emails: z.boolean(),
 })
 
-export default function SwitchForm() {
+export default function ToggleForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -60,7 +60,7 @@ export default function SwitchForm() {
                     </FormDescription>
                   </div>
                   <FormControl>
-                    <Switch
+                    <Toggle
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
@@ -80,7 +80,7 @@ export default function SwitchForm() {
                     </FormDescription>
                   </div>
                   <FormControl>
-                    <Switch
+                    <Toggle
                       checked={field.value}
                       onCheckedChange={field.onChange}
                       disabled
