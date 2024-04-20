@@ -1,7 +1,7 @@
 import { Button } from "@/registry/default/ui/button"
 import { Stack } from "@/registry/default/ui/stack"
 
-export default function ButtonLoading() {
+export default function ButtonDisabled() {
   return (
     <Stack
       align="start"
@@ -9,11 +9,11 @@ export default function ButtonLoading() {
       gap={4}
       justify="space-between"
     >
-      <Button loading size="small">
+      <Button disabled size="small">
         Upload
       </Button>
-      <Button loading>Upload</Button>
-      <Button loading size="large">
+      <Button disabled>Upload</Button>
+      <Button disabled size="large">
         Upload
       </Button>
     </Stack>

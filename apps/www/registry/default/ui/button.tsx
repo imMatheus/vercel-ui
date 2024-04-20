@@ -4,48 +4,86 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-const buttonVariants = cva("transition-colors font-medium", {
-  variants: {
-    variant: {
-      default: "bg-gray-1000 text-background-100 hover:bg-gray-1000/90",
-      error: "bg-red-800 hover:bg-destructive/90",
-      warning: "bg-amber-800 text-destructive-foreground hover:bg-amber-800/90",
-      outline:
-        "border border-input bg-background-200 hover:bg-accent hover:text-accent-foreground",
-      secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-      ghost: "hover:bg-accent hover:text-accent-foreground",
-      link: "text-primary underline-offset-4 hover:underline",
+import { Spinner } from "./spinner"
+
+const buttonVariants = cva(
+  "transition-colors font-medium border flex justify-center items-center gap-0.5 max-w-full disabled:bg-gray-100 disabled:text-gray-700 disabled:border-gray-400 disabled:cursor-not-allowed",
+  {
+    variants: {
+      variant: {
+        // Vercel has some of these hard coded values in the specs, not sure why tbh. Could be worth looking at some point
+        default: "bg-gray-1000 text-background-100 hover:bg-[#ccc]",
+        secondary:
+          "bg-background-100 border-gray-alpha-400 text-gray-1000 hover:bg-gray-alpha-200",
+        tertiary:
+          "bg-transparent border-transparent text-gray-1000 hover:bg-gray-alpha-200",
+        error:
+          "bg-red-800 border-red-800 hover:bg-red-900 hover:border-red-900",
+        warning:
+          "text-[#0a0a0a] bg-amber-800 border-amber-800 hover:bg-[#d27504] hover:border-[#d27504",
+      },
+      size: {
+        tiny: "h-6 px-0.5 rounded-[4px] text-xs leading-4",
+        small: "h-8 px-1.5 rounded-md text-sm leading-5",
+        medium: "h-10 px-2.5 rounded-md text-sm leading-5",
+        large: "h-12 px-[14px] rounded-lg text-base leading-6",
+      },
     },
-    size: {
-      sm: "h-8 px-3 rounded-md text-sm",
-      small: "h-8 px-3 rounded-md text-sm",
-      md: "h-10 px-4 rounded-md text-sm",
-      medium: "h-10 px-4 rounded-md text-sm",
-      lg: "h-12 px-5 rounded-lg text-base",
-      large: "h-12 px-5 rounded-lg text-base",
+    defaultVariants: {
+      variant: "default",
+      size: "medium",
     },
-  },
-  defaultVariants: {
-    variant: "default",
-    size: "medium",
-  },
-})
+  }
+)
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "prefix">,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
+  shape?: "square" | "circle" | "rounded"
+  svgOnly?: boolean
+  prefix?: React.ReactNode
+  suffix?: React.ReactNode
+  shadow?: boolean
+  loading?: boolean
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  (
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      shape,
+      svgOnly,
+      prefix,
+      suffix,
+      shadow,
+      loading,
+      children,
+      disabled,
+      ...props
+    },
+    ref
+  ) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(
+          buttonVariants({ variant, size, className }),
+          (shape === "rounded" || shape === "circle") && "rounded-full",
+          svgOnly && "aspect-square",
+          shadow && "shadow-sm"
+        )}
         ref={ref}
+        disabled={disabled || loading}
         {...props}
-      />
+      >
+        {loading ? <Spinner size={size === "large" ? 24 : 16} /> : prefix}
+        <span className="px-1.5 text-ellipsis">{children}</span>
+        {loading ? null : suffix}
+      </Comp>
     )
   }
 )

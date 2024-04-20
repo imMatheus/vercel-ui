@@ -17,7 +17,8 @@ type Direction = "column" | "row" | { [key in BreakPoint]?: "column" | "row" }
 export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
   gap?: Gap
   direction?: Direction
-  align?: "center" | "flex-start" | "flex-end"
+  align?: React.CSSProperties["alignItems"]
+  justify?: React.CSSProperties["justifyContent"]
 }
 
 function convertNumberIntoPx(n: number) {
@@ -38,7 +39,7 @@ function convertGapToProps(gap?: Gap) {
 }
 
 const Stack = React.forwardRef<HTMLDivElement, StackProps>(
-  ({ className, gap, direction, align, ...props }, ref) => {
+  ({ className, gap, direction, align, justify, ...props }, ref) => {
     const styles = convertGapToProps(gap)
 
     // Append styles for direction changes at specified breakpoints
@@ -58,7 +59,7 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
       <div
         ref={ref}
         className={cn(
-          "flex [align-items:var(--align-items)]",
+          "flex [align-items:var(--align-items)] [justify-content:var(--justify-content)]",
           !direction && "flex-col",
           typeof gap === "number"
             ? convertGapToProps(gap)
@@ -70,7 +71,13 @@ const Stack = React.forwardRef<HTMLDivElement, StackProps>(
               ],
           className
         )}
-        style={{ ...styles, "--align-items": align } as React.CSSProperties}
+        style={
+          {
+            ...styles,
+            "--align-items": align,
+            "--justify-content": justify,
+          } as React.CSSProperties
+        }
         {...props}
       >
         {props.children}
