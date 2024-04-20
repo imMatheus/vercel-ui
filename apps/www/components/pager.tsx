@@ -6,6 +6,7 @@ import { NavItem, NavItemWithChildren } from "types/nav"
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/registry/default/ui/button"
+import { Text } from "@/registry/default/ui/text"
 
 interface DocsPagerProps {
   doc: Doc
@@ -19,25 +20,48 @@ export function DocsPager({ doc }: DocsPagerProps) {
   }
 
   return (
-    <div className="flex flex-row items-center justify-between">
-      {pager?.prev?.href && (
-        <Link
-          href={pager.prev.href}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          <ChevronLeftIcon className="mr-2 h-4 w-4" />
-          {pager.prev.title}
-        </Link>
-      )}
-      {pager?.next?.href && (
-        <Link
-          href={pager.next.href}
-          className={cn(buttonVariants({ variant: "outline" }), "ml-auto")}
-        >
-          {pager.next.title}
-          <ChevronRightIcon className="ml-2 h-4 w-4" />
-        </Link>
-      )}
+    <div className="border-t p-4 xl:px-12 xl:pb-8 xl:pt-0 border-gray-alpha-400">
+      {/* TODO add feedback here */}
+
+      <div className="pt-8">
+        <nav className="flex items-start justify-between w-full relative">
+          {pager?.prev?.href && (
+            <Link href={pager.prev.href} className="group py-1 pr-2 pl-7">
+              <div className="">
+                <Text
+                  size="copy-13"
+                  color="gray-900"
+                  className="group-hover:text-contrast transition-colors"
+                >
+                  Previous
+                </Text>
+              </div>
+              <div className="relative">
+                <ChevronLeftIcon className="h-5 w-5 absolute left-[-26px] mt-0.5 text-gray-900 group-hover:text-contrast transition-colors" />
+                {pager.prev.title}
+              </div>
+            </Link>
+          )}
+
+          {pager?.next?.href && (
+            <Link href={pager.next.href} className="group py-1 pr-2 pl-7">
+              <div className="">
+                <Text
+                  size="copy-13"
+                  color="gray-900"
+                  className="group-hover:text-contrast transition-colors"
+                >
+                  Next
+                </Text>
+              </div>
+              <div className="relative">
+                <ChevronRightIcon className="h-5 w-5 absolute right-[-26px] mt-0.5 text-gray-900 group-hover:text-contrast transition-colors" />
+                {pager.next.title}
+              </div>
+            </Link>
+          )}
+        </nav>
+      </div>
     </div>
   )
 }
