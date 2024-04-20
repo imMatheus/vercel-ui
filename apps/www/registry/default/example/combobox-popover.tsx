@@ -72,7 +72,7 @@ export default function ComboboxPopover() {
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
-            variant="outline"
+            variant="secondary"
             size="sm"
             className="w-[150px] justify-start"
           >

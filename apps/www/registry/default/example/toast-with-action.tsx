@@ -9,7 +9,7 @@ export default function ToastWithAction() {
 
   return (
     <Button
-      variant="outline"
+      variant="secondary"
       onClick={() => {
         toast({
           title: "Uh oh! Something went wrong.",

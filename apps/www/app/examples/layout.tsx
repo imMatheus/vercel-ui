@@ -45,7 +45,7 @@ export default function ExamplesLayout({ children }: ExamplesLayoutProps) {
             <Link
               href="/components"
               className={cn(
-                buttonVariants({ variant: "outline" }),
+                buttonVariants({ variant: "secondary" }),
                 "rounded-[6px]"
               )}
             >

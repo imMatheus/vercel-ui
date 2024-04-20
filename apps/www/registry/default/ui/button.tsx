@@ -24,9 +24,12 @@ const buttonVariants = cva(
       },
       size: {
         tiny: "h-6 px-0.5 rounded-[4px] text-xs leading-4",
+        sm: "h-8 px-1.5 rounded-md text-sm leading-5",
         small: "h-8 px-1.5 rounded-md text-sm leading-5",
         medium: "h-10 px-2.5 rounded-md text-sm leading-5",
+        md: "h-10 px-2.5 rounded-md text-sm leading-5",
         large: "h-12 px-[14px] rounded-lg text-base leading-6",
+        lg: "h-12 px-[14px] rounded-lg text-base leading-6",
       },
     },
     defaultVariants: {

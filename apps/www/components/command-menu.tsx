@@ -59,7 +59,7 @@ export function CommandMenu({ ...props }: DialogProps) {
   return (
     <>
       <Button
-        variant="outline"
+        variant="secondary"
         className={cn(
           "relative h-8 w-full justify-start rounded-[0.5rem] bg-background-200 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64"
         )}

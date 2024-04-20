@@ -24,7 +24,7 @@ export default function SheetSide() {
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
           <SheetTrigger asChild>
-            <Button variant="outline">{side}</Button>
+            <Button variant="secondary">{side}</Button>
           </SheetTrigger>
           <SheetContent side={side}>
             <SheetHeader>

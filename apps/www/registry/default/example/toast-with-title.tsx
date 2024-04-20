@@ -8,7 +8,7 @@ export default function ToastWithTitle() {
 
   return (
     <Button
-      variant="outline"
+      variant="secondary"
       onClick={() => {
         toast({
           title: "Uh oh! Something went wrong.",

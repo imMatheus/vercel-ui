@@ -66,7 +66,7 @@ export default function DrawerDemo() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline">Open Drawer</Button>
+        <Button variant="secondary">Open Drawer</Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
@@ -77,7 +77,7 @@ export default function DrawerDemo() {
           <div className="p-4 pb-0">
             <div className="flex items-center justify-center space-x-2">
               <Button
-                variant="outline"
+                variant="secondary"
                 // TODO change this to icon button
                 size="sm"
                 className="h-8 w-8 shrink-0 rounded-full"
@@ -96,7 +96,7 @@ export default function DrawerDemo() {
                 </div>
               </div>
               <Button
-                variant="outline"
+                variant="secondary"
                 // TODO change this to icon button
                 size="sm"
                 className="h-8 w-8 shrink-0 rounded-full"
@@ -126,7 +126,7 @@ export default function DrawerDemo() {
           <DrawerFooter>
             <Button>Submit</Button>
             <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
+              <Button variant="secondary">Cancel</Button>
             </DrawerClose>
           </DrawerFooter>
         </div>

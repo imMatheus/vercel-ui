@@ -33,7 +33,7 @@ export default function IndexPage() {
             target="_blank"
             rel="noreferrer"
             href={siteConfig.links.github}
-            className={cn(buttonVariants({ variant: "outline" }))}
+            className={cn(buttonVariants({ variant: "secondary" }))}
           >
             <Icons.gitHub className="mr-2 h-4 w-4" />
             GitHub

@@ -4,7 +4,7 @@ import { Tooltip } from "@/registry/default/ui/tooltip"
 export default function TooltipDemo() {
   return (
     <Tooltip text="Add to library">
-      <Button variant="outline">Hover</Button>
+      <Button variant="secondary">Hover</Button>
     </Tooltip>
   )
 }

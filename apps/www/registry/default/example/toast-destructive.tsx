@@ -9,7 +9,7 @@ export default function ToastDestructive() {
 
   return (
     <Button
-      variant="outline"
+      variant="secondary"
       onClick={() => {
         toast({
           variant: "destructive",

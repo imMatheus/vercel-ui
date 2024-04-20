@@ -9,7 +9,7 @@ export default function ToastDemo() {
 
   return (
     <Button
-      variant="outline"
+      variant="secondary"
       onClick={() => {
         toast({
           title: "Scheduled: Catch up ",

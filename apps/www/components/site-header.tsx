@@ -28,7 +28,7 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({
-                    variant: "ghost",
+                    variant: "tertiary",
                   }),
                   "w-9 px-0"
                 )}
@@ -45,7 +45,7 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({
-                    variant: "ghost",
+                    variant: "tertiary",
                   }),
                   "w-9 px-0"
                 )}
