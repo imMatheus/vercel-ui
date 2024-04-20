@@ -230,6 +230,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Show more",
+          href: "/docs/components/show-more",
+          items: [],
+        },
+        {
           title: "Skeleton",
           href: "/docs/components/skeleton",
           items: [],
@@ -249,6 +254,7 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/stack",
           items: [],
         },
+
         {
           title: "Tabs",
           href: "/docs/components/tabs",

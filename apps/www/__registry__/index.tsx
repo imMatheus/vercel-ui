@@ -208,6 +208,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/sheet")),
       files: ["registry/default/ui/sheet.tsx"],
     },
+    "show-more": {
+      name: "show-more",
+      type: "components:ui",
+      registryDependencies: ["button"],
+      component: React.lazy(() => import("@/registry/default/ui/show-more")),
+      files: ["registry/default/ui/show-more.tsx"],
+    },
     "skeleton": {
       name: "skeleton",
       type: "components:ui",
@@ -263,6 +270,13 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/toast")),
       files: ["registry/default/ui/toast.tsx","registry/default/ui/use-toast.ts","registry/default/ui/toaster.tsx"],
+    },
+    "text": {
+      name: "text",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/text")),
+      files: ["registry/default/ui/text.tsx"],
     },
     "tooltip": {
       name: "tooltip",
@@ -795,6 +809,13 @@ export const Index: Record<string, any> = {
       registryDependencies: ["sheet"],
       component: React.lazy(() => import("@/registry/default/example/sheet-side")),
       files: ["registry/default/example/sheet-side.tsx"],
+    },
+    "show-more-demo": {
+      name: "show-more-demo",
+      type: "components:example",
+      registryDependencies: ["show-more"],
+      component: React.lazy(() => import("@/registry/default/example/show-more-demo")),
+      files: ["registry/default/example/show-more-demo.tsx"],
     },
     "skeleton-demo": {
       name: "skeleton-demo",

@@ -300,6 +300,17 @@
     "type": "components:ui"
   },
   {
+    "name": "show-more",
+    "dependencies": [],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "ui/show-more.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "skeleton",
     "files": [
       "ui/skeleton.tsx"
@@ -326,9 +337,7 @@
   },
   {
     "name": "stack",
-    "dependencies": [
-      "stack"
-    ],
+    "dependencies": [],
     "files": [
       "ui/stack.tsx"
     ],
@@ -370,6 +379,14 @@
       "ui/toast.tsx",
       "ui/use-toast.ts",
       "ui/toaster.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "text",
+    "dependencies": [],
+    "files": [
+      "ui/text.tsx"
     ],
     "type": "components:ui"
   },

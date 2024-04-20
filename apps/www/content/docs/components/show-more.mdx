@@ -1,0 +1,60 @@
+---
+title: Show more
+description: Displays a card with header, content, and footer.
+component: true
+---
+
+<PaddingBox title="Defualt">
+  <ComponentPreview name="show-more-demo" />
+</PaddingBox>
+
+<PaddingBox title="Installation">
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn-ui@latest add show-more
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="show-more" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { ShowMore } from "@/components/ui/show-more"
+```
+
+```tsx
+import { useState } from "react"
+
+import { ShowMore } from "@/registry/default/ui/show-more"
+
+export default function ShowMoreDemo() {
+  const [expanded, setExpanded] = useState(false)
+
+  return <ShowMore expanded={expanded} onClick={() => setExpanded(!expanded)} />
+}
+```
+
+</PaddingBox>

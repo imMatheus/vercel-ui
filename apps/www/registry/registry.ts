@@ -183,6 +183,13 @@ const ui: Registry = [
     files: ["ui/sheet.tsx"],
   },
   {
+    name: "show-more",
+    type: "components:ui",
+    dependencies: [],
+    registryDependencies: ["button"],
+    files: ["ui/show-more.tsx"],
+  },
+  {
     name: "skeleton",
     type: "components:ui",
     files: ["ui/skeleton.tsx"],
@@ -201,7 +208,7 @@ const ui: Registry = [
   {
     name: "stack",
     type: "components:ui",
-    dependencies: ["stack"],
+    dependencies: [],
     files: ["ui/stack.tsx"],
   },
   {
@@ -226,6 +233,12 @@ const ui: Registry = [
     type: "components:ui",
     dependencies: ["@radix-ui/react-toast"],
     files: ["ui/toast.tsx", "ui/use-toast.ts", "ui/toaster.tsx"],
+  },
+  {
+    name: "text",
+    type: "components:ui",
+    dependencies: [],
+    files: ["ui/text.tsx"],
   },
   {
     name: "tooltip",
@@ -689,6 +702,12 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["sheet"],
     files: ["example/sheet-side.tsx"],
+  },
+  {
+    name: "show-more-demo",
+    type: "components:example",
+    registryDependencies: ["show-more"],
+    files: ["example/show-more-demo.tsx"],
   },
   {
     name: "skeleton-demo",

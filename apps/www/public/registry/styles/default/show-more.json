@@ -1,0 +1,14 @@
+{
+  "name": "show-more",
+  "dependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "name": "show-more.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronDownIcon } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Button } from \"@/registry/default/ui/button\"\n\ninterface ShowMoreProps {\n  expanded: boolean\n  onClick: () => void\n}\n\nconst ShowMore = ({ expanded, onClick }: ShowMoreProps) => {\n  return (\n    <div className=\"min-h-[30px] flex items-center w-[calc(100%-40px)]\">\n      <div className=\"flex-1 h-[1px] translate-x-[-1px] bg-gray-alpha-400\"></div>\n      <div className=\"shrink-0\">\n        <Button\n          size=\"small\"\n          shape=\"rounded\"\n          variant=\"secondary\"\n          onClick={onClick}\n        >\n          <div className=\"flex items-center\">\n            <span>{expanded ? \"Show less\" : \"Show more\"}</span>\n            <ChevronDownIcon\n              className={cn(\n                \"ml-1 w-5 h-5 transition-transform\",\n                expanded && \"rotate-180\"\n              )}\n            />\n          </div>\n        </Button>\n      </div>\n      <div className=\"flex-1 h-[1px] translate-x-[1px] bg-gray-alpha-400\"></div>\n    </div>\n  )\n}\n\nexport { ShowMore }\n"
+    }
+  ],
+  "type": "components:ui"
+}
