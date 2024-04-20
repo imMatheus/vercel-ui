@@ -1,18 +1,17 @@
 ---
-title: toggle
-description: A control that allows the user to toggle between checked and not checked.
+title: Toggle
+description: Displays a boolean value.
 component: true
 links:
   doc: https://www.radix-ui.com/docs/primitives/components/switch
   api: https://www.radix-ui.com/docs/primitives/components/switch#api-reference
 ---
 
-toggle lol
+<PaddingBox title="Defualt">
+  <ComponentPreview name="toggle-demo" />
+</PaddingBox>
 
-<ComponentPreview name="switch-demo" />
-
-## Installation
-
+<PaddingBox title="Installation">
 <Tabs defaultValue="cli">
 
 <TabsList>
@@ -22,7 +21,7 @@ toggle lol
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add switch
+npx shadcn-ui@latest add toggle
 ```
 
 </TabsContent>
@@ -52,15 +51,19 @@ npm install @radix-ui/react-switch
 ## Usage
 
 ```tsx
-import { Switch } from "@/components/ui/switch"
+import { Toggle } from "@/components/ui/toggle"
 ```
 
 ```tsx
-<Switch />
+<Toggle />
 ```
 
-## Examples
+</PaddingBox>
 
-### Form
+<PaddingBox titl="Disabled">
+  <ComponentPreview name="toggle-disabled" />
+</PaddingBox>
 
-<ComponentPreview name="switch-form" />
+<PaddingBox titl="Size">
+  <ComponentPreview name="toggle-size" />
+</PaddingBox>

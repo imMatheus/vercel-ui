@@ -739,12 +739,6 @@ const example: Registry = [
     files: ["example/spinner-size.tsx"],
   },
   {
-    name: "toggle-demo",
-    type: "components:example",
-    registryDependencies: ["toggle"],
-    files: ["example/toggle-demo.tsx"],
-  },
-  {
     name: "stack-demo",
     type: "components:example",
     registryDependencies: ["stack"],
@@ -761,12 +755,6 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["stack"],
     files: ["example/stack-responsive.tsx"],
-  },
-  {
-    name: "toggle-form",
-    type: "components:example",
-    registryDependencies: ["toggle", "form"],
-    files: ["example/toggle-form.tsx"],
   },
   {
     name: "tabs-demo",
@@ -839,6 +827,24 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["toast"],
     files: ["example/toast-with-title.tsx"],
+  },
+  {
+    name: "toggle-demo",
+    type: "components:example",
+    registryDependencies: ["toggle"],
+    files: ["example/toggle-demo.tsx"],
+  },
+  {
+    name: "toggle-disabled",
+    type: "components:example",
+    registryDependencies: ["toggle"],
+    files: ["example/toggle-disabled.tsx"],
+  },
+  {
+    name: "toggle-size",
+    type: "components:example",
+    registryDependencies: ["toggle"],
+    files: ["example/toggle-size.tsx"],
   },
   {
     name: "tooltip-box-align",

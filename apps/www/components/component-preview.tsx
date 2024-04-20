@@ -66,7 +66,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "group relative rounded-lg overflow-hidden border bg-background-100 border-gray-alpha-400",
+        "group relative rounded-xl overflow-hidden border bg-background-100 border-gray-alpha-400",
         className
       )}
       {...props}

@@ -335,12 +335,12 @@
     "type": "components:ui"
   },
   {
-    "name": "switch",
+    "name": "toggle",
     "dependencies": [
       "@radix-ui/react-switch"
     ],
     "files": [
-      "ui/switch.tsx"
+      "ui/toggle.tsx"
     ],
     "type": "components:ui"
   },

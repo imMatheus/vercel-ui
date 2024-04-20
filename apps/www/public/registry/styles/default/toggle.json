@@ -1,0 +1,13 @@
+{
+  "name": "toggle",
+  "dependencies": [
+    "@radix-ui/react-switch"
+  ],
+  "files": [
+    {
+      "name": "toggle.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as SwitchPrimitives from \"@radix-ui/react-switch\"\n\nimport { cn } from \"@/lib/utils\"\n\ntype Size = \"medium\" | \"large\"\n\nconst Toggle = React.forwardRef<\n  React.ElementRef<typeof SwitchPrimitives.Root>,\n  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> & {\n    size?: Size\n  }\n>(({ className, size = \"medium\", ...props }, ref) => (\n  <SwitchPrimitives.Root\n    className={cn(\n      \"peer inline-flex shrink-0 cursor-pointer items-center rounded-full border border-gray-alpha-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-success data-[state=unchecked]:bg-gray-100\",\n      {\n        \"h-[14px] w-[28px]\": size === \"medium\",\n        \"h-[24px] w-[40px]\": size === \"large\",\n      },\n      className\n    )}\n    {...props}\n    ref={ref}\n  >\n    <SwitchPrimitives.Thumb\n      className={cn(\n        \"pointer-events-none block rounded-full shadow-md ring-0 transition-transform data-[state=checked]:bg-gray-1000 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:bg-gray-700\",\n        {\n          \"h-[12px] w-[12px] data-[state=checked]:translate-x-[14px]\":\n            size === \"medium\",\n          \"h-[22px] w-[22px] data-[state=checked]:translate-x-[16px]\":\n            size === \"large\",\n        }\n      )}\n    />\n  </SwitchPrimitives.Root>\n))\nToggle.displayName = SwitchPrimitives.Root.displayName\n\nexport { Toggle }\n"
+    }
+  ],
+  "type": "components:ui"
+}
