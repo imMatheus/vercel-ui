@@ -106,17 +106,18 @@ export function ComponentPreview({
 
       <Accordion.Root type="single" collapsible>
         <Accordion.Item value="code">
-          <Accordion.Header className="text-sm text-gray-900 px-4 bg-background-200">
+          <Accordion.Header className="text-sm text-gray-900 border-t border-t-gray-alpha-400 px-4 bg-background-200">
             <Accordion.Trigger className="group h-12 flex items-center gap-3">
               <ChevronDown
                 className="w-4 h-4 group-data-[state=open]:-rotate-90"
                 aria-hidden
               />
-              Show code
+              <p className="hidden group-data-[state=open]:block">Show code</p>
+              <p className="group-data-[state=open]:hidden">Hide code</p>
             </Accordion.Trigger>
           </Accordion.Header>
           <Accordion.Content>
-            <div className="flex flex-col space-y-4">
+            <div className="flex border-t border-gray-alpha-400 border-flex-col space-y-4">
               <div className="w-full [&_pre]:my-0 [&_pre]:overflow-auto">
                 {Code}
               </div>
