@@ -560,10 +560,10 @@ const example: Registry = [
     files: ["example/input-disabled.tsx"],
   },
   {
-    name: "input-file",
+    name: "input-prefix-suffix",
     type: "components:example",
     registryDependencies: ["input"],
-    files: ["example/input-file.tsx"],
+    files: ["example/input-prefix-suffix.tsx"],
   },
   {
     name: "input-form",

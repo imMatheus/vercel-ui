@@ -4,10 +4,11 @@ description: Displays a form input field or a component that looks like an input
 component: true
 ---
 
-<ComponentPreview name="input-demo" className="[&_input]:max-w-xs" />
+<PaddingBox>
+  <ComponentPreview name="input-demo" className="[&_input]:max-w-xs" />
+</PaddingBox>
 
-## Installation
-
+<PaddingBox title="Installation">
 <Tabs defaultValue="cli">
 
 <TabsList>
@@ -48,28 +49,28 @@ import { Input } from "@/components/ui/input"
 <Input />
 ```
 
-## Examples
+</PaddingBox>
 
-### Default
+<PaddingBox title="Default">
+  <ComponentPreview name="input-demo" className="[&_input]:max-w-xs" />
+</PaddingBox>
 
-<ComponentPreview name="input-demo" className="[&_input]:max-w-xs" />
+<PaddingBox title="Prefix">
+  <ComponentPreview name="input-prefix-suffix" className="[&_input]:max-w-xs" />
+</PaddingBox>
 
-### File
+<PaddingBox title="Disabled">
+  <ComponentPreview name="input-disabled" className="[&_input]:max-w-xs" />
+</PaddingBox>
 
-<ComponentPreview name="input-file" className="[&_input]:max-w-xs" />
+<PaddingBox title=" With Label">
+  <ComponentPreview name="input-with-label" className="[&_input]:max-w-xs" />
+</PaddingBox>
 
-### Disabled
+<PaddingBox title="With Button">
+  <ComponentPreview name="input-with-button" className="[&_input]:max-w-xs" />
+</PaddingBox>
 
-<ComponentPreview name="input-disabled" className="[&_input]:max-w-xs" />
-
-### With Label
-
-<ComponentPreview name="input-with-label" className="[&_input]:max-w-xs" />
-
-### With Button
-
-<ComponentPreview name="input-with-button" className="[&_input]:max-w-xs" />
-
-### Form
-
-<ComponentPreview name="input-form" />
+<PaddingBox title="Form">
+  <ComponentPreview name="input-form" />
+</PaddingBox>

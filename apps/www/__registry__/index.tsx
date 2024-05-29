@@ -642,12 +642,12 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/input-disabled")),
       files: ["registry/default/example/input-disabled.tsx"],
     },
-    "input-file": {
-      name: "input-file",
+    "input-prefix-suffix": {
+      name: "input-prefix-suffix",
       type: "components:example",
       registryDependencies: ["input"],
-      component: React.lazy(() => import("@/registry/default/example/input-file")),
-      files: ["registry/default/example/input-file.tsx"],
+      component: React.lazy(() => import("@/registry/default/example/input-prefix-suffix")),
+      files: ["registry/default/example/input-prefix-suffix.tsx"],
     },
     "input-form": {
       name: "input-form",
