@@ -566,12 +566,6 @@ const example: Registry = [
     files: ["example/input-prefix-suffix.tsx"],
   },
   {
-    name: "input-form",
-    type: "components:example",
-    registryDependencies: ["input", "button", "form"],
-    files: ["example/input-form.tsx"],
-  },
-  {
     name: "input-with-button",
     type: "components:example",
     registryDependencies: ["input", "button"],

@@ -1,4 +1,4 @@
-import * as React from "react"
+import { forwardRef, useId } from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
@@ -25,6 +25,7 @@ export interface InputProps
   prefix?: string | React.ReactNode
   suffix?: string | React.ReactNode
   prefixStyling?: boolean
+  label?: string
 }
 
 const TextBox = ({
@@ -46,15 +47,27 @@ const TextBox = ({
   )
 }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const Input = forwardRef<HTMLInputElement, InputProps>(
   (
-    { className, type, suffix, prefix, size, prefixStyling = true, ...props },
+    {
+      className,
+      type,
+      size,
+      label,
+      suffix,
+      prefix,
+      prefixStyling = true,
+      ...props
+    },
     ref
   ) => {
-    return (
+    const id = useId()
+
+    const input = (
       <div className={cn(inputVariants({ size, className }))}>
         {prefix && <TextBox prefixStyling={prefixStyling}>{prefix}</TextBox>}
         <input
+          id={id}
           type={type}
           className={cn(
             "bg-transparent placeholder:text-gray-700 outline-none",
@@ -66,6 +79,15 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         />
         {suffix && <TextBox prefixStyling={prefixStyling}>{suffix}</TextBox>}
       </div>
+    )
+
+    if (!label) return input
+
+    return (
+      <label htmlFor={id}>
+        <div className="mb-2 text-xs text-gray-900">{label}</div>
+        {input}
+      </label>
     )
   }
 )

@@ -1,11 +1,12 @@
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+import type { JSX } from "react"
 
-export default function InputWithLabel() {
+import { Input } from "@/registry/default/ui/input"
+import { Stack } from "@/registry/default/ui/stack"
+
+export default function Component(): JSX.Element {
   return (
-    <div className="grid w-full max-w-sm items-center gap-1.5">
-      <Label htmlFor="email">Email</Label>
-      <Input type="email" id="email" placeholder="Email" />
-    </div>
+    <Stack align="flex-start">
+      <Input aria-labelledby="Demo input" label="Label" placeholder="Label" />
+    </Stack>
   )
 }
