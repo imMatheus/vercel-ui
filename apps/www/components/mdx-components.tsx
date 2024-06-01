@@ -25,6 +25,7 @@ import {
 } from "@/registry/default/ui/alert"
 import { AspectRatio } from "@/registry/default/ui/aspect-ratio"
 import { Collapse, CollapseGroup } from "@/registry/default/ui/collapse"
+import { Snippet } from "@/registry/default/ui/snippet"
 import {
   Tabs,
   TabsContent,
@@ -182,13 +183,15 @@ const components = {
   } & NpmCommands) => {
     return (
       <StyleWrapper styleName={__style__}>
-        <pre
-          className={cn(
-            "mb-4 mt-6 overflow-x-auto py-4 bg-background-100",
-            className
-          )}
-          {...props}
-        />
+        {!__npmCommand__ && (
+          <pre
+            className={cn(
+              "mb-4 mt-6 overflow-x-auto py-4 bg-background-100",
+              className
+            )}
+            {...props}
+          />
+        )}
         {__rawString__ && !__npmCommand__ && (
           <CopyButton
             value={__rawString__}
@@ -197,7 +200,9 @@ const components = {
             className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
           />
         )}
-        {__npmCommand__ &&
+
+        {/* TODO maybe rethink this */}
+        {/* {__npmCommand__ &&
           __yarnCommand__ &&
           __pnpmCommand__ &&
           __bunCommand__ && (
@@ -210,7 +215,14 @@ const components = {
               }}
               className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
             />
-          )}
+          )} */}
+        {/* TODO add back the tracking on click */}
+        <div className="space-y-2">
+          {__npmCommand__ && <Snippet text={__npmCommand__} />}
+          {/* {__yarnCommand__ && <Snippet text={__yarnCommand__} />}
+          {__pnpmCommand__ && <Snippet text={__pnpmCommand__} />}
+          {__bunCommand__ && <Snippet text={__bunCommand__} />} */}
+        </div>
       </StyleWrapper>
     )
   },
