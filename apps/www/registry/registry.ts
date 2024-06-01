@@ -195,6 +195,11 @@ const ui: Registry = [
     files: ["ui/skeleton.tsx"],
   },
   {
+    name: "snippet",
+    type: "components:ui",
+    files: ["ui/snippet.tsx"],
+  },
+  {
     name: "sonner",
     type: "components:ui",
     dependencies: ["sonner", "next-themes"],
@@ -714,6 +719,42 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["skeleton"],
     files: ["example/skeleton-card.tsx"],
+  },
+  {
+    name: "snippet-demo",
+    type: "components:example",
+    registryDependencies: ["snippet"],
+    files: ["example/snippet-demo.tsx"],
+  },
+  {
+    name: "snippet-inverted",
+    type: "components:example",
+    registryDependencies: ["snippet"],
+    files: ["example/snippet-inverted.tsx"],
+  },
+  {
+    name: "snippet-multi-line",
+    type: "components:example",
+    registryDependencies: ["snippet"],
+    files: ["example/snippet-multi-line.tsx"],
+  },
+  {
+    name: "snippet-no-prompt",
+    type: "components:example",
+    registryDependencies: ["snippet"],
+    files: ["example/snippet-no-prompt.tsx"],
+  },
+  {
+    name: "snippet-callback",
+    type: "components:example",
+    registryDependencies: ["snippet"],
+    files: ["example/snippet-callback.tsx"],
+  },
+  {
+    name: "snippet-variants",
+    type: "components:example",
+    registryDependencies: ["snippet"],
+    files: ["example/snippet-variants.tsx"],
   },
   {
     name: "sonner-demo",

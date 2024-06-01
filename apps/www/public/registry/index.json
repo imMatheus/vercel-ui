@@ -318,6 +318,13 @@
     "type": "components:ui"
   },
   {
+    "name": "snippet",
+    "files": [
+      "ui/snippet.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "sonner",
     "dependencies": [
       "sonner",

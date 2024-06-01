@@ -213,12 +213,22 @@ module.exports = {
           "0%": { opacity: "1" },
           "100%": { opacity: "0.15" },
         },
+        "copy-button-fadeIn": {
+          "0%": { opacity: "0", scale: "0.5" },
+          "100%": { opacity: "1", scale: "1" },
+        },
+        "copy-button-fadeOut": {
+          "0%": { opacity: "1", scale: "1" },
+          "100%": { opacity: "0", scale: "0.5" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
         "spinner-spin": "spinner-spin 1.2s linear infinite",
+        "copy-button-fadeIn": "copy-button-fadeIn 150ms ease-out forwards",
+        "copy-button-fadeOut": "copy-button-fadeOut 150ms ease-out forwards",
       },
     },
   },
