@@ -226,6 +226,7 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
+        "spinner-spin": "spinner-spin 1.2s linear infinite",
         "copy-button-fadeIn": "copy-button-fadeIn 150ms ease-out forwards",
         "copy-button-fadeOut": "copy-button-fadeOut 150ms ease-out forwards",
       },
