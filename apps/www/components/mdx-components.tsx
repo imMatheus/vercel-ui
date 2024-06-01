@@ -311,7 +311,7 @@ const components = {
   ColorSteps: () => {
     const colors = [
       { label: "Gray", key: "gray" },
-      { label: "Gray alpha", key: "gray-alpha" },
+      { label: "Gray alpha", key: "gray-alpha", skipHslDisplay: true },
       { label: "Blue", key: "blue" },
       { label: "Red", key: "red" },
       { label: "Amber", key: "amber" },
@@ -359,9 +359,11 @@ const components = {
                         <button
                           className="h-10 w-full rounded shadow-inner"
                           style={{
-                            background: `hsl(var(--ds-${color.key}-${
-                              (index + 1) * 100
-                            }))`,
+                            background: color.skipHslDisplay
+                              ? `var(--ds-${color.key}-${(index + 1) * 100})`
+                              : `hsl(var(--ds-${color.key}-${
+                                  (index + 1) * 100
+                                }))`,
                           }}
                         />
                       </Tooltip>
