@@ -752,6 +752,16 @@ const example: Registry = [
     files: ["example/stack-responsive.tsx"],
   },
   {
+    name: "status-dot-demo",
+    type: "components:example",
+    files: ["example/status-dot-demo.tsx"],
+  },
+  {
+    name: "status-dot-label",
+    type: "components:example",
+    files: ["example/status-dot-label.tsx"],
+  },
+  {
     name: "tabs-demo",
     type: "components:example",
     registryDependencies: ["tabs"],

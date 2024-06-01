@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3005",
+    "dev": "next dev -p 3000",
     "build": "contentlayer build && pnpm build:registry && next build",
     "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.ts",
     "seed:tasks": "tsx --tsconfig ./tsconfig.scripts.json ./app/examples/tasks/data/seed.ts",

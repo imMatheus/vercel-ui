@@ -254,7 +254,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/stack",
           items: [],
         },
-
+        {
+          title: "Status dot",
+          href: "/docs/components/status-dot",
+          items: [],
+        },
         {
           title: "Tabs",
           href: "/docs/components/tabs",

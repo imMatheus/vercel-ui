@@ -1,0 +1,48 @@
+---
+title: Status dot
+description: Display an indicator of deployment status.
+component: true
+---
+
+<PaddingBox title="Default">
+  <ComponentPreview name="status-dot-demo" />
+</PaddingBox>
+
+<PaddingBox title="Installation">
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+{/* TODO change all of theese to be own command */}
+
+```bash
+npx shadcn-ui@latest add status-dot
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="status-dot" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+</PaddingBox>
+
+<PaddingBox title="Label">
+  <ComponentPreview name="status-dot-label" />
+</PaddingBox>
