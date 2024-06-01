@@ -190,6 +190,13 @@
     "type": "components:ui"
   },
   {
+    "name": "kbd",
+    "files": [
+      "ui/kbd.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "label",
     "dependencies": [
       "@radix-ui/react-label"

@@ -131,6 +131,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/input")),
       files: ["registry/default/ui/input.tsx"],
     },
+    "kbd": {
+      name: "kbd",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/kbd")),
+      files: ["registry/default/ui/kbd.tsx"],
+    },
     "label": {
       name: "label",
       type: "components:ui",
@@ -676,6 +683,27 @@ export const Index: Record<string, any> = {
       registryDependencies: ["input","button","label"],
       component: React.lazy(() => import("@/registry/default/example/input-with-text")),
       files: ["registry/default/example/input-with-text.tsx"],
+    },
+    "kbd-demo": {
+      name: "kbd-demo",
+      type: "components:example",
+      registryDependencies: ["kbd"],
+      component: React.lazy(() => import("@/registry/default/example/kbd-demo")),
+      files: ["registry/default/example/kbd-demo.tsx"],
+    },
+    "kbd-combination": {
+      name: "kbd-combination",
+      type: "components:example",
+      registryDependencies: ["kbd"],
+      component: React.lazy(() => import("@/registry/default/example/kbd-combination")),
+      files: ["registry/default/example/kbd-combination.tsx"],
+    },
+    "kbd-small": {
+      name: "kbd-small",
+      type: "components:example",
+      registryDependencies: ["kbd"],
+      component: React.lazy(() => import("@/registry/default/example/kbd-small")),
+      files: ["registry/default/example/kbd-small.tsx"],
     },
     "label-demo": {
       name: "label-demo",

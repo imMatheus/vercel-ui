@@ -117,6 +117,11 @@ const ui: Registry = [
     files: ["ui/input.tsx"],
   },
   {
+    name: "kbd",
+    type: "components:ui",
+    files: ["ui/kbd.tsx"],
+  },
+  {
     name: "label",
     type: "components:ui",
     dependencies: ["@radix-ui/react-label"],
@@ -587,6 +592,24 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["input", "button", "label"],
     files: ["example/input-with-text.tsx"],
+  },
+  {
+    name: "kbd-demo",
+    type: "components:example",
+    registryDependencies: ["kbd"],
+    files: ["example/kbd-demo.tsx"],
+  },
+  {
+    name: "kbd-combination",
+    type: "components:example",
+    registryDependencies: ["kbd"],
+    files: ["example/kbd-combination.tsx"],
+  },
+  {
+    name: "kbd-small",
+    type: "components:example",
+    registryDependencies: ["kbd"],
+    files: ["example/kbd-small.tsx"],
   },
   {
     name: "label-demo",
