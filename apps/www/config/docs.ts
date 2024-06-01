@@ -170,6 +170,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Keyboard Input",
+          href: "/docs/components/kbd",
+          items: [],
+        },
+        {
           title: "Label",
           href: "/docs/components/label",
           items: [],

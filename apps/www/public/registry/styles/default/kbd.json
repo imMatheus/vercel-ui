@@ -1,0 +1,10 @@
+{
+  "name": "kbd",
+  "files": [
+    {
+      "name": "kbd.tsx",
+      "content": "import React from \"react\"\nimport { cva } from \"class-variance-authority\"\n\nconst kbdVariants = cva(\n  \"text-gray-1000 text-sm bg-background-100 text-center space-x-1 inline-block rounded ml-1 shadow-border\",\n  {\n    variants: {\n      size: {\n        small: \"min-w-5 px-1\",\n        medium: \"min-w-6 min-h-6 px-1.5\",\n      },\n    },\n    defaultVariants: {\n      size: \"medium\",\n    },\n  }\n)\n\ninterface KbdProps {\n  meta?: boolean\n  shift?: boolean\n  alt?: boolean\n  ctrl?: boolean\n  small?: boolean\n  children?: React.ReactNode\n}\n\n// TODO fix the font so that this looks good\nconst Kbd: React.FC<KbdProps> = ({\n  meta,\n  shift,\n  alt,\n  ctrl,\n  small,\n  children,\n}) => {\n  return (\n    <kbd className={kbdVariants({ size: small ? \"small\" : \"medium\" })}>\n      {meta && <span>⌘</span>}\n      {shift && <span>⇧</span>}\n      {alt && <span>⌥</span>}\n      {ctrl && <span>⌃</span>}\n\n      {children && <span>{children}</span>}\n    </kbd>\n  )\n}\n\nexport { Kbd }\n"
+    }
+  ],
+  "type": "components:ui"
+}
