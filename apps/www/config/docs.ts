@@ -240,6 +240,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Snippet",
+          href: "/docs/components/snippet",
+          items: [],
+        },
+        {
           title: "Sonner",
           href: "/docs/components/sonner",
           items: [],

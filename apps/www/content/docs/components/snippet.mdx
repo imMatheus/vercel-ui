@@ -1,0 +1,62 @@
+---
+title: Snippet
+description: Display a snippet of copyable code for the command line.
+component: true
+---
+
+<PaddingBox title="Default">
+  <ComponentPreview name="snippet-demo" />
+</PaddingBox>
+
+<PaddingBox title="Installation">
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn-ui@latest add snippet
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="snippet" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+</PaddingBox>
+
+<PaddingBox title="Inverted">
+  <ComponentPreview name="snippet-inverted" />
+</PaddingBox>
+
+<PaddingBox title="Multi line">
+  <ComponentPreview name="snippet-multi-line" />
+</PaddingBox>
+
+<PaddingBox title="No prompt">
+  <ComponentPreview name="snippet-no-prompt" />
+</PaddingBox>
+
+<PaddingBox title="Callback">
+  <ComponentPreview name="snippet-callback" />
+</PaddingBox>
+
+<PaddingBox title="Variants">
+  <ComponentPreview name="snippet-variants" />
+</PaddingBox>
