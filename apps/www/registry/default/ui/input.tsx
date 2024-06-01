@@ -25,6 +25,7 @@ export interface InputProps
   prefix?: string | React.ReactNode
   suffix?: string | React.ReactNode
   prefixStyling?: boolean
+  suffixStyling?: boolean
   label?: string
 }
 
@@ -38,8 +39,8 @@ const TextBox = ({
   return (
     <span
       className={cn(
-        "[&>svg]:h-[var(--icon-size)] text-gray-700 [&>svg]:w-[var(--icon-size)] px-3 shrink-0 flex items-center",
-        prefixStyling && " bg-background-200"
+        "text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)] px-3 shrink-0 flex items-center",
+        prefixStyling && "bg-background-200"
       )}
     >
       {children}
@@ -57,6 +58,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       suffix,
       prefix,
       prefixStyling = true,
+      suffixStyling = true,
       ...props
     },
     ref
@@ -70,9 +72,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           id={id}
           type={type}
           className={cn(
-            "bg-transparent placeholder:text-gray-700 outline-none",
+            "bg-transparent placeholder:text-gray-700 outline-none disabled:bg-background-200 disabled:text-gray-700 disabled:placeholder:text-gray-500 disabled:cursor-not-allowed",
             ((prefix && prefixStyling) || !prefix) && "pl-3",
-            ((suffix && prefixStyling) || !suffix) && "pr-3"
+            ((suffix && suffixStyling) || !suffix) && "pr-3"
           )}
           ref={ref}
           {...props}

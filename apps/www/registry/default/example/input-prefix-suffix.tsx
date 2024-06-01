@@ -39,7 +39,6 @@ export default function Component(): JSX.Element {
         placeholder="Default"
         prefix="vercel/"
         suffix={<ArrowUpCircle />}
-        suffixContainer={false}
         suffixStyling={false}
       />
     </Stack>

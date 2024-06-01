@@ -1,5 +1,17 @@
-import { Input } from "@/registry/default/ui/input"
+import type { JSX } from "react"
 
-export default function InputDisabled() {
-  return <Input disabled type="email" placeholder="Email" />
+import { Input } from "@/registry/default/ui/input"
+import { Stack } from "@/registry/default/ui/stack"
+
+export default function Component(): JSX.Element {
+  return (
+    <Stack align="start" direction={{ sm: "column", md: "row" }} gap={4}>
+      <Input
+        aria-labelledby="Demo"
+        disabled
+        placeholder="Disabled with placeholder"
+      />
+      <Input aria-labelledby="Demo" disabled value="Disabled with value" />
+    </Stack>
+  )
 }
