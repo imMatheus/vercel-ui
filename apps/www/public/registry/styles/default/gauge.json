@@ -1,0 +1,10 @@
+{
+  "name": "gauge",
+  "files": [
+    {
+      "name": "gauge.tsx",
+      "content": "import React from \"react\"\n\ninterface GaugeProps {}\n\nconst Gauge: React.FC<GaugeProps> = ({}) => {\n  return <div>gauge</div>\n}\n\nexport { Gauge }\n"
+    }
+  ],
+  "type": "components:ui"
+}
