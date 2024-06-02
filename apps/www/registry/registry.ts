@@ -87,12 +87,6 @@ const ui: Registry = [
     files: ["ui/drawer.tsx"],
   },
   {
-    name: "menu",
-    type: "components:ui",
-    dependencies: ["@radix-ui/react-menu"],
-    files: ["ui/menu.tsx"],
-  },
-  {
     name: "form",
     type: "components:ui",
     dependencies: [
@@ -104,6 +98,11 @@ const ui: Registry = [
     ],
     registryDependencies: ["button", "label"],
     files: ["ui/form.tsx"],
+  },
+  {
+    name: "gauge",
+    type: "components:ui",
+    files: ["ui/gauge.tsx"],
   },
   {
     name: "hover-card",
@@ -126,6 +125,12 @@ const ui: Registry = [
     type: "components:ui",
     dependencies: ["@radix-ui/react-label"],
     files: ["ui/label.tsx"],
+  },
+  {
+    name: "menu",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-menu"],
+    files: ["ui/menu.tsx"],
   },
   {
     name: "menubar",
@@ -502,6 +507,42 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["drawer", "dialog"],
     files: ["example/drawer-dialog.tsx"],
+  },
+  {
+    name: "gauge-demo",
+    type: "components:example",
+    registryDependencies: ["gauge"],
+    files: ["example/gauge-demo.tsx"],
+  },
+  {
+    name: "gauge-label",
+    type: "components:example",
+    registryDependencies: ["gauge"],
+    files: ["example/gauge-label.tsx"],
+  },
+  {
+    name: "gauge-color-scale",
+    type: "components:example",
+    registryDependencies: ["gauge"],
+    files: ["example/gauge-color-scale.tsx"],
+  },
+  {
+    name: "gauge-custom-color-range",
+    type: "components:example",
+    registryDependencies: ["gauge"],
+    files: ["example/gauge-custom-color-range.tsx"],
+  },
+  {
+    name: "gauge-custom-secondary-color",
+    type: "components:example",
+    registryDependencies: ["gauge"],
+    files: ["example/gauge-custom-secondary-color.tsx"],
+  },
+  {
+    name: "gauge-arc-priority",
+    type: "components:example",
+    registryDependencies: ["gauge"],
+    files: ["example/gauge-arc-priority.tsx"],
   },
   {
     name: "menu-demo",

@@ -160,6 +160,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Gauge",
+          href: "/docs/components/gauge",
+          items: [],
+        },
+        {
           title: "Hover Card",
           href: "/docs/components/hover-card",
           items: [],

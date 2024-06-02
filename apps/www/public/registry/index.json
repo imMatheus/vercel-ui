@@ -145,16 +145,6 @@
     "type": "components:ui"
   },
   {
-    "name": "menu",
-    "dependencies": [
-      "@radix-ui/react-menu"
-    ],
-    "files": [
-      "ui/menu.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
     "name": "form",
     "dependencies": [
       "@radix-ui/react-label",
@@ -169,6 +159,13 @@
     ],
     "files": [
       "ui/form.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "gauge",
+    "files": [
+      "ui/gauge.tsx"
     ],
     "type": "components:ui"
   },
@@ -203,6 +200,16 @@
     ],
     "files": [
       "ui/label.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "menu",
+    "dependencies": [
+      "@radix-ui/react-menu"
+    ],
+    "files": [
+      "ui/menu.tsx"
     ],
     "type": "components:ui"
   },
