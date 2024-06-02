@@ -30,12 +30,30 @@ interface GaugeProps {
   size: keyof typeof sizes
   value: number
   showValue?: boolean
-  colors?: {
-    primary: string
-    secondary: string
-  }
+  colors?:
+    | {
+        primary: string
+        secondary: string
+      }
+    | Partial<
+        Record<
+          | "0"
+          | "10"
+          | "20"
+          | "30"
+          | "40"
+          | "50"
+          | "60"
+          | "70"
+          | "80"
+          | "90"
+          | "100",
+          string
+        >
+      >
 }
 
+// TODO fix the 0 value case
 const Gauge: React.FC<GaugeProps> = ({
   size = "medium",
   value,
@@ -44,11 +62,26 @@ const Gauge: React.FC<GaugeProps> = ({
 }) => {
   const circleSize = 100
 
-  const secondaryColor = colors?.secondary
-    ? `hsl(${colors.secondary})`
-    : "var(--ds-gray-alpha-400)"
-  const primaryColor = colors?.primary
-    ? `hsl(${colors.primary})`
+  const secondaryColor =
+    colors && "secondary" in colors
+      ? `hsl(${colors.secondary})`
+      : "var(--ds-gray-alpha-400)"
+  const primaryColor = colors
+    ? "primary" in colors
+      ? `hsl(${colors.primary})`
+      : colors[`${Math.round(value / 10) * 10}` as keyof typeof colors]
+      ? `hsl(${
+          colors[`${Math.round(value / 10) * 10}` as keyof typeof colors]
+        })`
+      : `hsl(${
+          colors[
+            Object.keys(colors).reduce((prev, curr) =>
+              Math.abs(Number(curr) - value) < Math.abs(Number(prev) - value)
+                ? curr
+                : prev
+            ) as keyof typeof colors
+          ]
+        })`
     : value >= 68
     ? "hsl(var(--ds-green-700))"
     : value >= 34
@@ -61,8 +94,8 @@ const Gauge: React.FC<GaugeProps> = ({
       style={{
         // @ts-ignore
         "--circle-size": `${100}px`,
-        "--circumference": `${282}px`,
-        "--percent-to-px": `${2.82}px`,
+        "--circumference": `${2827433388230814}px`,
+        "--percent-to-px": `${2.827433388230814}px`,
         "--gap-percent": `${5}`,
         "--offset-factor": `${0}`,
         "--secondary-color": `${secondaryColor}`,
