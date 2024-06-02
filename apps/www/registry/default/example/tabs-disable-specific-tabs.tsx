@@ -5,14 +5,15 @@ import {
   TabsTrigger,
 } from "@/registry/default/ui/tabs"
 
-// TODO fix some of the left over cases
-export default function TabsDemo() {
+export default function TabsDisableSpecificTabs() {
   return (
     <Tabs defaultValue="apple">
       <TabsList>
         <TabsTrigger value="apple">Apple</TabsTrigger>
         <TabsTrigger value="orange">Orange</TabsTrigger>
-        <TabsTrigger value="mango">Mango</TabsTrigger>
+        <TabsTrigger value="mango" disabled>
+          Mango
+        </TabsTrigger>
       </TabsList>
       <TabsContent value="apple" className="py-4">
         Apple

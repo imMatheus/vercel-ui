@@ -67,7 +67,16 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
     const input = (
       <div className={cn(inputVariants({ size, className }))}>
-        {prefix && <TextBox prefixStyling={prefixStyling}>{prefix}</TextBox>}
+        {prefix && (
+          <span
+            className={cn(
+              "text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)] px-3 shrink-0 flex items-center",
+              prefixStyling && "bg-background-200"
+            )}
+          >
+            {prefix}
+          </span>
+        )}
         <input
           id={id}
           type={type}
@@ -79,7 +88,16 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           {...props}
         />
-        {suffix && <TextBox prefixStyling={prefixStyling}>{suffix}</TextBox>}
+        {suffix && (
+          <span
+            className={cn(
+              "text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)] px-3 shrink-0 flex items-center",
+              suffixStyling && "bg-background-200"
+            )}
+          >
+            {suffix}
+          </span>
+        )}
       </div>
     )
 

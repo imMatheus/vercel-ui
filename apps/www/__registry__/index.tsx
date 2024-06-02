@@ -1034,6 +1034,20 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/tabs-demo")),
       files: ["registry/default/example/tabs-demo.tsx"],
     },
+    "tabs-controlled": {
+      name: "tabs-controlled",
+      type: "components:example",
+      registryDependencies: ["tabs"],
+      component: React.lazy(() => import("@/registry/default/example/tabs-controlled")),
+      files: ["registry/default/example/tabs-controlled.tsx"],
+    },
+    "tabs-disable-specific-tabs": {
+      name: "tabs-disable-specific-tabs",
+      type: "components:example",
+      registryDependencies: ["tabs"],
+      component: React.lazy(() => import("@/registry/default/example/tabs-disable-specific-tabs")),
+      files: ["registry/default/example/tabs-disable-specific-tabs.tsx"],
+    },
     "textarea-demo": {
       name: "textarea-demo",
       type: "components:example",
