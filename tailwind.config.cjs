@@ -222,9 +222,8 @@ module.exports = {
           "100%": { opacity: "0", scale: "0.5" },
         },
         "loading-dots-blink": {
-          "0%": { opacity: "0.2" },
+          "0%, 100%": { opacity: "0.2" },
           "20%": { opacity: "1" },
-          "100%": { opacity: "0.2" },
         },
       },
       animation: {
