@@ -180,6 +180,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Loading dots",
+          href: "/docs/components/loading-dots",
+          items: [],
+        },
+        {
           title: "Label",
           href: "/docs/components/label",
           items: [],

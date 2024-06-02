@@ -1,0 +1,10 @@
+{
+  "name": "loading-dots",
+  "files": [
+    {
+      "name": "loading-dots.tsx",
+      "content": "import React from \"react\"\n\ninterface LoadingDotsProps {\n  size?: number\n  children?: React.ReactNode\n}\n\nconst LoadingDots: React.FC<LoadingDotsProps> = ({ size, children }) => {\n  return <span>loading...</span>\n}\n\nexport { LoadingDots }\n"
+    }
+  ],
+  "type": "components:ui"
+}

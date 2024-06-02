@@ -121,6 +121,11 @@ const ui: Registry = [
     files: ["ui/kbd.tsx"],
   },
   {
+    name: "loading-dots",
+    type: "components:ui",
+    files: ["ui/loading-dots.tsx"],
+  },
+  {
     name: "label",
     type: "components:ui",
     dependencies: ["@radix-ui/react-label"],
@@ -651,6 +656,18 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["kbd"],
     files: ["example/kbd-small.tsx"],
+  },
+  {
+    name: "loading-dots-demo",
+    type: "components:example",
+    registryDependencies: ["loading-dots"],
+    files: ["example/loading-dots-demo.tsx"],
+  },
+  {
+    name: "loading-dots-with-text",
+    type: "components:example",
+    registryDependencies: ["loading-dots"],
+    files: ["example/loading-dots-with-text.tsx"],
   },
   {
     name: "label-demo",

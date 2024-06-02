@@ -138,6 +138,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/kbd")),
       files: ["registry/default/ui/kbd.tsx"],
     },
+    "loading-dots": {
+      name: "loading-dots",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/loading-dots")),
+      files: ["registry/default/ui/loading-dots.tsx"],
+    },
     "label": {
       name: "label",
       type: "components:ui",
@@ -753,6 +760,20 @@ export const Index: Record<string, any> = {
       registryDependencies: ["kbd"],
       component: React.lazy(() => import("@/registry/default/example/kbd-small")),
       files: ["registry/default/example/kbd-small.tsx"],
+    },
+    "loading-dots-demo": {
+      name: "loading-dots-demo",
+      type: "components:example",
+      registryDependencies: ["loading-dots"],
+      component: React.lazy(() => import("@/registry/default/example/loading-dots-demo")),
+      files: ["registry/default/example/loading-dots-demo.tsx"],
+    },
+    "loading-dots-with-text": {
+      name: "loading-dots-with-text",
+      type: "components:example",
+      registryDependencies: ["loading-dots"],
+      component: React.lazy(() => import("@/registry/default/example/loading-dots-with-text")),
+      files: ["registry/default/example/loading-dots-with-text.tsx"],
     },
     "label-demo": {
       name: "label-demo",
