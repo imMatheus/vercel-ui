@@ -221,6 +221,10 @@ module.exports = {
           "0%": { opacity: "1", scale: "1" },
           "100%": { opacity: "0", scale: "0.5" },
         },
+        "loading-dots-blink": {
+          "0%, 100%": { opacity: "0.2" },
+          "20%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -229,6 +233,7 @@ module.exports = {
         "spinner-spin": "spinner-spin 1.2s linear infinite",
         "copy-button-fadeIn": "copy-button-fadeIn 150ms ease-out forwards",
         "copy-button-fadeOut": "copy-button-fadeOut 150ms ease-out forwards",
+        "loading-dots-blink": "loading-dots-blink 1400ms both infinite",
       },
     },
   },

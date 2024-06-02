@@ -194,6 +194,13 @@
     "type": "components:ui"
   },
   {
+    "name": "loading-dots",
+    "files": [
+      "ui/loading-dots.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "label",
     "dependencies": [
       "@radix-ui/react-label"
