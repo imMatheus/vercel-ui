@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import {
   Tabs,
   TabsContent,
@@ -5,10 +7,11 @@ import {
   TabsTrigger,
 } from "@/registry/default/ui/tabs"
 
-// TODO fix some of the left over cases
-export default function TabsDemo() {
+export default function TabsControlled() {
+  const [selected, setSelected] = useState("apple")
+
   return (
-    <Tabs defaultValue="apple">
+    <Tabs value={selected} onValueChange={setSelected}>
       <TabsList>
         <TabsTrigger value="apple">Apple</TabsTrigger>
         <TabsTrigger value="orange">Orange</TabsTrigger>

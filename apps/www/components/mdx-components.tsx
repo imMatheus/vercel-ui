@@ -260,44 +260,18 @@ const components = {
       {...props}
     />
   ),
-  Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
-    <Tabs className={cn("relative mt-6 w-full", className)} {...props} />
-  ),
-  TabsList: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof TabsList>) => (
-    <TabsList
-      className={cn(
-        "w-full justify-start rounded-none border-b bg-transparent p-0",
-        className
-      )}
-      {...props}
-    />
+  Tabs: (props: React.ComponentProps<typeof Tabs>) => <Tabs {...props} />,
+  TabsList: (props: React.ComponentProps<typeof TabsList>) => (
+    <TabsList {...props} />
   ),
   TabsTrigger: ({
     className,
     ...props
   }: React.ComponentProps<typeof TabsTrigger>) => (
-    <TabsTrigger
-      className={cn(
-        "relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none",
-        className
-      )}
-      {...props}
-    />
+    <TabsTrigger className={cn("min-w-14", className)} {...props} />
   ),
-  TabsContent: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof TabsContent>) => (
-    <TabsContent
-      className={cn(
-        "relative [&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold",
-        className
-      )}
-      {...props}
-    />
+  TabsContent: (props: React.ComponentProps<typeof TabsContent>) => (
+    <TabsContent {...props} />
   ),
   FrameworkDocs: ({
     className,

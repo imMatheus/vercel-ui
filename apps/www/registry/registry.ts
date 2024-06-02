@@ -890,6 +890,18 @@ const example: Registry = [
     files: ["example/tabs-demo.tsx"],
   },
   {
+    name: "tabs-controlled",
+    type: "components:example",
+    registryDependencies: ["tabs"],
+    files: ["example/tabs-controlled.tsx"],
+  },
+  {
+    name: "tabs-disable-specific-tabs",
+    type: "components:example",
+    registryDependencies: ["tabs"],
+    files: ["example/tabs-disable-specific-tabs.tsx"],
+  },
+  {
     name: "textarea-demo",
     type: "components:example",
     registryDependencies: ["textarea"],

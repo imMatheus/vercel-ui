@@ -7,9 +7,11 @@ links:
   api: https://www.radix-ui.com/docs/primitives/components/tabs#api-reference
 ---
 
-<ComponentPreview name="tabs-demo" />
+<PaddingBox title="Default">
+  <ComponentPreview name="tabs-demo" />
+</PaddingBox>
 
-## Installation
+<PaddingBox title="Installation">
 
 <Tabs defaultValue="cli">
 
@@ -19,9 +21,15 @@ links:
 </TabsList>
 <TabsContent value="cli">
 
+<Steps>
+
+<Step>Run the following command:</Step>
+
 ```bash
 npx shadcn-ui@latest add tabs
 ```
+
+</Steps>
 
 </TabsContent>
 
@@ -63,3 +71,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
   <TabsContent value="password">Change your password here.</TabsContent>
 </Tabs>
 ```
+
+</PaddingBox>
+
+<PaddingBox title="Disable specific tabs">
+  <ComponentPreview name="tabs-disable-specific-tabs" />
+</PaddingBox>
+
+<PaddingBox title="Controlled">
+  <ComponentPreview name="tabs-controlled" />
+</PaddingBox>
+
+<PaddingBox title="Secondary">
+  <ComponentPreview name="tabs-secondary" />
+</PaddingBox>
