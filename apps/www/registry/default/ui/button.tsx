@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { Spinner } from "./spinner"
 
 const buttonVariants = cva(
-  "transition-colors font-medium border flex justify-center items-center gap-0.5 max-w-full disabled:bg-gray-100 disabled:text-gray-700 disabled:border-gray-400 disabled:cursor-not-allowed",
+  "transition-colors select-none font-medium border border-transparent flex justify-center items-center gap-0.5 max-w-full disabled:bg-gray-100 disabled:text-gray-700 disabled:border-gray-400 disabled:cursor-not-allowed",
   {
     variants: {
       variant: {

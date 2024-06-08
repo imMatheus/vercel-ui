@@ -150,6 +150,11 @@ const ui: Registry = [
     files: ["ui/navigation-menu.tsx"],
   },
   {
+    name: "note",
+    type: "components:ui",
+    files: ["ui/note.tsx"],
+  },
+  {
     name: "pagination",
     type: "components:ui",
     registryDependencies: ["button"],
@@ -686,6 +691,60 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["navigation-menu"],
     files: ["example/navigation-menu-demo.tsx"],
+  },
+  {
+    name: "note-demo",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-demo.tsx"],
+  },
+  {
+    name: "note-action",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-action.tsx"],
+  },
+  {
+    name: "note-success",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-success.tsx"],
+  },
+  {
+    name: "note-secondary",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-secondary.tsx"],
+  },
+  {
+    name: "note-violet",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-violet.tsx"],
+  },
+  {
+    name: "note-warning",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-warning.tsx"],
+  },
+  {
+    name: "note-error",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-error.tsx"],
+  },
+  {
+    name: "note-cyan",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-cyan.tsx"],
+  },
+  {
+    name: "note-disabled",
+    type: "components:example",
+    registryDependencies: ["note"],
+    files: ["example/note-disabled.tsx"],
   },
   {
     name: "pagination-demo",

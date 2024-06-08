@@ -241,6 +241,13 @@
     "type": "components:ui"
   },
   {
+    "name": "note",
+    "files": [
+      "ui/note.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "pagination",
     "registryDependencies": [
       "button"

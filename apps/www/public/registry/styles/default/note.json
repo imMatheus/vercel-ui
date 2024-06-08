@@ -1,0 +1,10 @@
+{
+  "name": "note",
+  "files": [
+    {
+      "name": "note.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { VariantProps, cva } from \"class-variance-authority\"\nimport { InfoIcon } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst noteVariants = cva(\n  \"border p-2 flex justify-between items-center rounded-md gap-3 [word-break:break-word] grow\",\n  {\n    variants: {\n      variant: {\n        default: \"[--note-color:red-500]\",\n      },\n      size: {\n        small: \"py-1.5 px-2\",\n        medium: \"py-2 px-3\",\n        large: \"\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"medium\",\n    },\n  }\n)\ninterface NoteProps {\n  children: React.ReactNode\n  action?: React.ReactNode\n  size?: VariantProps<typeof noteVariants>[\"size\"]\n  type?: VariantProps<typeof noteVariants>[\"variant\"]\n  fill?: boolean\n}\n\nconst Note = ({ action, children, size, type }: NoteProps) => {\n  return (\n    <div className={cn(noteVariants({ variant: type, size }))}>\n      <span className=\"flex items-center gap-3\">\n        <span>\n          <InfoIcon className=\"w-4 h-4\" />\n        </span>\n        <span>{children}</span>\n      </span>\n      {action && <div className=\"\">{action}</div>}\n    </div>\n  )\n}\n\nexport { Note }\n"
+    }
+  ],
+  "type": "components:ui"
+}
