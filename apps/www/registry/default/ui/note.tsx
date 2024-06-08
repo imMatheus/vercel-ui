@@ -3,8 +3,8 @@
 import * as React from "react"
 import { VariantProps, cva } from "class-variance-authority"
 import {
-  AlertCircleIcon,
   AlertOctagon,
+  AlertTriangleIcon,
   CheckCircle2,
   InfoIcon,
   XIcon,
@@ -18,13 +18,16 @@ const noteVariants = cva(
     variants: {
       variant: {
         secondary:
-          "text-gray-600 border-gray-300 [--note-filled-bg:var(--ds-gray-alpha-200)]",
+          "text-gray-600 border-gray-300 [--note-filled-bg:var(--ds-gray-alpha-200)] [--note-filled-border:transparent]",
         success:
-          "text-blue-900 border-blue-400 selection:blue-800 [--note-filled-bg:hsl(var(--ds-blue-200))]",
+          "text-blue-900 border-blue-400 selection:bg-blue-700 [--note-filled-bg:hsl(var(--ds-blue-200))] [--note-filled-border:hsl(var(--ds-blue-100))]",
         error:
-          "text-red-900 border-red-400 [--note-filled-bg:hsl(var(--ds-red-200))]",
+          "text-red-900 border-red-400 selection:bg-red-800 [--note-filled-bg:hsl(var(--ds-red-200))] [--note-filled-border:hsl(var(--ds-red-100))]",
         warning:
-          "text-red-900 border-red-400 [--note-filled-bg:hsl(var(--ds-red-200))]",
+          "text-amber-900 border-amber-400 selection:bg-amber-500 [--note-filled-bg:hsl(var(--ds-amber-200))] [--note-filled-border:hsl(var(--ds-amber-100))]",
+        violet:
+          "text-purple-900 border-purple-400 selection:bg-purple-600 [--note-filled-bg:hsl(var(--ds-purple-200))] [--note-filled-border:hsl(var(--ds-purple-100))]",
+        cyan: "text-teal-900 border-teal-400 selection:bg-teal-900 [--note-filled-bg:hsl(var(--ds-teal-200))] [--note-filled-border:hsl(var(--ds-teal-100))]",
       },
       size: {
         small: "py-1.5 px-2 text-[13px] min-h-[34px]",
@@ -45,12 +48,13 @@ interface NoteProps {
   type?: VariantProps<typeof noteVariants>["variant"]
   fill?: boolean
   className?: string
+  disabled?: boolean
 }
 
 const icons = {
   success: CheckCircle2,
   error: AlertOctagon,
-  warning: AlertCircleIcon,
+  warning: AlertTriangleIcon,
 }
 
 const Note = ({
@@ -60,6 +64,7 @@ const Note = ({
   type = "secondary",
   fill,
   className,
+  disabled,
 }: NoteProps) => {
   const Icon = icons[type as keyof typeof icons] ?? InfoIcon
 
@@ -69,10 +74,10 @@ const Note = ({
         noteVariants({
           variant: type,
           size,
-          className: fill
-            ? "bg-[var(--note-filled-bg)] border-transparent"
-            : "",
         }),
+        fill && "bg-[var(--note-filled-bg)] border-[var(--note-filled-border)]",
+        disabled &&
+          "text-gray-700 border-gray-alpha-200 [--note-filled-bg:transparent] [--note-filled-border:var(--ds-gray-alpha-200)]",
         className
       )}
     >

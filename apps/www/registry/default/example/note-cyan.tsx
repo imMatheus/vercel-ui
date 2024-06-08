@@ -1,12 +1,20 @@
+import { Button } from "@/registry/default/ui/button"
 import { Note } from "@/registry/default/ui/note"
 import { Stack } from "@/registry/default/ui/stack"
 
-export default function NoteDemo() {
+export default function NoteCyan() {
   return (
-    <Stack align="flex-start" direction={{ sm: "column", md: "row" }} gap={6}>
-      <Note size="small">A small note.</Note>
-      <Note>A default note.</Note>
-      <Note size="large">A large note.</Note>
+    <Stack gap={6}>
+      <Note type="cyan">This note details some success information.</Note>
+      <Note action={<Button size="small">Upgrade</Button>} type="cyan">
+        This note details some success information.
+      </Note>
+      <Note fill type="cyan">
+        This filled note details some success information.
+      </Note>
+      <Note action={<Button size="small">Upgrade</Button>} fill type="cyan">
+        This filled note details some success information.
+      </Note>
     </Stack>
   )
 }

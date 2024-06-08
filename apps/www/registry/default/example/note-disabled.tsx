@@ -1,12 +1,22 @@
+import { Button } from "@/registry/default/ui/button"
 import { Note } from "@/registry/default/ui/note"
 import { Stack } from "@/registry/default/ui/stack"
 
-export default function NoteDemo() {
+export default function NoteDisabled() {
   return (
-    <Stack align="flex-start" direction={{ sm: "column", md: "row" }} gap={6}>
-      <Note size="small">A small note.</Note>
-      <Note>A default note.</Note>
-      <Note size="large">A large note.</Note>
+    <Stack gap={6}>
+      <Note
+        action={
+          <Button size="small" disabled>
+            Upgrade
+          </Button>
+        }
+        disabled
+        fill
+        type="warning"
+      >
+        This note details a warning.
+      </Note>
     </Stack>
   )
 }
