@@ -10,7 +10,7 @@ export function PaddingBox({ title, description, children }: PaddingBoxProps) {
   const hasLabel = !!title || !!description
 
   return (
-    <div className="p-6 border-b last:border-b-0 sm:p-12">
+    <div className="p-6 border-b border-b-gray-400 last:border-b-0 md:p-10 lg:p-12">
       {hasLabel && (
         <div className="mb-4 xl:mb-7">
           {title && (
