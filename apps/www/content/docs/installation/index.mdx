@@ -3,8 +3,9 @@ title: Installation
 description: How to install dependencies and structure your app.
 ---
 
-<PaddingBox title="Frameworks">
-  <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-6">
+<PaddingBox title="Frameworks" description="Pick your framework">
+<div className="grid gap-[1px] border border-background-100 bg-background-100 sm:grid-cols-2">
+
     <LinkedCard href="/docs/installation/next">
       <svg
         role="img"
@@ -85,7 +86,7 @@ description: How to install dependencies and structure your app.
       </svg>
       <p className="mt-2 font-medium">Laravel</p>
     </LinkedCard>
-    <LinkedCard href="/docs/installation/manual">
+    <LinkedCard href="/docs/installation/manual" className="sm:col-span-2">
       <svg
         role="img"
         viewBox="0 0 24 24"
@@ -98,6 +99,7 @@ description: How to install dependencies and structure your app.
       </svg>
       <p className="mt-2 font-medium">Manual</p>
     </LinkedCard>
+
   </div>
 </PaddingBox>
 
