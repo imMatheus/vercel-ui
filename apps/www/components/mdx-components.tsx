@@ -271,7 +271,9 @@ const components = {
     <TabsTrigger className={cn("min-w-14", className)} {...props} />
   ),
   TabsContent: (props: React.ComponentProps<typeof TabsContent>) => (
-    <TabsContent {...props} />
+    <div className="mt-4">
+      <TabsContent {...props} />
+    </div>
   ),
   FrameworkDocs: ({
     className,
