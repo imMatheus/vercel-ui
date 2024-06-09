@@ -155,7 +155,6 @@
   .dark {
     --ds-background-100: 0 0% 4%;
     --ds-background-200: 0 0% 0%;
-    --ds-background-200: 0 0% 0%;
 
     --border: 0 0% 14%;
 
@@ -326,7 +325,7 @@
   }
 
   .step:before {
-    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background-200 ml-[-50px] mt-[-4px];
+    @apply absolute ml-[-50px] mt-[-4px] inline-flex h-9 w-9 items-center justify-center rounded-full border-4 border-background-200 bg-muted text-center -indent-px font-mono text-base font-medium;
     content: counter(step);
   }
 }

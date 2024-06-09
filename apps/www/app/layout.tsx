@@ -22,14 +22,15 @@ export const metadata: Metadata = {
   keywords: [
     "Next.js",
     "React",
+    "Vercel",
     "Tailwind CSS",
     "Server Components",
     "Radix UI",
   ],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "Matheus",
+      url: "https://immatheus.com",
     },
   ],
   creator: "Matheus",

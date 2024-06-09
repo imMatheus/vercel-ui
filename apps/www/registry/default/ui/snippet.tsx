@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Check, Copy } from "lucide-react"
@@ -28,14 +30,16 @@ interface SnippetProps {
   onCopy?: () => void
   type?: VariantProps<typeof snippetVariants>["variant"]
   prompt?: boolean
+  className?: string
 }
 
 const Snippet: React.FC<SnippetProps> = ({
   text,
-  width = "100%",
+  width,
   prompt = true,
   onCopy,
   type = "default",
+  className,
 }) => {
   const textArray = Array.isArray(text) ? text : [text]
   const [showCopyButton, setShowCopyButton] = React.useState(true)
@@ -56,7 +60,10 @@ const Snippet: React.FC<SnippetProps> = ({
   }
 
   return (
-    <div className={snippetVariants({ variant: type })} style={{ width }}>
+    <div
+      className={cn(snippetVariants({ variant: type }), className)}
+      style={{ width }}
+    >
       <div className="flex-1">
         {textArray.map((text, index) => (
           <pre

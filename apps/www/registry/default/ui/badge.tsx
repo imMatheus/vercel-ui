@@ -36,6 +36,7 @@ const badgeVariants = cva(
       },
     },
     defaultVariants: {
+      variant: "gray",
       size: "md",
     },
   }
@@ -62,7 +63,7 @@ function Badge({
       {...props}
     >
       {icon && <span>{icon}</span>}
-      <span>{children}</span>
+      {children}
     </span>
   )
 }

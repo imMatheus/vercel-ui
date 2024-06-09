@@ -1,10 +1,9 @@
-import Image from "next/image"
 import Link from "next/link"
+import { UserPlus } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Announcement } from "@/components/announcement"
-import { ExamplesNav } from "@/components/examples-nav"
 import { Icons } from "@/components/icons"
 import {
   PageActions,
@@ -12,9 +11,10 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { buttonVariants } from "@/registry/default/ui/button"
+import { Button, buttonVariants } from "@/registry/default/ui/button"
+import { Input } from "@/registry/default/ui/input"
+import { Snippet } from "@/registry/default/ui/snippet"
 import { Text } from "@/registry/default/ui/text"
-import AuthPage from "@/app/examples/authentication/page"
 
 export default function IndexPage() {
   return (
@@ -44,12 +44,34 @@ export default function IndexPage() {
         </PageHeader>
       </div>
       <section className="grid grid-cols-2 grid-rows-[repeat(2,calc(fit-content/2))] gap-[1px] border-y border-y-gray-200 bg-gray-200">
-        <div className="relative flex h-full flex-col gap-6 bg-background-200 p-4 hover:bg-background-100">
-          hej
-        </div>
-        <Link
+        <LinkBox
+          href="/docs/components"
+          title="Components"
+          description="Building blocks for React applications"
+        >
+          <div className="flex flex-wrap gap-4 [&>*]:!text-gray-700">
+            <Snippet
+              text="npm init next-app"
+              className="w-[214px] md:w-[246px]"
+            />
+            <Button
+              variant="secondary"
+              prefix={<UserPlus className="h-4 w-4" />}
+            >
+              Collaborate
+            </Button>
+            <Input
+              placeholder="Value"
+              prefix="Label"
+              className="w-[200px] md:w-[234px]"
+            />
+          </div>
+        </LinkBox>
+
+        <LinkBox
           href="/docs/colors"
-          className="relative flex h-full flex-col gap-6 bg-background-200 p-4 hover:bg-background-100"
+          title="Colors"
+          description="A high contrast, accessible color system."
         >
           <div className="flex justify-between">
             <div className="flex h-24 w-8 items-center justify-center rounded-full border bg-background-200">
@@ -77,19 +99,14 @@ export default function IndexPage() {
               <div className="h-[72px] w-2 rounded-full bg-teal-800"></div>
             </div>
           </div>
-          <div>
-            <Text size="heading-16">Colors</Text>
-            <Text size={16} color="gray-900">
-              A high contrast, accessible color system.
-            </Text>
-          </div>
-          <div className="pointer-events-none absolute inset-0"></div>
-        </Link>
-        <Link
+        </LinkBox>
+
+        {/* <LinkBox
           href="/docs/grid"
-          className="group relative flex h-full flex-col gap-6 bg-background-200 p-4 hover:bg-background-100"
+          title="Grid"
+          description="A huge part of the new Vercel aesthetic"
         >
-          {/* TODO update this once grid works */}
+          //  TODO update this once grid works 
           <div className="grid grid-cols-8 grid-rows-2 gap-[1px] border border-gray-400 bg-gray-400">
             {Array.from({ length: 16 }).map((_, index) => (
               <div
@@ -98,18 +115,42 @@ export default function IndexPage() {
               ></div>
             ))}
           </div>
-          <div>
-            <Text size="heading-16">Grid</Text>
-            <Text size={16} color="gray-900">
-              A huge part of the new Vercel aesthetic
-            </Text>
-          </div>
-          <div className="pointer-events-none absolute inset-0"></div>
-        </Link>
+        </LinkBox>
+
         <div className="relative flex h-full flex-col gap-6 bg-background-200 p-4 hover:bg-background-100">
           hej
-        </div>
+        </div> */}
       </section>
     </div>
+  )
+}
+
+interface LinkBoxProps {
+  href: string
+  title: string
+  description: string
+  children: React.ReactNode
+}
+
+const LinkBox: React.FC<LinkBoxProps> = ({
+  href,
+  title,
+  description,
+  children,
+}) => {
+  return (
+    <Link
+      href={href}
+      className="group relative flex h-full flex-col gap-6 bg-background-200 p-8 hover:bg-background-100"
+    >
+      <div className="pointer-events-none flex-1">{children}</div>
+      <div>
+        <Text size="heading-16">{title}</Text>
+        <Text size={16} color="gray-900">
+          {description}
+        </Text>
+      </div>
+      <div className="z-100 pointer-events-none absolute inset-0 border border-blue-700 opacity-0 group-focus-visible:opacity-100"></div>
+    </Link>
   )
 }

@@ -2,29 +2,78 @@ type IconProps = React.HTMLAttributes<SVGElement>
 
 export const Icons = {
   logo: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
-      <rect width="256" height="256" fill="none" />
+    <svg
+      width="427"
+      height="427"
+      viewBox="0 0 427 427"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <rect width="427" height="427" fill="" />
       <line
-        x1="208"
-        y1="128"
-        x2="128"
-        y2="208"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
+        stroke-width="12"
+        x1="403.5"
+        y1="23"
+        x2="403.5"
+        y2="403"
+        stroke="hsl(var(--ds-gray-500))"
       />
       <line
-        x1="192"
-        y1="40"
-        x2="40"
-        y2="192"
-        fill="none"
+        stroke-width="12"
+        x1="23.5"
+        y1="23"
+        x2="23.5"
+        y2="403"
+        stroke="hsl(var(--ds-gray-500))"
+      />
+      <line
+        stroke-width="12"
+        x1="213.5"
+        y1="23"
+        x2="213.5"
+        y2="403"
+        stroke="hsl(var(--ds-gray-500))"
+      />
+      <line
+        stroke-width="12"
+        x1="23"
+        y1="212.5"
+        x2="403"
+        y2="212.5"
+        stroke="hsl(var(--ds-gray-500))"
+      />
+      <line
+        stroke-width="12"
+        x1="23"
+        y1="22.5"
+        x2="404"
+        y2="22.5"
+        stroke="hsl(var(--ds-gray-500))"
+      />
+      <line
+        stroke-width="12"
+        x1="23"
+        y1="402.5"
+        x2="404"
+        y2="402.5"
+        stroke="hsl(var(--ds-gray-500))"
+      />
+      <line
+        x1="213.658"
+        y1="402.671"
+        x2="23.6584"
+        y2="22.6708"
         stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
+        stroke-width="18"
+      />
+      <line
+        x1="404.34"
+        y1="22.6736"
+        x2="213.34"
+        y2="402.674"
+        stroke="currentColor"
+        stroke-width="18"
       />
     </svg>
   ),
