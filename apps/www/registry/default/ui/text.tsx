@@ -37,14 +37,17 @@ const Text: React.FC<TextProps> = ({
   const isMediaSize = typeof size === "object"
 
   const style: React.CSSProperties = isMediaSize
-    ? Object.entries(size).reduce((acc, [breakpoint, value]) => {
-        acc[`--${breakpoint}-text-size`] = textSizes[value].fontSize
-        acc[`--${breakpoint}-text-weight`] = textSizes[value].fontWeight
-        acc[`--${breakpoint}-text-letter-spacing`] =
-          textSizes[value].letterSpacing
-        acc[`--${breakpoint}-text-line-height`] = textSizes[value].lineHeight
-        return acc
-      }, {} as Record<string, string>)
+    ? Object.entries(size).reduce(
+        (acc, [breakpoint, value]) => {
+          acc[`--${breakpoint}-text-size`] = textSizes[value].fontSize
+          acc[`--${breakpoint}-text-weight`] = textSizes[value].fontWeight
+          acc[`--${breakpoint}-text-letter-spacing`] =
+            textSizes[value].letterSpacing
+          acc[`--${breakpoint}-text-line-height`] = textSizes[value].lineHeight
+          return acc
+        },
+        {} as Record<string, string>
+      )
     : {
         "--text-size": textSizes[size as TextSize]?.fontSize,
         "--text-weight": textSizes[size as TextSize]?.fontWeight,

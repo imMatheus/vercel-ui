@@ -75,15 +75,15 @@ const Note = ({
           variant: type,
           size,
         }),
-        fill && "bg-[var(--note-filled-bg)] border-[var(--note-filled-border)]",
+        fill && "border-[var(--note-filled-border)] bg-[var(--note-filled-bg)]",
         disabled &&
-          "text-gray-700 border-gray-alpha-200 [--note-filled-bg:transparent] [--note-filled-border:var(--ds-gray-alpha-200)]",
+          "border-gray-alpha-200 text-gray-700 [--note-filled-bg:transparent] [--note-filled-border:var(--ds-gray-alpha-200)]",
         className
       )}
     >
       <span className="flex items-center gap-3">
         <span>
-          <Icon className="w-4 h-4" />
+          <Icon className="h-4 w-4" />
         </span>
         <span className="">{children}</span>
       </span>

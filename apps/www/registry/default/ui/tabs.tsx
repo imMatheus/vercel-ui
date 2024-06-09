@@ -15,7 +15,7 @@ const TabsList = React.forwardRef<
     ref={ref}
     // maybe rethink the box shadow here
     className={cn(
-      "flex flex-nowrap w-full items-baseline overflow-x-auto pb-[1px] [box-shadow:0_-1px_0_var(--accents-2)_inset]",
+      "flex w-full flex-nowrap items-baseline overflow-x-auto pb-[1px] [box-shadow:0_-1px_0_var(--accents-2)_inset]",
       className
     )}
     {...props}
@@ -31,13 +31,13 @@ const TabsTrigger = React.forwardRef<
     ref={ref}
     disabled={disabled}
     className={cn(
-      "group pr-6 last:pr-0 text-gray-900 data-[state=active]:text-gray-1000 disabled:cursor-not-allowed",
+      "group pr-6 text-gray-900 last:pr-0 disabled:cursor-not-allowed data-[state=active]:text-gray-1000",
       !disabled && "hover:text-gray-1000",
       className
     )}
     {...props}
   >
-    <div className="border-b-2 leading-5 mb-[-1px] py-3 text-sm group-first:pl-0.5 border-b-transparent group-data-[state=active]:border-b-gray-1000 group-data-[state=active]:text-foreground group-data-[state=active]:shadow-sm">
+    <div className="mb-[-1px] border-b-2 border-b-transparent py-3 text-sm leading-5 group-first:pl-0.5 group-data-[state=active]:border-b-gray-1000 group-data-[state=active]:text-foreground group-data-[state=active]:shadow-sm">
       {children}
     </div>
   </TabsPrimitive.Trigger>

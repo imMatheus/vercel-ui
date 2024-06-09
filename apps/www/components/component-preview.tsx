@@ -66,7 +66,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "group relative rounded-xl overflow-hidden border bg-background-100 border-gray-alpha-400",
+        "group relative overflow-hidden rounded-xl border border-gray-alpha-400 bg-background-100",
         className
       )}
       {...props}
@@ -106,10 +106,10 @@ export function ComponentPreview({
 
       <Accordion.Root type="single" collapsible>
         <Accordion.Item value="code">
-          <Accordion.Header className="text-sm text-gray-900 border-t border-t-gray-alpha-400 px-4 bg-background-200">
-            <Accordion.Trigger className="group h-12 flex items-center gap-3">
+          <Accordion.Header className="border-t border-t-gray-alpha-400 bg-background-200 px-4 text-sm text-gray-900">
+            <Accordion.Trigger className="group flex h-12 items-center gap-3">
               <ChevronDown
-                className="w-4 h-4 group-data-[state=open]:-rotate-90"
+                className="h-4 w-4 group-data-[state=open]:-rotate-90"
                 aria-hidden
               />
               <p className="hidden group-data-[state=open]:block">Show code</p>
@@ -117,7 +117,7 @@ export function ComponentPreview({
             </Accordion.Trigger>
           </Accordion.Header>
           <Accordion.Content>
-            <div className="flex border-t border-gray-alpha-400 border-flex-col space-y-4">
+            <div className="border-flex-col flex space-y-4 border-t border-gray-alpha-400">
               <div className="w-full [&_pre]:my-0 [&_pre]:overflow-auto">
                 {Code}
               </div>

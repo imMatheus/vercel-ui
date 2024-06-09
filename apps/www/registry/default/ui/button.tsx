@@ -84,7 +84,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {loading ? <Spinner size={size === "large" ? 24 : 16} /> : prefix}
-        <span className="px-1.5 text-ellipsis">{children}</span>
+        <span className="text-ellipsis px-1.5">{children}</span>
         {loading ? null : suffix}
       </Comp>
     )

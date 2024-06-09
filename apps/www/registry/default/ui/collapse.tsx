@@ -30,7 +30,7 @@ const Collapse = React.forwardRef<
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         className={cn(
-          "flex flex-1 items-center justify-between py-6 font-semibold text-2xl transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+          "flex flex-1 items-center justify-between py-6 text-2xl font-semibold transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
           className
         )}
       >
@@ -39,7 +39,7 @@ const Collapse = React.forwardRef<
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
     {/* <AccordionPrimitive.Content className="overflow-hidden text-sm transition-[height]"> */}
-    <AccordionPrimitive.Content className="overflow-hidden text-base mb-4 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+    <AccordionPrimitive.Content className="mb-4 overflow-hidden text-base data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
       {props.children}
     </AccordionPrimitive.Content>
   </AccordionPrimitive.Item>

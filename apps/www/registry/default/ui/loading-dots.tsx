@@ -15,9 +15,9 @@ const LoadingDots: React.FC<LoadingDotsProps> = ({ size = 2, children }) => {
       }}
     >
       {children && <span className="mr-3 inline-block">{children}</span>}
-      <span className="mx-[1px] inline-block w-[var(--loading-dots-size)] h-[var(--loading-dots-size)] rounded-full bg-gray-900 animate-loading-dots-blink"></span>
-      <span className="mx-[1px] inline-block w-[var(--loading-dots-size)] h-[var(--loading-dots-size)] rounded-full bg-gray-900 animate-loading-dots-blink delay-200"></span>
-      <span className="mx-[1px] inline-block w-[var(--loading-dots-size)] h-[var(--loading-dots-size)] rounded-full bg-gray-900 animate-loading-dots-blink [animation-delay:400ms]"></span>
+      <span className="mx-[1px] inline-block h-[var(--loading-dots-size)] w-[var(--loading-dots-size)] animate-loading-dots-blink rounded-full bg-gray-900"></span>
+      <span className="mx-[1px] inline-block h-[var(--loading-dots-size)] w-[var(--loading-dots-size)] animate-loading-dots-blink rounded-full bg-gray-900 delay-200"></span>
+      <span className="mx-[1px] inline-block h-[var(--loading-dots-size)] w-[var(--loading-dots-size)] animate-loading-dots-blink rounded-full bg-gray-900 [animation-delay:400ms]"></span>
     </span>
   )
 }

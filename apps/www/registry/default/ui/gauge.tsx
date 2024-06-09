@@ -70,23 +70,23 @@ const Gauge: React.FC<GaugeProps> = ({
     ? "primary" in colors
       ? `hsl(${colors.primary})`
       : colors[`${Math.round(value / 10) * 10}` as keyof typeof colors]
-      ? `hsl(${
-          colors[`${Math.round(value / 10) * 10}` as keyof typeof colors]
-        })`
-      : `hsl(${
-          colors[
-            Object.keys(colors).reduce((prev, curr) =>
-              Math.abs(Number(curr) - value) < Math.abs(Number(prev) - value)
-                ? curr
-                : prev
-            ) as keyof typeof colors
-          ]
-        })`
+        ? `hsl(${
+            colors[`${Math.round(value / 10) * 10}` as keyof typeof colors]
+          })`
+        : `hsl(${
+            colors[
+              Object.keys(colors).reduce((prev, curr) =>
+                Math.abs(Number(curr) - value) < Math.abs(Number(prev) - value)
+                  ? curr
+                  : prev
+              ) as keyof typeof colors
+            ]
+          })`
     : value >= 68
-    ? "hsl(var(--ds-green-700))"
-    : value >= 34
-    ? "hsl(var(--ds-amber-700))"
-    : "hsl(var(--ds-red-800))"
+      ? "hsl(var(--ds-green-700))"
+      : value >= 34
+        ? "hsl(var(--ds-amber-700))"
+        : "hsl(var(--ds-red-800))"
 
   return (
     <div
@@ -118,7 +118,7 @@ const Gauge: React.FC<GaugeProps> = ({
           stroke-linecap="round"
           stroke-linejoin="round"
           className={cn(
-            "transition-all duration-1000 ease-in-out stroke-[var(--secondary-color)]",
+            "stroke-[var(--secondary-color)] transition-all duration-1000 ease-in-out",
             "[stroke-dasharray:calc(var(--stroke-percent)_*_var(--percent-to-px))_var(--circumference)]",
             "[transition-property:stroke-dasharray,tranform]",
             "[transform:rotate(calc(1turn_-_90deg_-(var(--gap-percent)_*_var(--percent-to-deg)_*_var(--offset-factor-secondary))))_scaleY(-1)]",

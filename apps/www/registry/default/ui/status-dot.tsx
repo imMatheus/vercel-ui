@@ -28,8 +28,8 @@ interface StatusDotProps {
 const StatusDot: React.FC<StatusDotProps> = ({ state, label }) => {
   return (
     <div className="flex items-center">
-      <div className={cn("w-2.5 h-2.5 rounded-full", colors[state])} />
-      {label && <p className="text-sm ml-2 leading-4">{labels[state]}</p>}
+      <div className={cn("h-2.5 w-2.5 rounded-full", colors[state])} />
+      {label && <p className="ml-2 text-sm leading-4">{labels[state]}</p>}
     </div>
   )
 }

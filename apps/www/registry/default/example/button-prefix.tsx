@@ -11,11 +11,11 @@ export default function ButtonPrefix() {
       gap={4}
       justify="space-between"
     >
-      <Button prefix={<ArrowLeft className="w-4 h-4" />}>Upload</Button>
-      <Button suffix={<ArrowRight className="w-4 h-4" />}>Upload</Button>
+      <Button prefix={<ArrowLeft className="h-4 w-4" />}>Upload</Button>
+      <Button suffix={<ArrowRight className="h-4 w-4" />}>Upload</Button>
       <Button
-        prefix={<ArrowLeft className="w-4 h-4" />}
-        suffix={<ArrowRight className="w-4 h-4" />}
+        prefix={<ArrowLeft className="h-4 w-4" />}
+        suffix={<ArrowRight className="h-4 w-4" />}
       >
         Upload
       </Button>

@@ -15,13 +15,13 @@ const Toggle = React.forwardRef<
 >(({ className, size = "medium", ...props }, ref) => (
   <SwitchPrimitives.Root
     className={cn(
-      "peer inline-flex shrink-0 cursor-pointer items-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+      "focus-visible:ring-offset-background peer inline-flex shrink-0 cursor-pointer items-center rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
       {
         "h-[14px] w-[28px]": size === "medium",
         "h-[24px] w-[40px]": size === "large",
       },
       props.disabled
-        ? "disabled:cursor-not-allowed disabled:bg-accents-1 disabled:border-accents-2"
+        ? "disabled:cursor-not-allowed disabled:border-accents-2 disabled:bg-accents-1"
         : "border-gray-alpha-400 data-[state=checked]:bg-success data-[state=unchecked]:bg-gray-100",
       className
     )}

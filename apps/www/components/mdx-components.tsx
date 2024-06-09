@@ -186,7 +186,7 @@ const components = {
         {!__npmCommand__ && (
           <pre
             className={cn(
-              "mb-4 mt-6 overflow-x-auto py-4 bg-background-100",
+              "mb-4 mt-6 overflow-x-auto bg-background-100 py-4",
               className
             )}
             {...props}
@@ -316,12 +316,12 @@ const components = {
             <div className="flex w-full gap-1 md:gap-2">
               <div className="w-[68px]">
                 <Tooltip text="bg-background-100">
-                  <button className="h-10 w-full bg-background-100 shadow-inner rounded"></button>
+                  <button className="h-10 w-full rounded bg-background-100 shadow-inner"></button>
                 </Tooltip>
               </div>
               <div className="w-[68px]">
                 <Tooltip text="bg-background-200">
-                  <button className="bg-background-200 h-10 w-full rounded shadow-inner"></button>
+                  <button className="h-10 w-full rounded bg-background-200 shadow-inner"></button>
                 </Tooltip>
               </div>
             </div>

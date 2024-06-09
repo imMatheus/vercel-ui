@@ -4,7 +4,7 @@ import { Button } from "@/registry/default/ui/button"
 import { Stack } from "@/registry/default/ui/stack"
 
 export default function ButtonShapes() {
-  const Arrow = () => <ArrowUp className="w-4 h-4" />
+  const Arrow = () => <ArrowUp className="h-4 w-4" />
 
   return (
     <Stack
