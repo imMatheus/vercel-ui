@@ -82,9 +82,8 @@ const Note = ({
       )}
     >
       <span className="flex items-center gap-3">
-        <span>
-          <Icon className="h-4 w-4" />
-        </span>
+        <Icon className="h-4 w-4 shrink-0" />
+
         <span className="">{children}</span>
       </span>
       {action && <div className="shrink-0">{action}</div>}

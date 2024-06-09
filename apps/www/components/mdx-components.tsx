@@ -25,6 +25,7 @@ import {
 } from "@/registry/default/ui/alert"
 import { AspectRatio } from "@/registry/default/ui/aspect-ratio"
 import { Collapse, CollapseGroup } from "@/registry/default/ui/collapse"
+import { Note } from "@/registry/default/ui/note"
 import { Snippet } from "@/registry/default/ui/snippet"
 import {
   Tabs,
@@ -239,6 +240,7 @@ const components = {
   Callout,
   ComponentPreview,
   PaddingBox,
+  Note,
   ComponentExample,
   ComponentSource,
   AspectRatio,
