@@ -13,8 +13,8 @@ interface ShowMoreProps {
 
 const ShowMore = ({ expanded, onClick }: ShowMoreProps) => {
   return (
-    <div className="min-h-[30px] flex items-center w-[calc(100%-40px)]">
-      <div className="flex-1 h-[1px] translate-x-[-1px] bg-gray-alpha-400"></div>
+    <div className="flex min-h-[30px] w-[calc(100%-40px)] items-center">
+      <div className="h-[1px] flex-1 translate-x-[-1px] bg-gray-alpha-400"></div>
       <div className="shrink-0">
         <Button
           size="small"
@@ -26,14 +26,14 @@ const ShowMore = ({ expanded, onClick }: ShowMoreProps) => {
             <span>{expanded ? "Show less" : "Show more"}</span>
             <ChevronDownIcon
               className={cn(
-                "ml-1 w-5 h-5 transition-transform",
+                "ml-1 h-5 w-5 transition-transform",
                 expanded && "rotate-180"
               )}
             />
           </div>
         </Button>
       </div>
-      <div className="flex-1 h-[1px] translate-x-[1px] bg-gray-alpha-400"></div>
+      <div className="h-[1px] flex-1 translate-x-[1px] bg-gray-alpha-400"></div>
     </div>
   )
 }

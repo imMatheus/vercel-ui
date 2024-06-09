@@ -312,7 +312,7 @@ We are shipping two styles: `default` and `new-york` (with more coming soon).
   width="716"
   height="402"
   alt="Default vs New York style"
-  className="border rounded-lg overflow-hidden mt-6"
+  className="mt-6 overflow-hidden rounded-lg border"
 />
 
 The `default` style is the one you are used to. It's the one we've been using since the beginning of this project. It uses `lucide-react` for icons and `tailwindcss-animate` for animations.
@@ -336,7 +336,7 @@ Start with a style as the base then theme using CSS variables or Tailwind CSS ut
   width="716"
   height="402"
   alt="Style with theming"
-  className="border rounded-lg overflow-hidden mt-6"
+  className="mt-6 overflow-hidden rounded-lg border"
 />
 
 ---
@@ -492,7 +492,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+      <SheetPrimitive.Close className="ring-offset-background absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>

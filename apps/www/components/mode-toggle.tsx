@@ -9,10 +9,10 @@ export function ModeToggle() {
 
   // NOTE vercel seems to have a bug on there site where the switcher has "32x" in height
   return (
-    <div className="flex rounded-full bg-background-100 shadow-border w-fit">
+    <div className="flex w-fit rounded-full bg-background-100 shadow-border">
       <span className="h-full">
         <input
-          className="sr-only peer"
+          className="peer sr-only"
           type="radio"
           id="theme-switch-system"
           value="system"
@@ -21,14 +21,14 @@ export function ModeToggle() {
         />
         <label
           htmlFor="theme-switch-system"
-          className="peer-checked:shadow-border peer-checked:text-gray-1000 w-[28px] h-[28px] relative text-gray-700 rounded-full flex justify-center items-center"
+          className="relative flex h-[28px] w-[28px] items-center justify-center rounded-full text-gray-700 peer-checked:text-gray-1000 peer-checked:shadow-border"
         >
-          <LaptopIcon className="w-4 h-4" />
+          <LaptopIcon className="h-4 w-4" />
         </label>
       </span>
       <span className="h-full">
         <input
-          className="sr-only peer"
+          className="peer sr-only"
           type="radio"
           id="theme-switch-light"
           value="light"
@@ -37,14 +37,14 @@ export function ModeToggle() {
         />
         <label
           htmlFor="theme-switch-light"
-          className="peer-checked:shadow-border peer-checked:text-gray-1000 w-[28px] h-[28px] relative text-gray-700 rounded-full flex justify-center items-center"
+          className="relative flex h-[28px] w-[28px] items-center justify-center rounded-full text-gray-700 peer-checked:text-gray-1000 peer-checked:shadow-border"
         >
-          <SunIcon className="w-4 h-4" />
+          <SunIcon className="h-4 w-4" />
         </label>
       </span>
       <span className="h-full">
         <input
-          className="sr-only peer"
+          className="peer sr-only"
           type="radio"
           id="theme-switch-dark"
           value="dark"
@@ -53,9 +53,9 @@ export function ModeToggle() {
         />
         <label
           htmlFor="theme-switch-dark"
-          className="peer-checked:shadow-border peer-checked:text-gray-1000 w-[28px] h-[28px] relative text-gray-700 rounded-full flex justify-center items-center"
+          className="relative flex h-[28px] w-[28px] items-center justify-center rounded-full text-gray-700 peer-checked:text-gray-1000 peer-checked:shadow-border"
         >
-          <MoonIcon className="w-4 h-4" />
+          <MoonIcon className="h-4 w-4" />
         </label>
       </span>
     </div>

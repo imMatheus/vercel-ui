@@ -39,7 +39,7 @@ const TextBox = ({
   return (
     <span
       className={cn(
-        "text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)] px-3 shrink-0 flex items-center",
+        "flex shrink-0 items-center px-3 text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)]",
         prefixStyling && "bg-background-200"
       )}
     >
@@ -70,7 +70,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {prefix && (
           <span
             className={cn(
-              "text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)] px-3 shrink-0 flex items-center",
+              "flex shrink-0 items-center px-3 text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)]",
               prefixStyling && "bg-background-200"
             )}
           >
@@ -81,7 +81,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           id={id}
           type={type}
           className={cn(
-            "bg-transparent placeholder:text-gray-700 outline-none disabled:bg-background-200 disabled:text-gray-700 disabled:placeholder:text-gray-500 disabled:cursor-not-allowed",
+            "bg-transparent outline-none placeholder:text-gray-700 disabled:cursor-not-allowed disabled:bg-background-200 disabled:text-gray-700 disabled:placeholder:text-gray-500",
             ((prefix && prefixStyling) || !prefix) && "pl-3",
             ((suffix && suffixStyling) || !suffix) && "pr-3"
           )}
@@ -91,7 +91,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {suffix && (
           <span
             className={cn(
-              "text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)] px-3 shrink-0 flex items-center",
+              "flex shrink-0 items-center px-3 text-gray-700 [&>svg]:h-[var(--icon-size)] [&>svg]:w-[var(--icon-size)]",
               suffixStyling && "bg-background-200"
             )}
           >

@@ -37,14 +37,14 @@ interface DocsSidebarNavItemsProps {
 // SHADCNUI should not export here
 function DocsSidebarNavItems({ items, pathname }: DocsSidebarNavItemsProps) {
   return items?.length ? (
-    <div className="grid grid-flow-row auto-rows-max text-sm space-y-1">
+    <div className="grid grid-flow-row auto-rows-max space-y-1 text-sm">
       {items.map((item, index) =>
         item.href && !item.disabled ? (
           <Link
             key={index}
             href={item.href}
             className={cn(
-              "group flex w-full text-gray-900 items-center rounded-md px-3 h-10 leading-5 hover:no-underline",
+              "group flex h-10 w-full items-center rounded-md px-3 leading-5 text-gray-900 hover:no-underline",
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href
                 ? "bg-gray-alpha-100 text-gray-1000"

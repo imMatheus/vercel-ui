@@ -98,13 +98,13 @@ export default async function DocPage({ params }: DocPageProps) {
           <div className="space-y-3">
             <h1
               className={cn(
-                "scroll-m-20 text-2xl sm:text-[40px] font-semibold tracking-tight"
+                "scroll-m-20 text-2xl font-semibold tracking-tight sm:text-[40px]"
               )}
             >
               {doc.title}
             </h1>
             {doc.description && (
-              <p className="text-base sm:text-[20px] tracking-tight text-gray-900">
+              <p className="text-base tracking-tight text-gray-900 sm:text-[20px]">
                 {doc.description}
               </p>
             )}

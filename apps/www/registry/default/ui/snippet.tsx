@@ -63,7 +63,7 @@ const Snippet: React.FC<SnippetProps> = ({
             key={index}
             className={cn(
               "overflow-y-auto text-[13px]",
-              prompt && "before:content-['$_'] before:select-none"
+              prompt && "before:select-none before:content-['$_']"
             )}
           >
             {text}
@@ -73,27 +73,27 @@ const Snippet: React.FC<SnippetProps> = ({
 
       <button
         onClick={copyTextHandler}
-        className="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 flex justify-center items-center"
+        className="absolute right-1 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center"
       >
         <div
           className={cn(
-            "absolute  duration-150 fill-mode-forwards ease-out",
+            "absolute  duration-150 ease-out fill-mode-forwards",
             showCopyButton
               ? "animate-copy-button-fadeOut"
               : "animate-copy-button-fadeIn"
           )}
         >
-          <Check className="w-4 h-4" />
+          <Check className="h-4 w-4" />
         </div>
         <div
           className={cn(
-            "absolute  duration-150 fill-mode-forwards ease-out",
+            "absolute  duration-150 ease-out fill-mode-forwards",
             showCopyButton
               ? "animate-copy-button-fadeIn"
               : "animate-copy-button-fadeOut"
           )}
         >
-          <Copy className="w-4 h-4" />
+          <Copy className="h-4 w-4" />
         </div>
       </button>
     </div>

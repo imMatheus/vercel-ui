@@ -20,42 +20,42 @@ export function DocsPager({ doc }: DocsPagerProps) {
   }
 
   return (
-    <div className="border-t p-4 xl:px-12 xl:pb-8 xl:pt-0 border-gray-alpha-400">
+    <div className="border-t border-gray-alpha-400 p-4 xl:px-12 xl:pb-8 xl:pt-0">
       {/* TODO add feedback here */}
 
       <div className="pt-8">
-        <nav className="flex items-start justify-between w-full relative">
+        <nav className="relative flex w-full items-start justify-between">
           {pager?.prev?.href && (
-            <Link href={pager.prev.href} className="group py-1 pr-2 pl-7">
+            <Link href={pager.prev.href} className="group py-1 pl-7 pr-2">
               <div className="">
                 <Text
                   size="copy-13"
                   color="gray-900"
-                  className="group-hover:text-contrast transition-colors"
+                  className="transition-colors group-hover:text-contrast"
                 >
                   Previous
                 </Text>
               </div>
               <div className="relative">
-                <ChevronLeftIcon className="h-5 w-5 absolute left-[-26px] mt-0.5 text-gray-900 group-hover:text-contrast transition-colors" />
+                <ChevronLeftIcon className="absolute left-[-26px] mt-0.5 h-5 w-5 text-gray-900 transition-colors group-hover:text-contrast" />
                 {pager.prev.title}
               </div>
             </Link>
           )}
 
           {pager?.next?.href && (
-            <Link href={pager.next.href} className="group py-1 pr-2 pl-7">
+            <Link href={pager.next.href} className="group py-1 pl-7 pr-2">
               <div className="">
                 <Text
                   size="copy-13"
                   color="gray-900"
-                  className="group-hover:text-contrast transition-colors"
+                  className="transition-colors group-hover:text-contrast"
                 >
                   Next
                 </Text>
               </div>
               <div className="relative">
-                <ChevronRightIcon className="h-5 w-5 absolute right-[-26px] mt-0.5 text-gray-900 group-hover:text-contrast transition-colors" />
+                <ChevronRightIcon className="absolute right-[-26px] mt-0.5 h-5 w-5 text-gray-900 transition-colors group-hover:text-contrast" />
                 {pager.next.title}
               </div>
             </Link>

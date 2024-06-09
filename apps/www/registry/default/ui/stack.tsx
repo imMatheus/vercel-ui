@@ -29,11 +29,14 @@ function convertGapToProps(gap?: Gap) {
   if (typeof gap === "number") {
     return { gap: convertNumberIntoPx(gap) } // Applies universally if gap is a number
   } else if (gap && typeof gap === "object") {
-    return Object.entries(gap).reduce((acc, [breakpoint, value]) => {
-      // Use CSS variables for gap values at different breakpoints
-      acc[`--gap-${breakpoint}`] = convertNumberIntoPx(value)
-      return acc
-    }, {} as Record<string, Object>)
+    return Object.entries(gap).reduce(
+      (acc, [breakpoint, value]) => {
+        // Use CSS variables for gap values at different breakpoints
+        acc[`--gap-${breakpoint}`] = convertNumberIntoPx(value)
+        return acc
+      },
+      {} as Record<string, Object>
+    )
   }
   return {}
 }
