@@ -15,7 +15,7 @@ export function SiteHeader() {
       <div className="flex h-16 max-w-screen-2xl items-center">
         <MainNav />
         <MobileNav />
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+        <div className="flex flex-1 items-center justify-between space-x-2 pr-4 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <CommandMenu />
           </div>
@@ -24,6 +24,7 @@ export function SiteHeader() {
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
+              className="hidden md:block"
             >
               <div
                 className={cn(
@@ -41,6 +42,7 @@ export function SiteHeader() {
               href={siteConfig.links.twitter}
               target="_blank"
               rel="noreferrer"
+              className="hidden md:block"
             >
               <div
                 className={cn(

@@ -3,7 +3,6 @@
 import * as React from "react"
 import Link, { LinkProps } from "next/link"
 import { useRouter } from "next/navigation"
-import { ViewVerticalIcon } from "@radix-ui/react-icons"
 
 import { docsConfig } from "@/config/docs"
 import { siteConfig } from "@/config/site"
@@ -21,7 +20,7 @@ export function MobileNav() {
       <SheetTrigger asChild>
         <Button
           variant="tertiary"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="ml-4 mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
           <svg
             strokeWidth="1.5"
@@ -64,8 +63,8 @@ export function MobileNav() {
           <Icons.logo className="mr-2 h-4 w-4" />
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
-        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-3">
+        <ScrollArea className="my-4 h-[calc(100vh-3rem)] pb-10 pl-6">
+          <div className="mb-6 flex flex-col space-y-3">
             {docsConfig.mainNav?.map(
               (item) =>
                 item.href && (
@@ -73,16 +72,17 @@ export function MobileNav() {
                     key={item.href}
                     href={item.href}
                     onOpenChange={setOpen}
+                    className="text-gray-900"
                   >
                     {item.title}
                   </MobileLink>
                 )
             )}
           </div>
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-8">
             {docsConfig.sidebarNav.map((item, index) => (
-              <div key={index} className="flex flex-col space-y-3 pt-6">
-                <h4 className="font-medium">{item.title}</h4>
+              <div key={index} className="flex flex-col space-y-3">
+                <h4 className="font-medium text-gray-1000">{item.title}</h4>
                 {item?.items?.length &&
                   item.items.map((item) => (
                     <React.Fragment key={item.href}>
@@ -91,7 +91,7 @@ export function MobileNav() {
                           <MobileLink
                             href={item.href}
                             onOpenChange={setOpen}
-                            className="text-muted-foreground"
+                            className="text-gray-900"
                           >
                             {item.title}
                             {item.label && (

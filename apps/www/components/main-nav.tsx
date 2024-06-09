@@ -14,7 +14,10 @@ export function MainNav() {
 
   return (
     <div className="mr-4 hidden pl-6 md:flex">
-      <Link href="/" className="mr-6 flex items-center space-x-2">
+      <Link
+        href="/"
+        className="mr-6 flex h-16 items-center space-x-2 xl:w-[236px] xl:border-r xl:pr-4"
+      >
         <Icons.logo className="h-6 w-6" />
         <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
@@ -24,8 +27,10 @@ export function MainNav() {
         <Link
           href="/docs"
           className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/docs" ? "text-foreground" : "text-foreground/60"
+            "transition-colors",
+            pathname === "/docs"
+              ? "text-white"
+              : "text-gray-700 hover:text-gray-900"
           )}
         >
           Docs
@@ -33,16 +38,16 @@ export function MainNav() {
         <Link
           href="/docs/components"
           className={cn(
-            "transition-colors hover:text-foreground/80",
+            "transition-colors",
             pathname?.startsWith("/docs/components")
-              ? "text-foreground"
-              : "text-foreground/60"
+              ? "text-white"
+              : "text-gray-700 hover:text-gray-900"
           )}
         >
           Components
         </Link>
 
-        <Link
+        {/* <Link
           href="/examples"
           className={cn(
             "transition-colors hover:text-foreground/80",
@@ -52,15 +57,7 @@ export function MainNav() {
           )}
         >
           Examples
-        </Link>
-        <Link
-          href={siteConfig.links.github}
-          className={cn(
-            "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
-          )}
-        >
-          GitHub
-        </Link>
+        </Link> */}
       </nav>
     </div>
   )

@@ -15,10 +15,10 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       href: "/docs/components/collapse",
     },
-    {
-      title: "Examples",
-      href: "/examples",
-    },
+    // {
+    //   title: "Examples",
+    //   href: "/examples",
+    // },
     {
       title: "GitHub",
       href: "https://github.com/shadcn/ui",
