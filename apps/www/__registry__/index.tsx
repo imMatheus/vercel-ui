@@ -103,6 +103,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/drawer")),
       files: ["registry/default/ui/drawer.tsx"],
     },
+    "error": {
+      name: "error",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/error")),
+      files: ["registry/default/ui/error.tsx"],
+    },
     "form": {
       name: "form",
       type: "components:ui",
@@ -599,6 +606,34 @@ export const Index: Record<string, any> = {
       registryDependencies: ["drawer","dialog"],
       component: React.lazy(() => import("@/registry/default/example/drawer-dialog")),
       files: ["registry/default/example/drawer-dialog.tsx"],
+    },
+    "error-demo": {
+      name: "error-demo",
+      type: "components:example",
+      registryDependencies: ["error"],
+      component: React.lazy(() => import("@/registry/default/example/error-demo")),
+      files: ["registry/default/example/error-demo.tsx"],
+    },
+    "error-custom-label": {
+      name: "error-custom-label",
+      type: "components:example",
+      registryDependencies: ["error"],
+      component: React.lazy(() => import("@/registry/default/example/error-custom-label")),
+      files: ["registry/default/example/error-custom-label.tsx"],
+    },
+    "error-property": {
+      name: "error-property",
+      type: "components:example",
+      registryDependencies: ["error"],
+      component: React.lazy(() => import("@/registry/default/example/error-property")),
+      files: ["registry/default/example/error-property.tsx"],
+    },
+    "error-sizes": {
+      name: "error-sizes",
+      type: "components:example",
+      registryDependencies: ["error"],
+      component: React.lazy(() => import("@/registry/default/example/error-sizes")),
+      files: ["registry/default/example/error-sizes.tsx"],
     },
     "gauge-demo": {
       name: "gauge-demo",

@@ -87,6 +87,11 @@ const ui: Registry = [
     files: ["ui/drawer.tsx"],
   },
   {
+    name: "error",
+    type: "components:ui",
+    files: ["ui/error.tsx"],
+  },
+  {
     name: "form",
     type: "components:ui",
     dependencies: [
@@ -517,6 +522,30 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["drawer", "dialog"],
     files: ["example/drawer-dialog.tsx"],
+  },
+  {
+    name: "error-demo",
+    type: "components:example",
+    registryDependencies: ["error"],
+    files: ["example/error-demo.tsx"],
+  },
+  {
+    name: "error-custom-label",
+    type: "components:example",
+    registryDependencies: ["error"],
+    files: ["example/error-custom-label.tsx"],
+  },
+  {
+    name: "error-property",
+    type: "components:example",
+    registryDependencies: ["error"],
+    files: ["example/error-property.tsx"],
+  },
+  {
+    name: "error-sizes",
+    type: "components:example",
+    registryDependencies: ["error"],
+    files: ["example/error-sizes.tsx"],
   },
   {
     name: "gauge-demo",

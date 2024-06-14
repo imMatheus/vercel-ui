@@ -1,0 +1,10 @@
+{
+  "name": "error",
+  "files": [
+    {
+      "name": "error.tsx",
+      "content": "import React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst errorVariants = cva(\"p-3 rounded-md bg-red-500\", {\n  variants: {\n    size: {\n      small: \"\",\n      medium: \"\",\n      large: \"\",\n    },\n  },\n  defaultVariants: {\n    size: \"medium\",\n  },\n})\n\ninterface ErrorProps extends VariantProps<typeof errorVariants> {}\n\nconst Error: React.FC<ErrorProps> = ({ size = \"medium\" }) => {\n  return <div className={cn(errorVariants({ size }))}>error lool</div>\n}\n\nexport { Error }\n"
+    }
+  ],
+  "type": "components:ui"
+}

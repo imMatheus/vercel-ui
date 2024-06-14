@@ -145,6 +145,13 @@
     "type": "components:ui"
   },
   {
+    "name": "error",
+    "files": [
+      "ui/error.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "form",
     "dependencies": [
       "@radix-ui/react-label",

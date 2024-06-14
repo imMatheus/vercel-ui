@@ -155,6 +155,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Error",
+          href: "/docs/components/error",
+          items: [],
+        },
+        {
           title: "Form",
           href: "/docs/components/form",
           items: [],
