@@ -1,6 +1,6 @@
 import React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import { AlertOctagonIcon } from "lucide-react"
+import { AlertOctagonIcon, ExternalLinkIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -56,9 +56,10 @@ const Error: React.FC<ErrorProps> = ({
             {error.message}
             <a
               href={error.link}
-              className="inline-flex items-center gap-0.5 bg-gradient-to-t from-current to-current bg-no-repeat font-medium [background-position:0_100%] [background-size:100%_1px] hover:opacity-60"
+              className="ml-1 inline-flex items-center gap-0.5 bg-gradient-to-t from-current to-current bg-no-repeat font-medium [background-position:0_100%] [background-size:100%_1px] hover:opacity-60"
             >
               {error.action}
+              <ExternalLinkIcon className="ml-0.5 h-[14px] w-[14px]" />
             </a>
           </>
         ) : (
