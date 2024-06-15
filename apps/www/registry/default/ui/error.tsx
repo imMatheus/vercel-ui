@@ -1,14 +1,15 @@
 import React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
+import { AlertOctagonIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-const errorVariants = cva("p-3 rounded-md bg-red-500", {
+const errorVariants = cva("flex items-start text-red-900", {
   variants: {
     size: {
-      small: "",
-      medium: "",
-      large: "",
+      small: "text-[13px] leading-5 [--error-icon-mt:2px]",
+      medium: "text-sm [--error-icon-mt:2px]",
+      large: "text-base [--error-icon-mt:4px]",
     },
   },
   defaultVariants: {
@@ -16,10 +17,56 @@ const errorVariants = cva("p-3 rounded-md bg-red-500", {
   },
 })
 
-interface ErrorProps extends VariantProps<typeof errorVariants> {}
+interface ErrorPropsBasics extends VariantProps<typeof errorVariants> {
+  label?: string
+}
 
-const Error: React.FC<ErrorProps> = ({ size = "medium" }) => {
-  return <div className={cn(errorVariants({ size }))}>error lool</div>
+interface ErrorPropsWithChildren extends ErrorPropsBasics {
+  children: React.ReactNode
+  error?: never
+}
+
+interface ErrorPropsWithProperty extends ErrorPropsBasics {
+  error: {
+    message: string
+    action: string
+    link: string
+  }
+  children?: never
+}
+
+type ErrorProps = ErrorPropsWithChildren | ErrorPropsWithProperty
+
+const Error: React.FC<ErrorProps> = ({
+  size = "medium",
+  label,
+  error,
+  children,
+}) => {
+  return (
+    <div className={cn(errorVariants({ size }))}>
+      <div className="mr-2 mt-[var(--error-icon-mt)]">
+        <AlertOctagonIcon className="h-4 w-4" />
+      </div>
+      <p className="[word-break:break-word]">
+        {label && <b className="mr-2 font-medium">{label}:</b>}
+
+        {error ? (
+          <>
+            {error.message}
+            <a
+              href={error.link}
+              className="inline-flex items-center gap-0.5 bg-gradient-to-t from-current to-current bg-no-repeat font-medium [background-position:0_100%] [background-size:100%_1px] hover:opacity-60"
+            >
+              {error.action}
+            </a>
+          </>
+        ) : (
+          children
+        )}
+      </p>
+    </div>
+  )
 }
 
 export { Error }

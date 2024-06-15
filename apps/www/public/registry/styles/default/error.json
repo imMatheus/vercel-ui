@@ -3,7 +3,7 @@
   "files": [
     {
       "name": "error.tsx",
-      "content": "import React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst errorVariants = cva(\"p-3 rounded-md bg-red-500\", {\n  variants: {\n    size: {\n      small: \"\",\n      medium: \"\",\n      large: \"\",\n    },\n  },\n  defaultVariants: {\n    size: \"medium\",\n  },\n})\n\ninterface ErrorProps extends VariantProps<typeof errorVariants> {}\n\nconst Error: React.FC<ErrorProps> = ({ size = \"medium\" }) => {\n  return <div className={cn(errorVariants({ size }))}>error lool</div>\n}\n\nexport { Error }\n"
+      "content": "import React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { AlertOctagonIcon } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst errorVariants = cva(\"flex items-start text-red-900\", {\n  variants: {\n    size: {\n      small: \"text-[13px]\",\n      medium: \"text-sm\",\n      large: \"text-base\",\n    },\n  },\n  defaultVariants: {\n    size: \"medium\",\n  },\n})\n\ninterface ErrorProps extends VariantProps<typeof errorVariants> {\n  children: React.ReactNode\n}\n\nconst Error: React.FC<ErrorProps> = ({ size = \"medium\", children }) => {\n  return (\n    <div className={cn(errorVariants({ size }))}>\n      <AlertOctagonIcon className=\"mr-2 mt-0.5 h-4 w-4\" />\n      <p className=\"[word-break:break-word]\">{children}</p>\n    </div>\n  )\n}\n\nexport { Error }\n"
     }
   ],
   "type": "components:ui"
