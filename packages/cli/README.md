@@ -25,7 +25,7 @@ npx shadcn-ui add [component]
 ### Example
 
 ```bash
-npx shadcn-ui add alert-dialog
+npx shadcn-ui add modal
 ```
 
 You can also run the command without any arguments to view a list of all available components:

@@ -1,5 +1,5 @@
 ---
-title: Alert Dialog
+title: Modal
 description: A modal dialog that interrupts the user with important content and expects a response.
 featured: true
 component: true
@@ -8,9 +8,11 @@ links:
   api: https://www.radix-ui.com/docs/primitives/components/alert-dialog#api-reference
 ---
 
-<ComponentPreview name="alert-dialog-demo" />
+<PaddingBox title="Modal">
+  <ComponentPreview name="modal-demo" />
+</PaddingBox>
 
-## Installation
+<PaddingBox title="Installation">
 
 <Tabs defaultValue="cli">
 
@@ -21,7 +23,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add alert-dialog
+npx shadcn-ui@latest add modal
 ```
 
 </TabsContent>
@@ -38,7 +40,7 @@ npm install @radix-ui/react-alert-dialog
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="alert-dialog" />
+<ComponentSource name="modal" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -82,3 +84,5 @@ import {
   </AlertDialogContent>
 </AlertDialog>
 ```
+
+</PaddingBox>

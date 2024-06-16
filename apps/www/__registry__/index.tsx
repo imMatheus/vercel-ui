@@ -5,13 +5,6 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "default": {
-    "alert-dialog": {
-      name: "alert-dialog",
-      type: "components:ui",
-      registryDependencies: ["button"],
-      component: React.lazy(() => import("@/registry/default/ui/alert-dialog")),
-      files: ["registry/default/ui/alert-dialog.tsx"],
-    },
     "aspect-ratio": {
       name: "aspect-ratio",
       type: "components:ui",
@@ -165,6 +158,13 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/ui/menubar")),
       files: ["registry/default/ui/menubar.tsx"],
+    },
+    "modal": {
+      name: "modal",
+      type: "components:ui",
+      registryDependencies: ["button"],
+      component: React.lazy(() => import("@/registry/default/ui/modal")),
+      files: ["registry/default/ui/modal.tsx"],
     },
     "navigation-menu": {
       name: "navigation-menu",
@@ -327,12 +327,12 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/collapse-demo")),
       files: ["registry/default/example/collapse-demo.tsx"],
     },
-    "alert-dialog-demo": {
-      name: "alert-dialog-demo",
+    "modal-demo": {
+      name: "modal-demo",
       type: "components:example",
-      registryDependencies: ["alert-dialog","button"],
-      component: React.lazy(() => import("@/registry/default/example/alert-dialog-demo")),
-      files: ["registry/default/example/alert-dialog-demo.tsx"],
+      registryDependencies: ["modal","button"],
+      component: React.lazy(() => import("@/registry/default/example/modal-demo")),
+      files: ["registry/default/example/modal-demo.tsx"],
     },
     "aspect-ratio-demo": {
       name: "aspect-ratio-demo",

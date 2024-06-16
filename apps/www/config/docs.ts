@@ -75,11 +75,6 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
-          title: "Alert Dialog",
-          href: "/docs/components/alert-dialog",
-          items: [],
-        },
-        {
           title: "Aspect Ratio",
           href: "/docs/components/aspect-ratio",
           items: [],
@@ -197,6 +192,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Menubar",
           href: "/docs/components/menubar",
+          items: [],
+        },
+        {
+          title: "Modal",
+          href: "/docs/components/modal",
           items: [],
         },
         {

@@ -2,13 +2,6 @@ import { Registry } from "@/registry/schema"
 
 const ui: Registry = [
   {
-    name: "alert-dialog",
-    type: "components:ui",
-    dependencies: ["@radix-ui/react-alert-dialog"],
-    registryDependencies: ["button"],
-    files: ["ui/alert-dialog.tsx"],
-  },
-  {
     name: "aspect-ratio",
     type: "components:ui",
     dependencies: ["@radix-ui/react-aspect-ratio"],
@@ -142,6 +135,13 @@ const ui: Registry = [
     type: "components:ui",
     dependencies: ["@radix-ui/react-menubar"],
     files: ["ui/menubar.tsx"],
+  },
+  {
+    name: "modal",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-alert-dialog"],
+    registryDependencies: ["button"],
+    files: ["ui/modal.tsx"],
   },
   {
     name: "navigation-menu",
@@ -281,10 +281,10 @@ const example: Registry = [
     files: ["example/collapse-demo.tsx"],
   },
   {
-    name: "alert-dialog-demo",
+    name: "modal-demo",
     type: "components:example",
-    registryDependencies: ["alert-dialog", "button"],
-    files: ["example/alert-dialog-demo.tsx"],
+    registryDependencies: ["modal", "button"],
+    files: ["example/modal-demo.tsx"],
   },
   {
     name: "aspect-ratio-demo",
