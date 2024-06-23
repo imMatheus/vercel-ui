@@ -6,11 +6,10 @@ import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Analytics } from "@/components/analytics"
 import { ThemeProvider } from "@/components/providers"
-import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeSwitcher } from "@/components/theme-switcher"
-import { Toaster as DefaultToaster } from "@/registry/default/ui/toaster"
+import { Toaster } from "@/registry/default/ui/sonner"
 
 export const metadata: Metadata = {
   title: {
@@ -105,7 +104,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <ThemeSwitcher />
             <Analytics />
 
-            <DefaultToaster />
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>
