@@ -9,21 +9,21 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        gray: "bg-gray-700 text-contrast",
+        gray: "bg-gray-700 text-white",
         "gray-subtle": "bg-gray-200 text-gray-1000",
-        blue: "bg-blue-700 text-contrast",
+        blue: "bg-blue-700 text-white",
         "blue-subtle": "bg-blue-200 text-blue-900",
-        purple: "bg-purple-700 text-contrast",
+        purple: "bg-purple-700 text-white",
         "purple-subtle": "bg-purple-200 text-purple-900",
         amber: "bg-amber-700 text-black",
         "amber-subtle": "bg-amber-200 text-amber-900",
-        red: "bg-red-700 text-contrast",
+        red: "bg-red-700 text-white",
         "red-subtle": "bg-red-200 text-red-900",
-        pink: "bg-pink-700 text-contrast",
+        pink: "bg-pink-700 text-white",
         "pink-subtle": "bg-pink-300 text-pink-900",
-        green: "bg-green-700 text-contrast",
+        green: "bg-green-700 text-white",
         "green-subtle": "bg-green-200 text-green-900",
-        teal: "bg-teal-700 text-contrast",
+        teal: "bg-teal-700 text-white",
         "teal-subtle": "bg-teal-300 text-teal-900",
         // TODO revisit this pink color
         trial: "bg-gradient-to-br from-blue-700 to-[#f81be6] text-white",
