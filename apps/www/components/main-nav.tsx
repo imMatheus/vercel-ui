@@ -29,7 +29,7 @@ export function MainNav() {
           className={cn(
             "transition-colors",
             pathname === "/docs"
-              ? "text-white"
+              ? "text-gray-1000"
               : "text-gray-700 hover:text-gray-900"
           )}
         >
@@ -40,7 +40,7 @@ export function MainNav() {
           className={cn(
             "transition-colors",
             pathname?.startsWith("/docs/components")
-              ? "text-white"
+              ? "text-gray-1000"
               : "text-gray-700 hover:text-gray-900"
           )}
         >
