@@ -109,11 +109,11 @@ export function ComponentPreview({
           <Accordion.Header className="border-t border-t-gray-alpha-400 bg-background-200 px-4 text-sm text-gray-900">
             <Accordion.Trigger className="group flex h-12 items-center gap-3">
               <ChevronDown
-                className="h-4 w-4 group-data-[state=open]:-rotate-90"
+                className="h-4 w-4 group-data-[state=closed]:-rotate-90"
                 aria-hidden
               />
-              <p className="hidden group-data-[state=open]:block">Show code</p>
-              <p className="group-data-[state=open]:hidden">Hide code</p>
+              <p className="hidden group-data-[state=open]:block">Hide code</p>
+              <p className="group-data-[state=open]:hidden">Show code</p>
             </Accordion.Trigger>
           </Accordion.Header>
           <Accordion.Content>
