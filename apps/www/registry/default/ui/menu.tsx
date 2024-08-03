@@ -25,8 +25,6 @@ const MenuButton = React.forwardRef<
 ))
 MenuButton.displayName = DropdownMenuPrimitive.Item.displayName
 
-const DropdownMenuPortal = DropdownMenuPrimitive.Portal
-
 const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup
 
 const Menu = React.forwardRef<
@@ -168,6 +166,5 @@ export {
   DropdownMenuRadioItem,
   DropdownMenuLabel,
   DropdownMenuShortcut,
-  DropdownMenuPortal,
   DropdownMenuRadioGroup,
 }
