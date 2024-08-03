@@ -264,6 +264,20 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/sonner")),
       files: ["registry/default/ui/sonner.tsx"],
     },
+    "status-dot": {
+      name: "status-dot",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/status-dot")),
+      files: ["registry/default/ui/status-dot.tsx"],
+    },
+    "switch": {
+      name: "switch",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/switch")),
+      files: ["registry/default/ui/switch.tsx"],
+    },
     "spinner": {
       name: "spinner",
       type: "components:ui",
@@ -1096,6 +1110,13 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       component: React.lazy(() => import("@/registry/default/example/status-dot-label")),
       files: ["registry/default/example/status-dot-label.tsx"],
+    },
+    "switch-demo": {
+      name: "switch-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/example/switch-demo")),
+      files: ["registry/default/example/switch-demo.tsx"],
     },
     "tabs-demo": {
       name: "tabs-demo",

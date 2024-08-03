@@ -13,7 +13,7 @@ const TabsList = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.List
     ref={ref}
-    // maybe rethink the box shadow here
+    // TODO maybe rethink the box shadow here
     className={cn(
       "flex w-full flex-nowrap items-baseline overflow-x-auto pb-[1px] [box-shadow:0_-1px_0_var(--accents-2)_inset]",
       className

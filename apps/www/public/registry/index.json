@@ -364,6 +364,24 @@
     "type": "components:ui"
   },
   {
+    "name": "status-dot",
+    "dependencies": [],
+    "files": [
+      "ui/status-dot.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "switch",
+    "dependencies": [
+      "@radix-ui/react-tabs"
+    ],
+    "files": [
+      "ui/switch.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "spinner",
     "files": [
       "ui/spinner.tsx"
