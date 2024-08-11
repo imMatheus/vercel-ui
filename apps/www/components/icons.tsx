@@ -12,7 +12,7 @@ export const Icons = {
     >
       <rect width="427" height="427" fill="" />
       <line
-        stroke-width="12"
+        strokeWidth="12"
         x1="403.5"
         y1="23"
         x2="403.5"
@@ -20,7 +20,7 @@ export const Icons = {
         stroke="hsl(var(--ds-gray-500))"
       />
       <line
-        stroke-width="12"
+        strokeWidth="12"
         x1="23.5"
         y1="23"
         x2="23.5"
@@ -28,7 +28,7 @@ export const Icons = {
         stroke="hsl(var(--ds-gray-500))"
       />
       <line
-        stroke-width="12"
+        strokeWidth="12"
         x1="213.5"
         y1="23"
         x2="213.5"
@@ -36,7 +36,7 @@ export const Icons = {
         stroke="hsl(var(--ds-gray-500))"
       />
       <line
-        stroke-width="12"
+        strokeWidth="12"
         x1="23"
         y1="212.5"
         x2="403"
@@ -44,7 +44,7 @@ export const Icons = {
         stroke="hsl(var(--ds-gray-500))"
       />
       <line
-        stroke-width="12"
+        strokeWidth="12"
         x1="23"
         y1="22.5"
         x2="404"
@@ -52,7 +52,7 @@ export const Icons = {
         stroke="hsl(var(--ds-gray-500))"
       />
       <line
-        stroke-width="12"
+        strokeWidth="12"
         x1="23"
         y1="402.5"
         x2="404"
