@@ -65,7 +65,7 @@ export const Icons = {
         x2="23.6584"
         y2="22.6708"
         stroke="currentColor"
-        stroke-width="18"
+        strokeWidth="18"
       />
       <line
         x1="404.34"
@@ -73,7 +73,7 @@ export const Icons = {
         x2="213.34"
         y2="402.674"
         stroke="currentColor"
-        stroke-width="18"
+        strokeWidth="18"
       />
     </svg>
   ),

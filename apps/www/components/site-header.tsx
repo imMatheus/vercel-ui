@@ -19,7 +19,7 @@ export function SiteHeader() {
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <CommandMenu />
           </div>
-          <nav className="flex items-center">
+          <nav className="flex items-center gap-2">
             <Link
               href={siteConfig.links.github}
               target="_blank"
