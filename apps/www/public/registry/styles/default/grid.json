@@ -1,0 +1,10 @@
+{
+  "name": "grid",
+  "files": [
+    {
+      "name": "grid.tsx",
+      "content": "import React from \"react\"\nimport { cva } from \"class-variance-authority\"\n\nconst gridVariants = cva(\"bg-red-500\")\n\ninterface GridProps {\n  children?: React.ReactNode\n}\n\nconst Grid: React.FC<GridProps> = ({ children }) => {\n  return (\n    <div className={gridVariants()}>\n      <p>hek</p>\n\n      {children && <span>{children}</span>}\n    </div>\n  )\n}\n\nexport { Grid }\n"
+    }
+  ],
+  "type": "components:ui"
+}

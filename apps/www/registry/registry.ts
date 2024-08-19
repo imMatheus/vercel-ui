@@ -98,6 +98,11 @@ const ui: Registry = [
     files: ["ui/gauge.tsx"],
   },
   {
+    name: "grid",
+    type: "components:ui",
+    files: ["ui/grid.tsx"],
+  },
+  {
     name: "hover-card",
     type: "components:ui",
     dependencies: ["@radix-ui/react-hover-card"],
@@ -565,6 +570,12 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["gauge"],
     files: ["example/gauge-arc-priority.tsx"],
+  },
+  {
+    name: "grid-demo",
+    type: "components:example",
+    registryDependencies: ["grid"],
+    files: ["example/grid-demo.tsx"],
   },
   {
     name: "menu-demo",

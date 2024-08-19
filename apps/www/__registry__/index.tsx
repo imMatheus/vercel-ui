@@ -110,6 +110,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/ui/gauge")),
       files: ["registry/default/ui/gauge.tsx"],
     },
+    "grid": {
+      name: "grid",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/grid")),
+      files: ["registry/default/ui/grid.tsx"],
+    },
     "hover-card": {
       name: "hover-card",
       type: "components:ui",
@@ -655,6 +662,13 @@ export const Index: Record<string, any> = {
       registryDependencies: ["gauge"],
       component: React.lazy(() => import("@/registry/default/example/gauge-arc-priority")),
       files: ["registry/default/example/gauge-arc-priority.tsx"],
+    },
+    "grid-demo": {
+      name: "grid-demo",
+      type: "components:example",
+      registryDependencies: ["grid"],
+      component: React.lazy(() => import("@/registry/default/example/grid-demo")),
+      files: ["registry/default/example/grid-demo.tsx"],
     },
     "menu-demo": {
       name: "menu-demo",
