@@ -226,6 +226,18 @@ const ui: Registry = [
     files: ["ui/sonner.tsx"],
   },
   {
+    name: "status-dot",
+    type: "components:ui",
+    dependencies: [],
+    files: ["ui/status-dot.tsx"],
+  },
+  {
+    name: "switch",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-tabs"],
+    files: ["ui/switch.tsx"],
+  },
+  {
     name: "spinner",
     type: "components:ui",
     files: ["ui/spinner.tsx"],
@@ -941,6 +953,31 @@ const example: Registry = [
     name: "status-dot-label",
     type: "components:example",
     files: ["example/status-dot-label.tsx"],
+  },
+  {
+    name: "switch-demo",
+    type: "components:example",
+    files: ["example/switch-demo.tsx"],
+  },
+  {
+    name: "switch-disabled",
+    type: "components:example",
+    files: ["example/switch-disabled.tsx"],
+  },
+  {
+    name: "switch-sizes",
+    type: "components:example",
+    files: ["example/switch-sizes.tsx"],
+  },
+  {
+    name: "switch-full-width",
+    type: "components:example",
+    files: ["example/switch-full-width.tsx"],
+  },
+  {
+    name: "switch-icon",
+    type: "components:example",
+    files: ["example/switch-icon.tsx"],
   },
   {
     name: "tabs-demo",

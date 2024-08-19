@@ -1,0 +1,11 @@
+{
+  "name": "status-dot",
+  "dependencies": [],
+  "files": [
+    {
+      "name": "status-dot.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ntype State = \"QUEUED\" | \"BUILDING\" | \"ERROR\" | \"READY\" | \"CANCELED\"\n\nconst labels: Record<State, string> = {\n  QUEUED: \"Queued\",\n  BUILDING: \"Building\",\n  ERROR: \"Error\",\n  READY: \"Ready\",\n  CANCELED: \"Canceled\",\n}\n\nconst colors: Record<State, string> = {\n  QUEUED: \"bg-accents-2\",\n  BUILDING: \"bg-orange-500\", // TODO change out these colors to real colors\n  ERROR: \"bg-red-800\",\n  READY: \"bg-teal-600\",\n  CANCELED: \"bg-accents-2\",\n}\n\ninterface StatusDotProps {\n  state: State\n  label?: boolean\n}\n\nconst StatusDot: React.FC<StatusDotProps> = ({ state, label }) => {\n  return (\n    <div className=\"flex items-center\">\n      <div className={cn(\"h-2.5 w-2.5 rounded-full\", colors[state])} />\n      {label && <p className=\"ml-2 text-sm leading-4\">{labels[state]}</p>}\n    </div>\n  )\n}\n\nexport { StatusDot }\n"
+    }
+  ],
+  "type": "components:ui"
+}
