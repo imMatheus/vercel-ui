@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -106,6 +107,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
             <Toaster />
           </ThemeProvider>
+          <SpeedInsights />
         </body>
       </html>
     </>
