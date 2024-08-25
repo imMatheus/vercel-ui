@@ -14,11 +14,11 @@ const GridSystem: React.FC<GridSystemProps> = ({
 }) => {
   return (
     <div
+      className="relative before:absolute before:inset-0 before:left-[calc(-1*var(--guide-width))] before:top-[calc(-1*var(--guide-width))] before:border-solid before:border-gray-400 before:content-[''] before:[border-width:var(--guide-width)]"
       style={{
         // @ts-ignore
         "--guide-width": `${guideWidth}px`,
       }}
-      //   className={cn("ml-[var(--guide-width)] mt-[var(--guide-width)]")}
     >
       {children}
     </div>
@@ -41,6 +41,11 @@ const breakpoints = {
 type BreakPoint = keyof typeof breakpoints
 
 const Grid: React.FC<GridProps> = ({ children, columns = 1, rows = 1 }) => {
+  // TODO change this to do media query checks
+  const realColumnCount: number =
+    typeof columns === "number" ? columns : columns.md || 0
+  const realRowCount: number = typeof rows === "number" ? rows : rows.md || 0
+
   const columnStyles: React.CSSProperties =
     typeof columns === "object"
       ? Object.entries(columns).reduce(
@@ -67,15 +72,12 @@ const Grid: React.FC<GridProps> = ({ children, columns = 1, rows = 1 }) => {
           "--grid-rows": String(rows),
         }
 
-  const guideCount =
-    typeof columns === "number" && typeof rows === "rows"
-      ? columns * rows
-      : React.Children.count(children)
+  const guideCount = realColumnCount * realRowCount
 
   return (
     <div
       className={cn(
-        "grid border-b-gray-200 [border-bottom-width:var(--guide-width)]",
+        "relative grid",
         typeof columns === "object"
           ? [
               columns?.sm &&
@@ -100,9 +102,18 @@ const Grid: React.FC<GridProps> = ({ children, columns = 1, rows = 1 }) => {
       style={{ ...columnStyles, ...rowStyles }}
     >
       {children}
-      <div className="pointer-events-none z-[1] contents">
+      <div className="pointer-events-none z-[1] contents" aria-hidden>
         {Array.from({ length: guideCount }).map((_, index) => (
-          <div key={index}>index</div>
+          <div
+            key={index}
+            className="absolute inset-0 col-start-[var(--x)] col-end-[span_1] row-start-[var(--y)] row-end-[span_1] border-solid border-gray-400 [border-left:none] [border-top:none] [border-width:var(--guide-width)]"
+            style={
+              {
+                "--x": (index % realColumnCount) + 1,
+                "--y": Math.floor(index / realColumnCount) + 1,
+              } as React.CSSProperties
+            }
+          />
         ))}
       </div>
     </div>
@@ -118,12 +129,11 @@ const GridCell: React.FC<GridCellProps> = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "border-solid border-gray-200 p-6 [border-width:var(--guide-width)] md:p-8 lg:p-10 xl:p-12",
-        "mb-[var(--guide-width)] mr-[var(--guide-width)]",
+        "z-[2] mb-[var(--guide-width)] mr-[var(--guide-width)] p-6 md:p-8 lg:p-10 xl:p-12",
         className
       )}
     >
-      {children && <span>{children}</span>}
+      {children}
     </div>
   )
 }
