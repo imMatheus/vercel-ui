@@ -670,6 +670,20 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/grid-demo")),
       files: ["registry/default/example/grid-demo.tsx"],
     },
+    "grid-debug": {
+      name: "grid-debug",
+      type: "components:example",
+      registryDependencies: ["grid"],
+      component: React.lazy(() => import("@/registry/default/example/grid-debug")),
+      files: ["registry/default/example/grid-debug.tsx"],
+    },
+    "grid-cell-span": {
+      name: "grid-cell-span",
+      type: "components:example",
+      registryDependencies: ["grid"],
+      component: React.lazy(() => import("@/registry/default/example/grid-cell-span")),
+      files: ["registry/default/example/grid-cell-span.tsx"],
+    },
     "menu-demo": {
       name: "menu-demo",
       type: "components:example",

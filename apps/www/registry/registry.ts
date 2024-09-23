@@ -578,6 +578,18 @@ const example: Registry = [
     files: ["example/grid-demo.tsx"],
   },
   {
+    name: "grid-debug",
+    type: "components:example",
+    registryDependencies: ["grid"],
+    files: ["example/grid-debug.tsx"],
+  },
+  {
+    name: "grid-cell-span",
+    type: "components:example",
+    registryDependencies: ["grid"],
+    files: ["example/grid-cell-span.tsx"],
+  },
+  {
     name: "menu-demo",
     type: "components:example",
     registryDependencies: ["menu"],

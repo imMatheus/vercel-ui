@@ -5,20 +5,32 @@ import { cn } from "@/lib/utils"
 
 interface GridSystemProps {
   guideWidth: number
+  debug?: boolean
   children: React.ReactNode
 }
 
 const GridSystem: React.FC<GridSystemProps> = ({
   guideWidth = 1,
+  debug,
   children,
 }) => {
+  const style: Record<string, string> = {
+    "--guide-width": `${guideWidth}px`,
+    "--guide-color": "hsl(var(--ds-gray-400))",
+  }
+
+  if (debug) {
+    style["--debug-color-rgb"] = "255, 204, 109"
+    style["--debug-guide-color"] = "rgba(var(--debug-color-rgb), 0.7)"
+    style["--debug-block-color"] = "rgba(var(--debug-color-rgb), 0.1)"
+    style["--debug-hidden-guide-color"] = "rgba(var(--debug-color-rgb), 0.1)"
+    style["--guide-color"] = "var(--debug-guide-color)"
+  }
+
   return (
     <div
-      className="relative before:absolute before:inset-0 before:left-[calc(-1*var(--guide-width))] before:top-[calc(-1*var(--guide-width))] before:border-solid before:border-gray-400 before:content-[''] before:[border-width:var(--guide-width)]"
-      style={{
-        // @ts-ignore
-        "--guide-width": `${guideWidth}px`,
-      }}
+      className="relative h-fit before:absolute before:inset-0 before:left-[calc(-1*var(--guide-width))] before:top-[calc(-1*var(--guide-width))] before:border-solid before:border-[var(--guide-color)] before:content-[''] before:[border-width:var(--guide-width)]"
+      style={style as React.CSSProperties}
     >
       {children}
     </div>
@@ -39,6 +51,9 @@ const breakpoints = {
 }
 
 type BreakPoint = keyof typeof breakpoints
+
+const MIN_WIDTH = "368px"
+const MAX_WIDTH = "1080px"
 
 const Grid: React.FC<GridProps> = ({ children, columns = 1, rows = 1 }) => {
   // TODO change this to do media query checks
@@ -77,7 +92,7 @@ const Grid: React.FC<GridProps> = ({ children, columns = 1, rows = 1 }) => {
   return (
     <div
       className={cn(
-        "relative grid",
+        "relative grid w-[var(--width)]",
         typeof columns === "object"
           ? [
               columns?.sm &&
@@ -99,14 +114,20 @@ const Grid: React.FC<GridProps> = ({ children, columns = 1, rows = 1 }) => {
             ]
           : "grid-rows-[repeat(var(--grid-rows),_1fr)]"
       )}
-      style={{ ...columnStyles, ...rowStyles }}
+      style={
+        {
+          ...columnStyles,
+          ...rowStyles,
+          "--width": `clamp(calc(${MIN_WIDTH} - var(--guide-width)), calc(calc(100%) - var(--guide-width)), calc(${MAX_WIDTH} - var(--guide-width)))`,
+        } as React.CSSProperties
+      }
     >
       {children}
       <div className="pointer-events-none z-[1] contents" aria-hidden>
         {Array.from({ length: guideCount }).map((_, index) => (
           <div
             key={index}
-            className="absolute inset-0 col-start-[var(--x)] col-end-[span_1] row-start-[var(--y)] row-end-[span_1] border-solid border-gray-400 [border-left:none] [border-top:none] [border-width:var(--guide-width)]"
+            className="absolute inset-0 col-start-[var(--x)] col-end-[span_1] row-start-[var(--y)] row-end-[span_1] border-solid border-[var(--guide-color)] [border-left:none] [border-top:none] [border-width:var(--guide-width)]"
             style={
               {
                 "--x": (index % realColumnCount) + 1,
@@ -121,17 +142,30 @@ const Grid: React.FC<GridProps> = ({ children, columns = 1, rows = 1 }) => {
 }
 
 interface GridCellProps {
+  column?: { [key in BreakPoint]?: string | number }
+  row?: { [key in BreakPoint]?: string | number }
   className?: string
   children?: React.ReactNode
 }
 
-const GridCell: React.FC<GridCellProps> = ({ className, children }) => {
+const GridCell: React.FC<GridCellProps> = ({
+  column,
+  row,
+  className,
+  children,
+}) => {
   return (
     <div
       className={cn(
-        "z-[2] mb-[var(--guide-width)] mr-[var(--guide-width)] p-6 md:p-8 lg:p-10 xl:p-12",
+        "z-[2] mb-[var(--guide-width)] mr-[var(--guide-width)] p-6 [grid-column:var(--grid-column)] [grid-row:var(--grid-row)] md:p-8 lg:p-10 xl:p-12",
         className
       )}
+      style={
+        {
+          "--x": 1,
+          "--y": 1,
+        } as React.CSSProperties
+      }
     >
       {children}
     </div>
