@@ -159,11 +159,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/gauge",
           items: [],
         },
-        {
-          title: "Grid",
-          href: "/docs/components/grid",
-          items: [],
-        },
+        // {
+        //   title: "Grid",
+        //   href: "/docs/components/grid",
+        //   items: [],
+        // },
         // {
         //   title: "Hover Card",
         //   href: "/docs/components/hover-card",
