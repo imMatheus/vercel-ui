@@ -96,7 +96,7 @@ Place a mode toggle on your site to toggle between light and dark mode.
 ```astro title="src/pages/index.astro"
 ---
 import '../styles/globals.css'
-import { ModeToggle } from '@/components/ModeToggle';
+import { ThemeSwitcher } from '@/components/theme-switcher';
 ---
 
 <!-- Inline script -->
@@ -104,7 +104,7 @@ import { ModeToggle } from '@/components/ModeToggle';
 <html lang="en">
 	<body>
       <h1>Astro</h1>
-      <ModeToggle client:load />
+      <ThemeSwitcher client:load />
 	</body>
 </html>
 ```
