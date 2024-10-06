@@ -157,6 +157,13 @@
     "type": "components:ui"
   },
   {
+    "name": "grid",
+    "files": [
+      "ui/grid.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "hover-card",
     "dependencies": [
       "@radix-ui/react-hover-card"

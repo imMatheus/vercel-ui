@@ -203,6 +203,9 @@ importers:
       '@vercel/og':
         specifier: ^0.0.21
         version: 0.0.21
+      '@vercel/speed-insights':
+        specifier: ^1.0.12
+        version: 1.0.12(next@14.0.4)(react@18.2.0)
       class-variance-authority:
         specifier: ^0.4.0
         version: 0.4.0(typescript@4.9.5)
@@ -4402,6 +4405,34 @@ packages:
       '@resvg/resvg-wasm': 2.0.0-alpha.4
       satori: 0.0.44
       yoga-wasm-web: 0.1.2
+    dev: false
+
+  /@vercel/speed-insights@1.0.12(next@14.0.4)(react@18.2.0):
+    resolution: {integrity: sha512-ZGQ+a7bcfWJD2VYEp2R1LHvRAMyyaFBYytZXsfnbOMkeOvzGNVxUL7aVUvisIrTZjXTSsxG45DKX7yiw6nq2Jw==}
+    requiresBuild: true
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19
+      svelte: ^4
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+    dependencies:
+      next: 14.0.4(@babel/core@7.22.1)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
     dev: false
 
   /@vitest/expect@0.31.2:

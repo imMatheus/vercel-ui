@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev -p 3001",
     "build": "contentlayer build && pnpm build:registry && next build",
     "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.ts",
     "seed:tasks": "tsx --tsconfig ./tsconfig.scripts.json ./app/examples/tasks/data/seed.ts",
@@ -48,6 +48,7 @@
     "@tanstack/react-table": "^8.9.1",
     "@vercel/analytics": "^1.0.1",
     "@vercel/og": "^0.0.21",
+    "@vercel/speed-insights": "^1.0.12",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "cmdk": "^0.2.0",

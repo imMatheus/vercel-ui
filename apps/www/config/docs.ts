@@ -160,6 +160,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         // {
+        //   title: "Grid",
+        //   href: "/docs/components/grid",
+        //   items: [],
+        // },
+        // {
         //   title: "Hover Card",
         //   href: "/docs/components/hover-card",
         //   items: [],
