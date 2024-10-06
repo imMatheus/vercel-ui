@@ -1209,6 +1209,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/textarea-with-text")),
       files: ["registry/default/example/textarea-with-text.tsx"],
     },
+    "theme-switcher-demo": {
+      name: "theme-switcher-demo",
+      type: "components:example",
+      registryDependencies: ["theme-switcher"],
+      component: React.lazy(() => import("@/registry/default/example/theme-switcher-demo")),
+      files: ["registry/default/example/theme-switcher-demo.tsx"],
+    },
     "toast-demo": {
       name: "toast-demo",
       type: "components:example",

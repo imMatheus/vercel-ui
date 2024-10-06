@@ -304,6 +304,11 @@ export const docsConfig: DocsConfig = {
         //   href: "/docs/components/textarea",
         //   items: [],
         // },
+        {
+          title: "Theme Switcher",
+          href: "/docs/components/theme-switcher",
+          items: [],
+        },
         // {
         //   title: "Toast",
         //   href: "/docs/components/toast",

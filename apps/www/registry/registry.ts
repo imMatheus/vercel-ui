@@ -1034,6 +1034,12 @@ const example: Registry = [
     files: ["example/textarea-with-text.tsx"],
   },
   {
+    name: "theme-switcher-demo",
+    type: "components:example",
+    registryDependencies: ["theme-switcher"],
+    files: ["example/theme-switcher-demo.tsx"],
+  },
+  {
     name: "toast-demo",
     type: "components:example",
     registryDependencies: ["toast"],

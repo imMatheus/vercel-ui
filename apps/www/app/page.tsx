@@ -51,6 +51,8 @@ export default function IndexPage() {
           <ComponentsPreview />
         </div>
       </div>
+
+      <div className="relative h-4 border-t border-t-gray-200 bg-background-200"></div>
       <section className="relative grid grid-rows-[repeat(2,calc(fit-content/2))] gap-[1px] border-y border-y-gray-200 bg-gray-200 md:grid-cols-2">
         <LinkBox
           href="/docs/components"
