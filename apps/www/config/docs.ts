@@ -74,16 +74,16 @@ export const docsConfig: DocsConfig = {
     {
       title: "Components",
       items: [
-        {
-          title: "Aspect Ratio",
-          href: "/docs/components/aspect-ratio",
-          items: [],
-        },
-        {
-          title: "Avatar",
-          href: "/docs/components/avatar",
-          items: [],
-        },
+        // {
+        //   title: "Aspect Ratio",
+        //   href: "/docs/components/aspect-ratio",
+        //   items: [],
+        // },
+        // {
+        //   title: "Avatar",
+        //   href: "/docs/components/avatar",
+        //   items: [],
+        // },
         {
           title: "Badge",
           href: "/docs/components/badge",
@@ -94,66 +94,66 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/button",
           items: [],
         },
-        {
-          title: "Calendar",
-          href: "/docs/components/calendar",
-          items: [],
-        },
-        {
-          title: "Card",
-          href: "/docs/components/card",
-          items: [],
-        },
-        {
-          title: "Checkbox",
-          href: "/docs/components/checkbox",
-          items: [],
-        },
+        // {
+        //   title: "Calendar",
+        //   href: "/docs/components/calendar",
+        //   items: [],
+        // },
+        // {
+        //   title: "Card",
+        //   href: "/docs/components/card",
+        //   items: [],
+        // },
+        // {
+        //   title: "Checkbox",
+        //   href: "/docs/components/checkbox",
+        //   items: [],
+        // },
         {
           title: "Collapse",
           href: "/docs/components/collapse",
           items: [],
         },
-        {
-          title: "Collapsible",
-          href: "/docs/components/collapsible",
-          items: [],
-        },
-        {
-          title: "Combobox",
-          href: "/docs/components/combobox",
-          items: [],
-        },
-        {
-          title: "Command",
-          href: "/docs/components/command",
-          items: [],
-        },
+        // {
+        //   title: "Collapsible",
+        //   href: "/docs/components/collapsible",
+        //   items: [],
+        // },
+        // {
+        //   title: "Combobox",
+        //   href: "/docs/components/combobox",
+        //   items: [],
+        // },
+        // {
+        //   title: "Command",
+        //   href: "/docs/components/command",
+        //   items: [],
+        // },
         {
           title: "Context Menu",
           href: "/docs/components/context-menu",
           items: [],
         },
-        {
-          title: "Date Picker",
-          href: "/docs/components/date-picker",
-          items: [],
-        },
-        {
-          title: "Dialog",
-          href: "/docs/components/dialog",
-          items: [],
-        },
-        {
-          title: "Drawer",
-          href: "/docs/components/drawer",
-          items: [],
-        },
-        {
-          title: "Form",
-          href: "/docs/components/form",
-          items: [],
-        },
+        // {
+        //   title: "Date Picker",
+        //   href: "/docs/components/date-picker",
+        //   items: [],
+        // },
+        // {
+        //   title: "Dialog",
+        //   href: "/docs/components/dialog",
+        //   items: [],
+        // },
+        // {
+        //   title: "Drawer",
+        //   href: "/docs/components/drawer",
+        //   items: [],
+        // },
+        // {
+        //   title: "Form",
+        //   href: "/docs/components/form",
+        //   items: [],
+        // },
         {
           title: "Gauge",
           href: "/docs/components/gauge",
@@ -164,11 +164,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/grid",
           items: [],
         },
-        {
-          title: "Hover Card",
-          href: "/docs/components/hover-card",
-          items: [],
-        },
+        // {
+        //   title: "Hover Card",
+        //   href: "/docs/components/hover-card",
+        //   items: [],
+        // },
         {
           title: "Input",
           href: "/docs/components/input",
@@ -184,96 +184,96 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/loading-dots",
           items: [],
         },
-        {
-          title: "Label",
-          href: "/docs/components/label",
-          items: [],
-        },
+        // {
+        //   title: "Label",
+        //   href: "/docs/components/label",
+        //   items: [],
+        // },
         {
           title: "Menu",
           href: "/docs/components/menu",
           items: [],
         },
-        {
-          title: "Menubar",
-          href: "/docs/components/menubar",
-          items: [],
-        },
+        // {
+        //   title: "Menubar",
+        //   href: "/docs/components/menubar",
+        //   items: [],
+        // },
         {
           title: "Modal",
           href: "/docs/components/modal",
           items: [],
         },
-        {
-          title: "Navigation Menu",
-          href: "/docs/components/navigation-menu",
-          items: [],
-        },
+        // {
+        //   title: "Navigation Menu",
+        //   href: "/docs/components/navigation-menu",
+        //   items: [],
+        // },
         {
           title: "Note",
           href: "/docs/components/note",
           items: [],
         },
-        {
-          title: "Pagination",
-          href: "/docs/components/pagination",
-          items: [],
-        },
-        {
-          title: "Popover",
-          href: "/docs/components/popover",
-          items: [],
-        },
-        {
-          title: "Progress",
-          href: "/docs/components/progress",
-          items: [],
-        },
-        {
-          title: "Radio Group",
-          href: "/docs/components/radio-group",
-          items: [],
-        },
-        {
-          title: "Resizable",
-          href: "/docs/components/resizable",
-          items: [],
-        },
-        {
-          title: "Scroll Area",
-          href: "/docs/components/scroll-area",
-          items: [],
-        },
-        {
-          title: "Select",
-          href: "/docs/components/select",
-          items: [],
-        },
-        {
-          title: "Sheet",
-          href: "/docs/components/sheet",
-          items: [],
-        },
+        // {
+        //   title: "Pagination",
+        //   href: "/docs/components/pagination",
+        //   items: [],
+        // },
+        // {
+        //   title: "Popover",
+        //   href: "/docs/components/popover",
+        //   items: [],
+        // },
+        // {
+        //   title: "Progress",
+        //   href: "/docs/components/progress",
+        //   items: [],
+        // },
+        // {
+        //   title: "Radio Group",
+        //   href: "/docs/components/radio-group",
+        //   items: [],
+        // },
+        // {
+        //   title: "Resizable",
+        //   href: "/docs/components/resizable",
+        //   items: [],
+        // },
+        // {
+        //   title: "Scroll Area",
+        //   href: "/docs/components/scroll-area",
+        //   items: [],
+        // },
+        // {
+        //   title: "Select",
+        //   href: "/docs/components/select",
+        //   items: [],
+        // },
+        // {
+        //   title: "Sheet",
+        //   href: "/docs/components/sheet",
+        //   items: [],
+        // },
         {
           title: "Show more",
           href: "/docs/components/show-more",
           items: [],
         },
-        {
-          title: "Skeleton",
-          href: "/docs/components/skeleton",
-          items: [],
-        },
+        // {
+        //   title: "Skeleton",
+        //   href: "/docs/components/skeleton",
+        //   items: [],
+        // },
         {
           title: "Snippet",
           href: "/docs/components/snippet",
           items: [],
         },
-        {
-          title: "Sonner",
-          href: "/docs/components/sonner",
-          items: [],
-        },
+        // {
+        //   title: "Sonner",
+        //   href: "/docs/components/sonner",
+        //   items: [],
+        // },
         {
           title: "Spinner",
           href: "/docs/components/spinner",
@@ -304,16 +304,21 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/text",
           items: [],
         },
+        // {
+        //   title: "Textarea",
+        //   href: "/docs/components/textarea",
+        //   items: [],
+        // },
         {
-          title: "Textarea",
-          href: "/docs/components/textarea",
+          title: "Theme Switcher",
+          href: "/docs/components/theme-switcher",
           items: [],
         },
-        {
-          title: "Toast",
-          href: "/docs/components/toast",
-          items: [],
-        },
+        // {
+        //   title: "Toast",
+        //   href: "/docs/components/toast",
+        //   items: [],
+        // },
         {
           title: "Toggle",
           href: "/docs/components/toggle",

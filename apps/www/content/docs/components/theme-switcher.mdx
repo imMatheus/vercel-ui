@@ -1,11 +1,11 @@
 ---
-title: Keyboard input
-description: Display keyboard input that triggers an action.
+title: Theme Switcher
+description: Component that allows users to switch between light and dark themes.
 component: true
 ---
 
-<PaddingBox>
-  <ComponentPreview name="kbd-demo" />
+<PaddingBox title="Defualt">
+  <ComponentPreview name="theme-switcher-demo" />
 </PaddingBox>
 
 <PaddingBox title="Installation">
@@ -18,7 +18,7 @@ component: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add kbd
+npx shadcn-ui@latest add theme-switcher
 ```
 
 </TabsContent>
@@ -27,9 +27,15 @@ npx shadcn-ui@latest add kbd
 
 <Steps>
 
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install next-themes
+```
+
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="input" />
+<ComponentSource name="theme-switcher" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -38,13 +44,4 @@ npx shadcn-ui@latest add kbd
 </TabsContent>
 
 </Tabs>
-
-</PaddingBox>
-
-<PaddingBox title="Combinations">
-  <ComponentPreview name="kbd-combination" />
-</PaddingBox>
-
-<PaddingBox title="Small">
-  <ComponentPreview name="kbd-small" />
 </PaddingBox>

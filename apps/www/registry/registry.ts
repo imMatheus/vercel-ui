@@ -271,6 +271,12 @@ const ui: Registry = [
     files: ["ui/textarea.tsx"],
   },
   {
+    name: "theme-switcher",
+    type: "components:ui",
+    dependencies: ["next-themes"],
+    files: ["ui/theme-switcher.tsx"],
+  },
+  {
     name: "toast",
     type: "components:ui",
     dependencies: ["@radix-ui/react-toast"],
@@ -1055,6 +1061,12 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["textarea", "label"],
     files: ["example/textarea-with-text.tsx"],
+  },
+  {
+    name: "theme-switcher-demo",
+    type: "components:example",
+    registryDependencies: ["theme-switcher"],
+    files: ["example/theme-switcher-demo.tsx"],
   },
   {
     name: "toast-demo",
