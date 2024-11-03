@@ -331,7 +331,7 @@
   }
 
   .step:before {
-    @apply absolute ml-[-50px] mt-[-4px] inline-flex h-9 w-9 items-center justify-center rounded-full border-4 border-black bg-background-100 text-center -indent-px font-mono text-base font-medium;
+    @apply absolute ml-[-50px] mt-[-4px] inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background-100 text-center -indent-px font-mono text-base font-medium;
     content: counter(step);
   }
 }
