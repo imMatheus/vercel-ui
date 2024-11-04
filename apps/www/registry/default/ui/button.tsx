@@ -74,10 +74,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
-          buttonVariants({ variant, size, className }),
-          (shape === "rounded" || shape === "circle") && "rounded-full",
+          buttonVariants({ variant, size }),
+          (shape === "rounded" || shape === "circle") &&
+            "aspect-square rounded-full",
           svgOnly && "aspect-square",
-          shadow && "shadow-sm"
+          shadow && "shadow-sm",
+          className
         )}
         ref={ref}
         disabled={disabled || loading}
