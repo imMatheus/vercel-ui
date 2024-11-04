@@ -76,7 +76,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           buttonVariants({ variant, size }),
           (shape === "rounded" || shape === "square" || shape === "circle") &&
-            "h-unset aspect-square rounded-full",
+            "aspect-square h-[unset] rounded-full",
           svgOnly && "aspect-square",
           shadow && "shadow-sm",
           className
