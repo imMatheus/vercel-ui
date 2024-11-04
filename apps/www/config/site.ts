@@ -1,9 +1,8 @@
 export const siteConfig = {
   name: "vercel/ui",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
-  description:
-    "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
+  url: "https://vercel-ui-phi.vercel.app",
+  ogImage: "https://vercel-ui-phi.vercel.app/og.png",
+  description: "Component system based on Vercel's Geist system",
   links: {
     twitter: "https://twitter.com/whosmatu",
     github: "https://github.com/immatheus/vercel-ui",

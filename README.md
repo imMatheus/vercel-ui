@@ -4,3 +4,5 @@ Accessible and customizable components designed by [vercel](https://vercel.com) 
 
 > [!NOTE]
 > This is a NOT affiliated with Vercel or Shadcn in any way and is only a fork of Shadcn I made for fun and learning.
+
+This repo was a fork of the Shadcn repo, so a lot of cred to him and the other contributors.
